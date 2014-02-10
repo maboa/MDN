@@ -17,7 +17,7 @@ Here we define an audio element with multiple sources, we do this as not all bro
 
 We do this using the ``<source>`` tag which takes attributes ``src`` and ``type``.
 
-Similarly to how it is used with the ``<img>`` tag ``src`` contains a reference to the file to be loaded.
+Similarly to its use within the ``<img>`` tag, ``src`` contains a reference to the file to be loaded.
 ``type`` is used to inform the browser of the file type. If omitted, most browsers will attempt to guess this from the file extension.
 
 If the ``<audio>`` tag is not supported then ``<audio>`` and ``<source>`` will be ignored. However any supported text or elements that you define within ``<audio>`` will be acted upon. So the ideal place to create a fallback or inform of incompatibility is before the closing ``</audio>``.
