@@ -35,7 +35,7 @@ Video
   <source src="videofile.webm" type="video/webm">
   <!-- fallback for non supporting browsers goes here -->
   Your browser does not support the video element.
- </video>
+</video>
 `````
 
 ``<audio>`` and ``<video>`` have the same kind of structure. Dure to it's visual nature, there are a few extra things we can define for video. Here we define the width and height.
