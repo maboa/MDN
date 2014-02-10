@@ -4,12 +4,14 @@ Audio and Video Basics
 Audio
 -----
 
-``<audio controls>
-		<source src="audiofile.mp3" type="audio/mpeg">
-		<source src="audiofile.ogg" type="audio/ogg">
-		<!-- fallback for non supporting browsers goes here -->
-		Your browser does not support the audio element.
-  </audio>``
+`````html
+<audio controls>
+	<source src="audiofile.mp3" type="audio/mpeg">
+	<source src="audiofile.ogg" type="audio/ogg">
+	<!-- fallback for non supporting browsers goes here -->
+	Your browser does not support the audio element.
+</audio>
+`````
 
 Here we define an audio element with multiple sources, we do this as not all browsers support the same audio formats and so for reasonable coverage we should specify at least two. The two formats that will give you maximum coverage are mp3 and ogg vorbis.
 
@@ -27,15 +29,21 @@ If the ``<audio>`` tag is not supported then ``<audio>`` and ``<source>`` will b
 Video
 -----
 
-``<video controls width="640" height="480">
+`````html
+<video controls width="640" height="480">
 		<source src="videofile.mp4" type="video/mpeg">
 		<source src="videofile.webm" type="video/webm">
 		<!-- fallback for non supporting browsers goes here -->
 		Your browser does not support the video element.
-  </video>``
+  </video>
+`````
 
 ``<audio>`` and ``<video>`` have the same kind of structure. Dure to it's visual nature, there are a few extra things we can define for video. Here we define the width and height.
 
 > *Note* that if we do not define a width or height the browser will attempt to figure out the dimensions of the video file and use those.
 
 The ``controls`` attribute specifies that we want our video to be diplayed with play-back controls.
+
+
+
+
