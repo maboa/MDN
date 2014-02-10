@@ -6,10 +6,10 @@ Audio
 
 `````html
 <audio controls>
-	<source src="audiofile.mp3" type="audio/mpeg">
-	<source src="audiofile.ogg" type="audio/ogg">
-	<!-- fallback for non supporting browsers goes here -->
-	Your browser does not support the audio element.
+  <source src="audiofile.mp3" type="audio/mpeg">
+  <source src="audiofile.ogg" type="audio/ogg">
+  <!-- fallback for non supporting browsers goes here -->
+  Your browser does not support the audio element.
 </audio>
 `````
 
@@ -31,11 +31,11 @@ Video
 
 `````html
 <video controls width="640" height="480">
-		<source src="videofile.mp4" type="video/mpeg">
-		<source src="videofile.webm" type="video/webm">
-		<!-- fallback for non supporting browsers goes here -->
-		Your browser does not support the video element.
-  </video>
+  <source src="videofile.mp4" type="video/mpeg">
+  <source src="videofile.webm" type="video/webm">
+  <!-- fallback for non supporting browsers goes here -->
+  Your browser does not support the video element.
+ </video>
 `````
 
 ``<audio>`` and ``<video>`` have the same kind of structure. Dure to it's visual nature, there are a few extra things we can define for video. Here we define the width and height.
