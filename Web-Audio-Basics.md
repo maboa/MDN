@@ -188,8 +188,8 @@ alert('stop');
 
 myAudio.pause();
 
-myAudio.currentTime(5); // play from 5 seconds in
-
+// play from 5 seconds in
+myAudio.currentTime = 5; 
 myAudio.play();
 
 `````
@@ -232,13 +232,13 @@ if (myAudio.canPlayType('audio/mpeg')) {
 
 In practice, we usually check if the result is truthy or falsey. Non empty strings are truthy.
 
-> Note - very early specs specified that the browser should return "no" instead of empty string. Thankfully the number of people using these browsers are few and far between.
+> Note - very early specs specified that the browser should return "no" instead of empty string, thankfully the number of people using these browsers are few and far between.
 
 ### currentTime
 
 ```play``` does not take a parameter so we need to set the point to play from separately using the ```currentTime``` property. If not set the default is zero.
 
-We can get ```currentTime``` as well as set. The value is number that specifies the time in seconds.
+We can get ```currentTime``` as well as set it. The value is a number which represents the time in seconds.
 
 `````javascript
 if (myAudio.currentTime > 5) {
@@ -246,6 +246,14 @@ if (myAudio.currentTime > 5) {
 }
 `````
 
+### volume
+
+The ```volume``` property allows us to set the audio volume. You specify a number between 0 and 1.
+
+`````javascript
+// set the volume at 50%
+myAudio.volume = 0.5;
+`````
 
 
 
