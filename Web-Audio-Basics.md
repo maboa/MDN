@@ -114,12 +114,22 @@ The ```preload``` attribute allows you to specify a preference for how the brows
 As mentioned above ``controls`` is an attribute that we specify when we require the browser to provide us with a play-back controls.
 
 `````html
-<audio preload="controls">
+<audio controls>
   ...
 </audio>
 `````
 
-> Note - on mobile platforms controls will often not include volume as this is handle by the underlying OS.
+### src
+
+As mentioned above you can use the ```<source>``` element to specify one or more source audio files. Alternatively you can use the src attribute directly within the ```<audio>``` tag to specify a single source file.
+
+`````html
+<audio src="audiofile.mp3">
+  ...
+</audio>
+`````
+
+
 
 Fallbacks
 ---------
@@ -133,6 +143,10 @@ Although the vast majority of browsers now support the audio element, you may wa
 Manipulating Audio Properties with JavaScript
 ---------------------------------------------
 
+In addition to being able to specify various attributes in HTML, the audio element comes complete with several properties that you can manipulate via JavaScript.
+
+
+### play
 
 
 
