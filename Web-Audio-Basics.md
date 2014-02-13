@@ -41,6 +41,7 @@ Specifying ``autoplay`` will mean that the audio will start playing as soon as p
   ...
 </audio>
 `````
+> Note - this value is often ignored on mobile platforms.
 
 ### loop
 
@@ -62,9 +63,11 @@ If you want the audio to start muted (no volume), add the ``muted`` attribute.
 </audio>
 `````
 
+> Note - this value is often ignored on mobile platforms.
+
 ### preload
 
-The ```preload``` attribute allows you to specify a preference for how the browser preloads the audio, in other words what part of the file it downloads when the audio element is initialized.
+The ```preload``` attribute allows you to specify a preference for how the browser preloads the audio, in other words which part of the file it downloads when the audio element is initialized.
 
 ```preload``` can take 3 values:
 
@@ -72,11 +75,38 @@ The ```preload``` attribute allows you to specify a preference for how the brows
 2. ```preload = "meta"```
 3. ```preload = "auto"```
 
+> Note - this value is often ignored on mobile platforms.
+
 `````html
 <audio preload="auto">
   ...
 </audio>
 `````
+
+### controls
+
+As mentioned above ``controls`` is an attribute that we specify when we require the browser to provide us with a play-back controls.
+
+`````html
+<audio preload="controls">
+  ...
+</audio>
+`````
+
+> Note - on mobile platforms controls will often not include volume as this is handle by the underlying OS.
+
+Fallbacks
+---------
+
+Although the vast majority of browsers now support the audio element, you may want to cater for those that don't. Usually these browsers are catered for by using fallbacks written for plugins such as Adobe Flash or Microsoft Silverlight.
+
+> Note - you should be aware that Flash and Silverlight require that the user has that plugin installed and that the browser cannot guarantee the security aspects of code running in plugins.
+
+
+
+Manipulating Audio Properties with JavaScript
+---------------------------------------------
+
 
 
 
