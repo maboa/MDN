@@ -100,7 +100,7 @@ Fallbacks
 
 Although the vast majority of browsers now support the audio element, you may want to cater for those that don't. Usually these browsers are catered for by using fallbacks written for plugins such as Adobe Flash or Microsoft Silverlight.
 
-> Note - you should be aware that Flash and Silverlight require that the user has that plugin installed and that the browser cannot guarantee the security aspects of code running in plugins.
+> Note - you should be aware that Flash and Silverlight code require that the user has the appropriate plugin installed and significantly that the *browser cannot guarantee the security* aspects of code running on those plugin platforms.
 
 
 
