@@ -174,12 +174,10 @@ var myAudio = document.createElement('audio');
 
 if (myAudio.canPlayType('audio/mpeg')) {
   myAudio.setAttribute('src','audiofile.mp3');
-  myAudio.setAttribute('type','audio/mpeg');
 }
 
 if (myAudio.canPlayType('audio/ogg')) {
-  myAudio.setAttribute('src','audiofile.ogg);
-  myAudio.setAttribute('type','audio/ogg');
+  myAudio.setAttribute('src','audiofile.ogg');
 }
 
 alert('play');
@@ -199,10 +197,41 @@ myAudio.play();
 
 ### play
 
-The ```play``` method is used to tell the audio to play.
+The ```play``` method is used to tell the audio to play. It takes no parameters.
 
 `````javascript
-var myAudio = document.createElement('audio');
+myAudio.play();
 `````
+
+### pause
+
+The ```pause``` method is used to tell the audio to pause. It takes no parameters.
+
+`````javascript
+myAudio.pause();
+`````
+> Note - there is no stop method.
+
+### canPlayType
+
+Asks the browser whether a certain audio file type is supported. 
+
+It takes an Internet Media Type as a parameter and returns one of three values:
+
+1. "probably"
+2. "maybe"
+3. "" (the empty string).
+
+
+`````javascript
+if (myAudio.canPlayType('audio/mpeg')) {
+  // It's supported.
+  // Do something here!
+}
+`````
+
+In practice, we usually check if the result is truthy or falsey. Non empty strings are truthy.
+
+> Note that very early specs specified that the browser should return "no" instead of empty string. Thankfully the number of people using these browsers are few and far between.
 
 
