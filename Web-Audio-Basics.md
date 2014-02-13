@@ -149,8 +149,8 @@ Although the vast majority of browsers now support the audio element, you may wa
 
 
 
-Manipulating Audio Properties with JavaScript
----------------------------------------------
+Manipulating the Audio Element with JavaScript
+----------------------------------------------
 
 In addition to being able to specify various attributes in HTML, the audio element comes complete with several properties that you can manipulate via JavaScript.
 
@@ -214,7 +214,7 @@ myAudio.pause();
 
 ### canPlayType
 
-Asks the browser whether a certain audio file type is supported. 
+```canPlayType``` asks the browser whether a certain audio file type is supported. 
 
 It takes an Internet Media Type as a parameter and returns one of three values:
 
@@ -232,6 +232,20 @@ if (myAudio.canPlayType('audio/mpeg')) {
 
 In practice, we usually check if the result is truthy or falsey. Non empty strings are truthy.
 
-> Note that very early specs specified that the browser should return "no" instead of empty string. Thankfully the number of people using these browsers are few and far between.
+> Note - very early specs specified that the browser should return "no" instead of empty string. Thankfully the number of people using these browsers are few and far between.
+
+### currentTime
+
+```play``` does not take a parameter so we need to set the point to play from separately using the ```currentTime``` property. If not set the default is zero.
+
+We can get ```currentTime``` as well as set. The value is number that specifies the time in seconds.
+
+`````javascript
+if (myAudio.currentTime > 5) {
+  myAudio.currentTime = 3;
+}
+`````
+
+
 
 
