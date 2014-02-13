@@ -111,7 +111,7 @@ The ```preload``` attribute allows you to specify a preference for how the brows
 
 ### controls
 
-As mentioned above ``controls`` is an attribute that we specify when we require the browser to provide us with a play-back controls.
+Mentioned above, ``controls`` is an attribute that we specify when we require the browser to provide us with a play-back controls.
 
 `````html
 <audio controls>
@@ -121,7 +121,7 @@ As mentioned above ``controls`` is an attribute that we specify when we require 
 
 ### src
 
-As mentioned above you can use the ```<source>``` element to specify one or more source audio files. Alternatively you can use the src attribute directly within the ```<audio>``` tag to specify a single source file.
+Mentioned above, you can use the ```<source>``` element to specify one or more source audio files. Alternatively you can use the src attribute directly within the ```<audio>``` tag to specify a single source file.
 
 `````html
 <audio src="audiofile.mp3">
@@ -129,6 +129,15 @@ As mentioned above you can use the ```<source>``` element to specify one or more
 </audio>
 `````
 
+### type
+
+Mentioned above, to be sure that the browser knows what type of file is being specified, it's good practice to specify a type with the src attribute. The type attribute specifies the MIME type or Internet Media Type of the file.
+
+`````html
+<audio src="audiofile.mp3" type="audio/mpeg">
+  ...
+</audio>
+`````
 
 
 Fallbacks
@@ -144,6 +153,25 @@ Manipulating Audio Properties with JavaScript
 ---------------------------------------------
 
 In addition to being able to specify various attributes in HTML, the audio element comes complete with several properties that you can manipulate via JavaScript.
+
+You can grab the element from the HTML in the usual way given:
+
+`````html
+<audio id="my-audio" src="audiofile.mp3">
+  ...
+</audio>
+`````
+
+If audio element is defined in HTML you can grab it with:
+
+`````javascript
+var myAudio = document.getElementById('my-audio');
+`````
+otherwise you can create a new one:
+
+`````javascript
+var myAudio = document.createElement('audio');
+`````
 
 
 ### play
