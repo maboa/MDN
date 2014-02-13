@@ -188,7 +188,8 @@ alert('stop');
 
 myAudio.pause();
 
-// play from 5 seconds in
+alert('play from 5 seconds in');
+
 myAudio.currentTime = 5; 
 myAudio.play();
 
