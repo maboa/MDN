@@ -154,7 +154,7 @@ Manipulating Audio Properties with JavaScript
 
 In addition to being able to specify various attributes in HTML, the audio element comes complete with several properties that you can manipulate via JavaScript.
 
-You can grab the element from the HTML in the usual way given:
+Given the following HTML:
 
 `````html
 <audio id="my-audio" src="audiofile.mp3">
@@ -162,20 +162,47 @@ You can grab the element from the HTML in the usual way given:
 </audio>
 `````
 
-If audio element is defined in HTML you can grab it with:
+you can grab the audio element like this:
 
 `````javascript
 var myAudio = document.getElementById('my-audio');
 `````
-otherwise you can create a new one:
+Alternatively you can create a new one. Here's an example of creating an audio element, setting the media, playing, pausing and playing from a certain time:
 
 `````javascript
 var myAudio = document.createElement('audio');
+
+if (myAudio.canPlayType('audio/mpeg')) {
+  myAudio.setAttribute('src','audiofile.mp3');
+  myAudio.setAttribute('type','audio/mpeg');
+}
+
+if (myAudio.canPlayType('audio/ogg')) {
+  myAudio.setAttribute('src','audiofile.ogg);
+  myAudio.setAttribute('type','audio/ogg');
+}
+
+alert('play');
+
+myAudio.play();
+
+alert('stop');
+
+myAudio.pause();
+
+myAudio.currentTime(5); // play from 5 seconds in
+
+myAudio.play();
+
 `````
 
 
 ### play
 
+The ```play``` method is used to tell the audio to play.
 
+`````javascript
+var myAudio = document.createElement('audio');
+`````
 
 
