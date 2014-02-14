@@ -254,7 +254,60 @@ The ```volume``` property allows us to set the audio volume. You specify a numbe
 `````javascript
 // set the volume at 50%
 myAudio.volume = 0.5;
+
 `````
+
+Creating your own Audio Player
+------------------------------
+
+The JavaScript API allows you to create your own custom player. Let's take a look at a very minimal example. We can combine HTML and JavaScript to create a very simple player with a play and a pause button.
+
+We can set up the audio in the HTML, without the controls attribute, since we create our own controls.
+
+`````html
+<audio controls>
+  <source src="audiofile.mp3" type="audio/mpeg">
+  <source src="audiofile.ogg" type="audio/ogg">
+  <!-- place fallback here as <audio> supporting browsers will ignore it -->
+  <a href="audiofile.mp3">audiofile.mp3</a>
+</audio>
+
+<!-- we create our play and pause button next -->
+<a id="play" href="#">play</a>
+<a id="pause" href="#">pause</a>
+`````
+
+Next we attach some functionality to the player using JavaScript:
+
+`````javascript
+window.onload = function(){ 
+
+  var myAudio = document.getElementById('my-audio');
+  var play = document.getElementById('play');
+  var pause = document.getElementById('pause');
+
+  // associate functions with the 'onclick' events
+
+  play.onclick = playAudio;
+  pause.onclick = pauseAudio;
+
+  function playAudio() {
+    myAudio.play();
+  }
+
+  function pauseAudio() { 
+   myAudio.pause();
+  }
+
+}
+
+`````
+
+
+
+Media Events
+------------
+
 
 
 
