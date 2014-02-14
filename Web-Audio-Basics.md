@@ -265,7 +265,7 @@ The JavaScript API allows you to create your own custom player. Let's take a loo
 We can set up the audio in the HTML, without the controls attribute, since we create our own controls.
 
 `````html
-<audio controls>
+<audio id="my-audio">
   <source src="audiofile.mp3" type="audio/mpeg">
   <source src="audiofile.ogg" type="audio/ogg">
   <!-- place fallback here as <audio> supporting browsers will ignore it -->
@@ -287,7 +287,6 @@ window.onload = function(){
   var pause = document.getElementById('pause');
 
   // associate functions with the 'onclick' events
-
   play.onclick = playAudio;
   pause.onclick = pauseAudio;
 
@@ -308,6 +307,73 @@ window.onload = function(){
 Media Events
 ------------
 
+Above we have shown how you can create a very simple audio player, but what if we want to show progress, buffering and only activate the buttons when the media is ready to play? Fortunately there are a whole bunch of events we can use to let our player know exactly what is happening.
+
+First let's take a look at the media loading process in order:
+
+### loadstart
+The ```loadstart``` event tell us simply that load process has started and the browser is connecting to the media.
+`````javascript
+myAudio.addEventListener("loadstart", function() {
+  //grabbing the file
+});
+`````
+
+### durationchange
+If you just want to know as soon as the duration of your media is established, this is the event for you. This can be useful because the initial value for duration is ```NaN``` (Not a Number) which you probably don't want to display.
+
+`````javascript
+myAudio.addEventListener("durationchange", function() {
+  //you can display the duration now
+});
+`````
+
+### loadedmetadata
+Metadata can consist of more than just duration, if you want to wait for all the metadata to download before doing something, you can detect the ```loadedmetadata``` event.
+
+`````javascript
+myAudio.addEventListener("loadedmetadata", function() {
+  //you can display the duration now
+});
+`````
+
+### loaded
+The ```loaded``` event is fired when the first bit of media arrives. The playhead is in position but not quite ready to play.
+
+`````javascript
+myAudio.addEventListener("loaded", function() {
+  //you could display the playhead now
+});
+`````
+
+### progress
+The ```progress``` event indicates that the download of media is still in progress. It may be good practice to display some kind of 'loader' at this point.
+
+`````javascript
+myAudio.addEventListener("progress", function() {
+  // you could let the user know the media is downloading
+});
+`````
+
+### canplay
+
+```canplay``` is a useful event to detect should you want to determine whether the media ia ready to play. You could for example disable custom controls until this event occurs.
+
+`````javascript
+myAudio.addEventListener("canplay", function() {
+  //audio is ready to play
+});
+`````
+
+### canplaythrough
+
+```canplaythrough``` is similar to ```canplay``` but it lets you know that the media is ready to be played all the way through (that is to say that the file has completely downloaded or is estimated that it will download in time so that buffering stops do not occur).
+
+`````javascript
+myAudio.addEventListener("canplaythrough", function() {
+  //audio is ready to play all the way through
+});
+`````
 
 
 
