@@ -304,8 +304,8 @@ window.onload = function(){
 
 
 
-Media Events
-------------
+Media Loading Events
+--------------------
 
 Above we have shown how you can create a very simple audio player, but what if we want to show progress, buffering and only activate the buttons when the media is ready to play? Fortunately there are a whole bunch of events we can use to let our player know exactly what is happening.
 
@@ -378,6 +378,35 @@ myAudio.addEventListener("canplaythrough", function() {
 To recap, the order of the media loading events are:
 
 ```loadstart``` > ```durationchange``` > ```loadedmetadata``` > ```loadeddata``` > ```progress``` > ```canplay``` > ```canplaythrough```
+
+We also have a few events that will fire in the case that there is some kind of interuption to the media loading process.
+
+### suspend
+
+Media data is no longer being fetched even though the file has not been entirely downloaded.
+
+### abort
+
+Media data download has been aborted but not due to an error.
+
+### error
+
+An error is encountered while media data is being download.
+
+### emptied
+
+The media buffer has been emptied, possibly due to an error or because the load() method was invoked to reload it.
+
+### stalled
+
+Media data is unexpectedly no longer available.
+
+
+
+Media Playing Events
+--------------------
+
+
 
 
 
