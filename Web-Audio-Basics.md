@@ -406,7 +406,22 @@ Media data is unexpectedly no longer available.
 Media Playing Events
 --------------------
 
+We also have another set of events that are useful for reacting to the state of the media playback.
 
+### timeupdate
+
+The ```timeupdate``` event is fired every time the ```currentTime``` property changes. In practice this occurs every 250 milliseconds. This event can be used to trigger the displaying of playback progress.
+
+`````javascript
+myAudio.addEventListener("timeupdate", function() {
+  //update something related to playback progress
+});
+
+### ```play```
+
+The ```play``` event is fired after the ```play()``` method is called by user interaction.
+
+### ```playing``` event is fired when the ```play()``` method is called by the browser, ie autoplay or restarting after a loop.
 
 
 
