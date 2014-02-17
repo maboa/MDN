@@ -416,6 +416,7 @@ The ```timeupdate``` event is fired every time the ```currentTime``` property ch
 myAudio.addEventListener("timeupdate", function() {
   //update something related to playback progress
 });
+`````
 
 ### ```play```
 
