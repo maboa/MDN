@@ -422,7 +422,9 @@ myAudio.addEventListener("timeupdate", function() {
 
 The ```play``` event is fired after the ```play()``` method is called by user interaction.
 
-### ```playing``` event is fired when the ```play()``` method is called by the browser, ie autoplay or restarting after a loop.
+### ```playing``` 
+
+The ```playing``` event is fired when the ```play()``` method is called by the browser, ie autoplay or restarting after a loop.
 
 
 
