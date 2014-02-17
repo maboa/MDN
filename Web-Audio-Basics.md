@@ -375,5 +375,9 @@ myAudio.addEventListener("canplaythrough", function() {
 });
 `````
 
+To recap, the order of the media loading events are:
+
+```loadstart > durationchange > loadedmetadata > loadeddata > progress > canplay > canplaythrough```
+
 
 
