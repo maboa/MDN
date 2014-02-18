@@ -295,7 +295,7 @@ window.onload = function(){
   }
 
   function pauseAudio() { 
-   myAudio.pause();
+    myAudio.pause();
   }
 
 }
@@ -458,10 +458,17 @@ An Audio Player with Feedback
 Consider this snippet of HTML:
 
 `````html
+<audio id="my-audio">
+  <source src="http://jPlayer.org/audio/mp3/Miaow-07-Bubble.mp3" type="audio/mpeg">
+  <source src="http://jPlayer.org/audio/ogg/Miaow-07-Bubble.ogg" type="audio/ogg">
+  <!-- place fallback here as <audio> supporting browsers will ignore it -->
+  <a href="audiofile.mp3">audiofile.mp3</a>
+</audio>
+
 <div id="controls">
-  Loading ...
-  <a href="#" style="display:none" >play</a>
-  <a href="#" style="display:none" >pause</a>
+  <span id="loading">loading</span>
+  <a id="play" href="#" style="display:none">play</a>
+  <a id="pause" href="#" style="display:none" >pause</a>
 </div>
 <div id="progress">
   <div id="bar"></div>
@@ -487,9 +494,49 @@ Styled like so:
 #bar {
    height: 20px;
    background-color: green;
+   width: 0;
 }
 
 `````
 
+Now let's wire thing up with JavaScript:
 
+`````javascript
+
+window.onload = function(){ 
+
+  var myAudio = document.getElementById('my-audio');
+  var play = document.getElementById('play');
+  var pause = document.getElementById('pause');
+  var loading = document.getElementById('loading');
+  var bar = document.getElementById('bar');
+
+  // check that the media is ready before displaying the controls
+  if (myAudio.paused) {
+    loading.style.display = "none";
+    play.style.display = "block";
+  }
+  
+  play.addEventListener('click', function() {
+    myAudio.play();
+    play.style.display = "none";
+    pause.style.display = "block";
+  });
+  
+  pause.addEventListener('click', function() {
+    myAudio.pause();
+    pause.style.display = "none";
+    play.style.display = "block";
+  });
+  
+  // display progress
+  
+  myAudio.addEventListener('timeupdate', function() {
+    //sets the percentage
+    bar.style.width = parseInt(((myAudio.currentTime / myAudio.duration) * 100), 10) + "%";
+  });
+
+}
+
+`````
 
