@@ -455,4 +455,41 @@ The ```volumechange``` event signifies that the volume has changed and that incl
 An Audio Player with Feedback
 -----------------------------
 
+Consider this snippet of HTML:
+
+`````html
+<div id="controls">
+  Loading ...
+  <a href="#" style="display:none" >play</a>
+  <a href="#" style="display:none" >pause</a>
+</div>
+<div id="progress">
+  <div id="bar"></div>
+</div>
+
+`````
+
+Styled like so:
+
+`````css
+#controls
+{
+   width: 80px;
+   float: left;
+}
+    
+#progress
+{
+   margin-left: 80px;
+   border: 1px solid black;
+}
+
+#bar {
+   height: 20px;
+   background-color: green;
+}
+
+`````
+
+
 
