@@ -548,4 +548,6 @@ Now let's wire thing up with JavaScript:
   }
 
 `````
-
+ You should up with something like this:
+ 
+ <a class="jsbin-embed" href="http://jsbin.com/hunujiru/1/embed?output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
