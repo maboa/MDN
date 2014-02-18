@@ -418,13 +418,41 @@ myAudio.addEventListener("timeupdate", function() {
 });
 `````
 
-### ```play```
 
-The ```play``` event is fired after the ```play()``` method is called by user interaction.
+### playing 
 
-### ```playing``` 
+The ```playing``` event is fired when playback is ready to start after having being paused due to lack of media data.
 
-The ```playing``` event is fired when the ```play()``` method is called by the browser, ie autoplay or restarting after a loop.
+### waiting
 
+The ```waiting``` event is fired when playback has stopped due to lack of media data, although it is expected to resume once datat becomes available.
+
+### play
+
+The ```play``` event is fired after the ```play()``` method is returned or when the autoplay attribute has caused playback to begin. In short when the state switches from paused to playing.
+
+
+### pause
+
+The ```pause``` event is fired after the ```pause()``` method is returned. In short when the states switches from playing to paused.
+
+
+### ended
+
+The ```ended``` event is fired when the end of the media is reached.
+
+`````javascript
+myAudio.addEventListener("ended", function() {
+  //do something once audio track has finished playing
+});
+`````
+
+### volumechange
+
+The ```volumechange``` event signifies that the volume has changed and that includes being muted.
+
+
+An Audio Player with Feedback
+-----------------------------
 
 
