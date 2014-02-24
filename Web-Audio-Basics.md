@@ -578,7 +578,7 @@ Then we add the code that detects the click and moves the 'playhead' to the corr
       var clickPosition = (e.x  - this.offsetLeft) / this.offsetWidth;
       var clickTime = clickPosition * myAudio.duration;
 
-      // figure out where to play from
+      // move the playhead to the correct position
       myAudio.currentTime = clickTime;
     });
 
