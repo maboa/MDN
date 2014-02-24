@@ -499,7 +499,7 @@ Styled like so:
 
 `````
 
-Now let's wire thing up with JavaScript:
+Now let's wire this thing up with JavaScript:
 
 `````javascript
 
