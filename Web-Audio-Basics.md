@@ -567,14 +567,14 @@ Now let's wire this thing up with JavaScript:
 }
 
 `````
-Then we add the code that detects the click and moves the 'playhead' to the corect position:
+Then we add the code that detects the click and moves the 'playhead' to the correct position:
 
 `````javascript
     var progress = document.getElementById('progress');
 
     progress.addEventListener('click', function(e) {
       
-      // calculate the normalized value clicked on
+      // calculate the normalized position clicked
       var clickPosition = (e.x  - this.offsetLeft) / this.offsetWidth;
       var clickTime = clickPosition * myAudio.duration;
 
