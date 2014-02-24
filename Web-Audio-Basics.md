@@ -556,6 +556,33 @@ Now let's wire this thing up with JavaScript:
  
  This is a good start, but it would be nice to be able to navigate the audio using the progress bar. Fortunately this isn't too difficult to implement.
  
+ A quick update to the progress bar CSS to display the hand pointer on hover:
+ 
+ `````css
+#progress
+{
+   margin-left: 80px;
+   border: 1px solid black;
+   cursor: pointer;
+}
+
+`````
+Then we add the code that detects the click and moves the 'playhead' to the corect position:
+
+`````javascript
+    var progress = document.getElementById('progress');
+
+    progress.addEventListener('click', function(e) {
+      
+      // calculate the normalized value clicked on
+      var clickPosition = (e.x  - this.offsetLeft) / this.offsetWidth;
+      var clickTime = clickPosition * myAudio.duration;
+
+      // figure out where to play from
+      myAudio.currentTime = clickTime;
+    });
+
+`````
  
  
  
