@@ -583,6 +583,15 @@ Then we add the code that detects the click and moves the 'playhead' to the corr
     });
 
 `````
- 
+
+Ok we're getting there, but there is another piece of useful information we can display and that is the amount of audio has been buffered or downloaded in advance.
+
+### Buffering, Seeking, and Time Ranges
+
+
+
+
+
+
  
  
