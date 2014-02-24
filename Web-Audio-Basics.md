@@ -586,10 +586,21 @@ Then we add the code that detects the click and moves the 'playhead' to the corr
 
 Ok we're getting there, but there is another piece of useful information we can display and that is the amount of audio has been buffered or downloaded in advance.
 
-### Buffering, Seeking, and Time Ranges
+Buffering, Seeking and Time Ranges
+----------------------------------
 
+There are a couple of attributes we haven't looked at yet.
 
+### buffered
 
+This method lets us know which parts of the audio has been buffered (downloaded in advance). It returns something called a TimeRanges object.
+
+`````javascript
+myBufferedTime = myAudio.buffered;
+
+`````
+
+### seekable
 
 
 
