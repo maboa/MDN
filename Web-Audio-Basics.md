@@ -596,11 +596,16 @@ There are a couple of attributes we haven't looked at yet, ```buffered``` and ``
 This method lets us know which parts of the audio has been buffered (downloaded in advance). It returns something called a TimeRanges object.
 
 `````javascript
-myBufferedTime = myAudio.buffered;
+myBufferedTimeRanges = myAudio.buffered;
 
 `````
 
 ### seekable
+
+`````javascript
+mySeekableTimeRanges = myAudio.seekable;
+
+`````
 
 The ```seekable``` method informs you of whether you can jump directly to that part of the media without further buffering.
 
