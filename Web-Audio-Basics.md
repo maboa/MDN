@@ -586,10 +586,10 @@ Then we add the code that detects the click and moves the 'playhead' to the corr
 
 Ok we're getting there, but there is another piece of useful information we can display and that is the amount of audio has been buffered or downloaded in advance.
 
-Buffering, Seeking and Time Ranges
-----------------------------------
+Buffering
+---------
 
-There are a couple of attributes we haven't looked at yet.
+There are a couple of attributes we haven't looked at yet, ```buffered``` and ```seekable```.
 
 ### buffered
 
@@ -602,6 +602,11 @@ myBufferedTime = myAudio.buffered;
 
 ### seekable
 
+The ```seekable``` method informs you of whether you can jump directly to that part of the media without further buffering.
+
+We are going to concentrate on buffered and build a buffering progress bar into our player but for more detail see the article on Buffering, Seeking and Time Ranges.
+
+Both ```buffered``` and ```seekable``` return a TimeRanges object. Simply put a TimeRanges object contains an array of Time Ranges that have been buffered, each of which contain a start and an end, for th purposes if this player we just want to find out where the end of the last time range is and to establish this we will use ```myAudio.buffered.end```.
 
 
  
