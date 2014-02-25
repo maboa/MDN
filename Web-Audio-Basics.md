@@ -613,6 +613,17 @@ We are going to concentrate on buffered and build a buffering progress bar into 
 
 Both ```buffered``` and ```seekable``` return a ```TimeRanges``` object. Simply put a TimeRanges object contains an array of Time Ranges that have been buffered, each of which contain a start and an end, for th purposes if this player we just want to find out where the end of the last time range is and to establish this we will use ```myAudio.buffered.end(myAudio.length - 1)```.
 
+So let's add another bar to indicate the amount of media buffered.
+
+`````css
+#buffered {
+   height: 5px;
+   background-color: blue;
+   width: 0;
+}
+
+`````
+
 
  
  
