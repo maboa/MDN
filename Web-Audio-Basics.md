@@ -550,7 +550,7 @@ Now let's wire this thing up with JavaScript:
 `````
  You should up with something like this:
  
-![simple audio player](https://github.com/maboa/MDN/blob/master/images/audioplayer.png)
+![simple audio player](https://raw.github.com/maboa/MDN/master/images/audioplayer.png)
  
  This is a good start, but it would be nice to be able to navigate the audio using the progress bar. Fortunately this isn't too difficult to implement.
  
