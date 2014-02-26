@@ -575,7 +575,7 @@ Then we add the code that detects the click and moves the 'playhead' to the corr
     progress.addEventListener('click', function(e) {
       
       // calculate the normalized position clicked
-      var clickPosition = (e.x  - this.offsetLeft) / this.offsetWidth;
+      var clickPosition = (e.pageX  - this.offsetLeft) / this.offsetWidth;
       var clickTime = clickPosition * myAudio.duration;
 
       // move the playhead to the correct position
