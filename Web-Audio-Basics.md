@@ -624,6 +624,22 @@ So let's add another bar to indicate the amount of media buffered.
 
 `````
 
+The next move is to check ```myAudio.buffered.end(myAudio.length - 1)```. Remember ```buffered``` returns an array of TimeRanges so we want to access the end time to display the amount of audio buffered so far.
+
+Our ```timeUpdate``` event handler then becomes:
+
+`````javascript
+    var buffered = document.getElementById('buffered');
+    
+    myAudio.addEventListener('timeupdate', function() {
+      //sets the bar to the percentage played
+      bar.style.width = parseInt(((myAudio.currentTime / myAudio.duration) * 100), 10) + "%";
+
+      //sets buffered bar to percentage buffered
+      buffered.style.width = parseInt(((myAudio.buffered.end(myAudio.buffered.length - 1) / myAudio.duration) * 100), 10) + "%";
+    });
+
+`````
 
  
  
