@@ -71,6 +71,9 @@ Audio Codec Support
 | Android 2.3+             | ✓   | ✓      | ✓   | ✓       |        |
 
 
+We are at the stage where nearly all browsers support MP3 for more details visit this page on [media format browser compatibility](https://developer.mozilla.org/en-US/docs/HTML/Supported_media_formats#Browser_compatibility).
+
+
 Priming Audio with HTML Attributes
 ----------------------------------
 
