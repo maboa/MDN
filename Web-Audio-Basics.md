@@ -639,5 +639,8 @@ Our ```timeUpdate``` event handler then becomes:
 
 `````
 
+Here we can see a version of the audio player with the audio fully buffered.
+
+![simple audio player with buffered bar](https://raw.github.com/maboa/MDN/master/images/audioplayer2.png)
  
  
