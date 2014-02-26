@@ -550,9 +550,7 @@ Now let's wire this thing up with JavaScript:
 `````
  You should up with something like this:
  
- (insert image here)
- 
- <a class="jsbin-embed" href="http://jsbin.com/hunujiru/1/embed?output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+![simple audio player](https://github.com/maboa/MDN/blob/master/images/audioplayer.png)
  
  This is a good start, but it would be nice to be able to navigate the audio using the progress bar. Fortunately this isn't too difficult to implement.
  
