@@ -50,7 +50,7 @@ It may help to visualize them:
 
 | 0                     5  | Ogg | MP3    | AAC | PCM     | Opus   | 
 | ------------------------ | --- | ------ | --- | ------- | ------ |
-| Firefox 3.5+             | ✓   | ✓ *26+ |     | ✓       | ✓ *14+ |
+
 
 
 
