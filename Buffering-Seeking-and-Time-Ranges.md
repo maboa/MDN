@@ -49,7 +49,7 @@ Without any user interaction there is usually only one time range, but conceivab
 It may help to visualize them:
 
 ------------------------------------------------------
-|=============|                    |===========|     |
+| =========== |                    | ========= |     |
 ------------------------------------------------------
 
 
