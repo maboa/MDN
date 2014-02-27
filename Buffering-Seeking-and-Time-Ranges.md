@@ -59,11 +59,11 @@ Imagine the above diagram represents two buffered time ranges - one spanning 0 t
 
 `````javascript
 
-console.log( myAudio.buffered.length );   // returns 2
-console.log( myAudio.buffered.start(0) ); // returns 0
-console.log( myAudio.buffered.end(0) );   // returns 5
-console.log( myAudio.buffered.start(1) ); // returns 15
-console.log( myAudio.buffered.end(1) );   // returns 19
+myAudio.buffered.length;   // returns 2
+myAudio.buffered.start(0); // returns 0
+myAudio.buffered.end(0);   // returns 5
+myAudio.buffered.start(1); // returns 15
+myAudio.buffered.end(1);   // returns 19
 
 `````
 
