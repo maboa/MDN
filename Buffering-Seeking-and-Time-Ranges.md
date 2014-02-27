@@ -22,9 +22,7 @@ we can access these attributes like so:
 `````javascript
 var myAudio = document.getElementById('my-audio');
 
-
 var bufferedTimeRanges = myAudio.buffered;
-
 
 `````
 
