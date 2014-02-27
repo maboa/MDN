@@ -48,7 +48,7 @@ Without any user interaction there is usually only one time range, but conceivab
 
 It may help to visualize them:
 
-| Desktop Browser   | Version |           |   |
+| Desktop Browser   | Version | a         | a |
 | ----------------- | ------- | --------- | - |
 | Chrome            | 4+      |           |   |
 
