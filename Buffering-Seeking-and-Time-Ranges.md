@@ -43,7 +43,7 @@ A TimeRanges Object consists of the following properties:
 - ```start(index)``` - start time in seconds of a time range
 - ```end(index)``` - end time in seconds of a time range
 
-Without any user interaction there is usually only one time range, but conceivably if you jump about in the media, more than one time range can appear.
+Without any user interaction there is usually only one time range, but if you jump about in the media, more than one time range can appear.
 
 
 It may help to visualize them:
@@ -55,7 +55,17 @@ It may help to visualize them:
 0             5                    15          19    21
 `````
 
+Imagine the above diagram represents two buffered time ranges - one spanning 0 to 5 seconds and the second spanning 15 to 19 seconds.
 
+`````javascript
+
+console.log( myAudio.buffered.length );   // returns 2
+console.log( myAudio.buffered.start(0) ); // returns 0
+console.log( myAudio.buffered.end(0) );   // returns 5
+console.log( myAudio.buffered.start(1) ); // returns 15
+console.log( myAudio.buffered.end(1) );   // returns 19
+
+`````
 
 
 
