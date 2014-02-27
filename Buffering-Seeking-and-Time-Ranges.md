@@ -48,9 +48,9 @@ Without any user interaction there is usually only one time range, but conceivab
 
 It may help to visualize them:
 
-| Desktop Browser   | Version |
-| ----------------- | ------- |
-| Chrome            | 4+      |
+| Desktop Browser   | Version |           |   |
+| ----------------- | ------- | --------- | - |
+| Chrome            | 4+      |           |   |
 
 
 | xxxxxxxxxxx | y              | xxxxxxxxx | y  |
