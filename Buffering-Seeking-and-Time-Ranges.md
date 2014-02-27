@@ -112,6 +112,8 @@ and a little bit of JavaScript:
 
 `````
 
+![buffered TimeRanges displayed](https://raw.github.com/maboa/MDN/master/images/bufferedtimeranges.png)
+
 
 Seekable
 --------
