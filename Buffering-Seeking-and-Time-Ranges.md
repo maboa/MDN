@@ -35,7 +35,24 @@ var seekableTimeRanges = myAudio.seekable;
 TimeRanges Object
 -----------------
 
-TimeRanges are a series of non-overlapping ranges of time with start and stop times. More about (TimeRanges)[https://developer.mozilla.org/en-US/docs/Web/API/TimeRanges]
+TimeRanges are a series of non-overlapping ranges of time with start and stop times. More about [TimeRanges](https://developer.mozilla.org/en-US/docs/Web/API/TimeRanges)
+
+A TimeRanges Object consists of the following properties:
+
+- ```length``` - number of time ranges
+- ```start(index)``` - start time in seconds of a time range
+- ```end(index)``` - end time in seconds of a time range
+
+Without any user interaction there is usually only one time range, but conceivably if you jump about in the media, more than one time range can appear.
+
+
+It may help to visualize them:
+
+------------------------------------------------------
+|=============|                    |===========|     |
+------------------------------------------------------
+
+
 
 
 
