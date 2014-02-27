@@ -67,13 +67,14 @@ To try out and visualize buffered ```TimeRanges``` we can write a little bit of 
 
 `````HTML
 <p>
-<audio id="my-audio" controls>
-  <source src="music.mp3" type="audio/mpeg">
-</audio>
+  <audio id="my-audio" controls>
+    <source src="http://hyperaud.io/lab/ha-examples/kmi/TracyMurphy.mp3" type="audio/mpeg">
+    <source src="http://jPlayer.org/audio/ogg/Miaow-07-Bubble.ogg" type="audio/ogg">
+  </audio>
 </p>
 <p>
-<canvas id="my-canvas" width="300" height="20">
-</canvas>
+  <canvas id="my-canvas" width="300" height="20">
+  </canvas>
 </p>
 
 `````
