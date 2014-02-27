@@ -8,10 +8,6 @@ Buffered
 
 The ```buffered``` attribute will tell us which parts of the media has been downloaded. It returns a ```TimeRanges``` object which will tell us which chunks of media have been downloaded. This is usually contiguous but if the user jumps about while media is buffering, it may contain holes.
 
-Seekable
---------
-
-The ```seekable``` attribute returns a ```TimeRanges``` object and tells use which parts of the media can be played without delay, this is irrespective of whether that part has been downloaded or not. Some parts of media may be seekable but not buffered if byte-range requests are enabled on the server. Byte-range requests allow parts of the media file to be delivered from the server and so can be ready to play almost immediately - thus seekable.
 
 Consider we have created an audio element, 
 
@@ -28,7 +24,7 @@ var myAudio = document.getElementById('my-audio');
 
 
 var bufferedTimeRanges = myAudio.buffered;
-var seekableTimeRanges = myAudio.seekable;
+
 
 `````
 
@@ -67,6 +63,64 @@ myAudio.buffered.end(1);   // returns 19
 
 `````
 
+To try out and visualize buffered ```TimeRanges``` we can write a little bit of HTML:
+
+`````HTML
+<p>
+<audio id="my-audio" controls>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+</p>
+<p>
+<canvas id="my-canvas" width="300" height="20">
+</canvas>
+</p>
+
+`````
+
+and a little bit of JavaScript:
+
+````` javascript
+  window.onload = function(){ 
+
+    var myAudio = document.getElementById('my-audio');
+    var myCanvas = document.getElementById('my-canvas');
+    var context = myCanvas.getContext('2d');
+
+    context.fillStyle = 'lightgray';
+    context.fillRect(0, 0, myCanvas.width, 20);
+    context.fillStyle = 'red';
+    context.strokeStyle = 'white';
+    
+    var inc = myCanvas.width / myAudio.duration;
+
+    // display TimeRanges
+    
+    myAudio.addEventListener('seeked', function() {
+      for (i = 0; i < myAudio.buffered.length; i++) {
+
+        var startX = myAudio.buffered.start(i) * inc;
+        var endX = myAudio.buffered.end(i) * inc;
+
+        context.fillRect(startX, 0, endX, 20);
+        context.rect(startX, 0, endX, 20);
+        context.stroke();
+      }
+    });
+  }
+
+`````
+
+
+Seekable
+--------
+
+The ```seekable``` attribute returns a ```TimeRanges``` object and tells use which parts of the media can be played without delay, this is irrespective of whether that part has been downloaded or not. Some parts of media may be seekable but not buffered if byte-range requests are enabled on the server. Byte-range requests allow parts of the media file to be delivered from the server and so can be ready to play almost immediately - thus seekable.
+
+`````javascript
+var seekableTimeRanges = myAudio.seekable;
+
+`````
 
 
 
