@@ -53,9 +53,9 @@ It may help to visualize them:
 | Chrome            | 4+      |
 
 
-| =========== |                | ========= |    |
+| xxxxxxxxxxx | y              | xxxxxxxxx | y  |
 | ----------- | -------------- | --------- | -- |
-|             |                |           |    |
+| xxxxx       | xxx            | s         |    |
 
 
 
