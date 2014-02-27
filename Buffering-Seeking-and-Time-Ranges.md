@@ -68,8 +68,7 @@ To try out and visualize buffered ```TimeRanges``` we can write a little bit of 
 `````HTML
 <p>
   <audio id="my-audio" controls>
-    <source src="http://hyperaud.io/lab/ha-examples/kmi/TracyMurphy.mp3" type="audio/mpeg">
-    <source src="http://jPlayer.org/audio/ogg/Miaow-07-Bubble.ogg" type="audio/ogg">
+    <source src="music.mp3" type="audio/mpeg">
   </audio>
 </p>
 <p>
@@ -111,6 +110,8 @@ and a little bit of JavaScript:
   }
 
 `````
+
+This works better with longer pieces of audio or video, but press play and click about the player progress bar and you should get something like this. Each red filled white rectangle represents a time range.
 
 ![buffered TimeRanges displayed](https://raw.github.com/maboa/MDN/master/images/bufferedtimeranges.png)
 
