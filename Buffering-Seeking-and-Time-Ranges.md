@@ -48,14 +48,9 @@ Without any user interaction there is usually only one time range, but conceivab
 
 It may help to visualize them:
 
-| Desktop Browser   | Version | a         | a |
-| ----------------- | ------- | --------- | - |
-| Chrome            | 4+      |           |   |
-
-
-| xxxxxxxxxxx | y              | xxxxxxxxx | y  |
-| ----------- | -------------- | --------- | -- |
-| xxxxx       | xxx            | s         |    |
+| 0                     5  | Ogg | MP3    | AAC | PCM     | Opus   | 
+| ------------------------ | --- | ------ | --- | ------- | ------ |
+| Firefox 3.5+             | ✓   | ✓ *26+ |     | ✓       | ✓ *14+ |
 
 
 
