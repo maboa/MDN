@@ -663,5 +663,16 @@ Our ```timeUpdate``` event handler then becomes:
 Here we can see a version of the audio player with the audio fully buffered.
 
 ![simple audio player with buffered bar](https://raw.github.com/maboa/MDN/master/images/audioplayer2.png)
- 
+
+There are also a few events related to buffering:
+
+### seeking
+
+The ```seeking``` event is fired when media is being sought.
+
+### seeked
+
+```seeked``` occurs when the ```seeking``` attribute changes to false.
+
+More information on Buffering, Seekable and Time Ranges
  
