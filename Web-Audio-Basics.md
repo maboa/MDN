@@ -674,5 +674,5 @@ The ```seeking``` event is fired when media is being sought.
 
 ```seeked``` occurs when the ```seeking``` attribute changes to false.
 
-More information on Buffering, Seekable and Time Ranges
+More information on [Buffering, Seeking and Time Ranges](https://github.com/maboa/MDN/blob/master/Buffering-Seeking-and-Time-Ranges.md)
  
