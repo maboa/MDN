@@ -29,7 +29,7 @@ var bufferedTimeRanges = myAudio.buffered;
 TimeRanges Object
 -----------------
 
-TimeRanges are a series of non-overlapping ranges of time with start and stop times. More about [TimeRanges](https://developer.mozilla.org/en-US/docs/Web/API/TimeRanges)
+TimeRanges are a series of non-overlapping ranges of time, with start and stop times. More about [TimeRanges](https://developer.mozilla.org/en-US/docs/Web/API/TimeRanges)
 
 A TimeRanges Object consists of the following properties:
 
@@ -123,6 +123,19 @@ The ```seekable``` attribute returns a ```TimeRanges``` object and tells use whi
 var seekableTimeRanges = myAudio.seekable;
 
 `````
+
+Creating our own Buffering Feedback
+-----------------------------------
+
+If we wish to create our own custom player, we may want to provide feedback on how much of the media is ready to be played. In practice a good way to do this is use the seekable attribute. Although as we have seen above, seekable parts of the media are not neccessarily contiguous, they often are and we can safely approximate this information to give the user an indication of which parts of the media can be played directly. We can find this point in the media using the following line of code:
+
+`````javascript
+var seekableEnd = myAudio.seekable.end(myAudio.seekable.length - 1);
+
+`````
+
+Note : ```myAudio.seekable.end(myAudio.seekable.length - 1)``` actually tells us the end point of the last time range that is seekable (not all seekable media). In practice this is good enough, as the browser either enables range requests or it doesn't. If it doesn't then ```audio.seekable``` will be equivalent to ```audio.buffered``` which will give a valid indication of the end of seekable media.
+
 
 
 
