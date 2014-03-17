@@ -141,33 +141,33 @@ Better perhaps to give an indication of how much media has actually downloaded, 
 So let's build this:
 
 `````css
-  .buffered { 
-    height: 20px; 
-    position: relative;
-    background: #555;
-    width: 300px;
-  }
+.buffered { 
+  height: 20px; 
+  position: relative;
+  background: #555;
+  width: 300px;
+}
 
-  #buffered-amount {
-    display: block;
-    height: 100%;
-    background-color: #777;
-    width: 0;
-  }
+#buffered-amount {
+  display: block;
+  height: 100%;
+  background-color: #777;
+  width: 0;
+}
 
-  .progress { 
-    margin-top: -20px;
-    height: 20px;  
-    position: relative;
-    width: 300px;
-  }
+.progress { 
+  margin-top: -20px;
+  height: 20px;  
+  position: relative;
+  width: 300px;
+}
 
-  #progress-amount {
-    display: block;
-    height: 100%;
-    background-color: #595;
-    width: 0;
-  }
+#progress-amount {
+  display: block;
+  height: 100%;
+  background-color: #595;
+  width: 0;
+}
 `````
 
 HTML :
@@ -187,26 +187,29 @@ HTML :
 and the JavaScript :
 
 `````javascript
-  window.onload = function(){ 
+window.onload = function(){ 
 
-    var myAudio = document.getElementById('my-audio');
+  var myAudio = document.getElementById('my-audio');
 
-    myAudio.addEventListener('progress', function() {
-      var bufferedEnd = myAudio.buffered.end(myAudio.buffered.length - 1);
-      var duration =  myAudio.duration;
-      if (duration > 0) {
-        document.getElementById('buffered-amount').style.width = ((bufferedEnd / duration)*100) + "%";
-      }
-    });
+  myAudio.addEventListener('progress', function() {
+    var bufferedEnd = myAudio.buffered.end(myAudio.buffered.length - 1);
+    var duration =  myAudio.duration;
+    if (duration > 0) {
+      document.getElementById('buffered-amount').style.width = ((bufferedEnd / duration)*100) + "%";
+    }
+  });
 
-    myAudio.addEventListener('timeupdate', function() {
-      var duration =  myAudio.duration;
-      if (duration > 0) {
-        document.getElementById('progress-amount').style.width = ((myAudio.currentTime / duration)*100) + "%";
-      }
-    });
-  }
+  myAudio.addEventListener('timeupdate', function() {
+    var duration =  myAudio.duration;
+    if (duration > 0) {
+      document.getElementById('progress-amount').style.width = ((myAudio.currentTime / duration)*100) + "%";
+    }
+  });
+}
 `````
+
+this should give you results similar to this, where light gray represent the buffered progress and green the played progress:
+
 
 
 
