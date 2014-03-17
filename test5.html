@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Buffering</title>
+  <style>
+  .buffered { 
+    height: 20px; 
+    position: relative;
+    background: #555;
+    width: 300px;
+  }
+
+  #buffered-amount {
+    display: block;
+    height: 100%;
+    background-color: #777;
+    width: 0;
+  }
+
+  .progress { 
+    margin-top: -20px;
+    height: 20px;  
+    position: relative;
+    width: 300px;
+  }
+
+  #progress-amount {
+    display: block;
+    height: 100%;
+    background-color: #595;
+    width: 0;
+  }
+  </style>
+</head>
+<body>
+<audio id="my-audio" preload controls>
+  <source src="http://hyperaud.io/lab/ha-examples/kmi/TracyMurphy.mp3" type="audio/mpeg">
+</audio>
+<div class="buffered">
+  <span id="buffered-amount"></span>
+</div>
+<div class="progress">
+  <span id="progress-amount"></span>
+</div>
+<script>
+  window.onload = function(){ 
+
+    var myAudio = document.getElementById('my-audio');
+
+    myAudio.addEventListener('progress', function() {
+      var bufferedEnd = myAudio.buffered.end(myAudio.buffered.length - 1);
+      var duration =  myAudio.duration;
+      if (duration > 0) {
+        document.getElementById('buffered-amount').style.width = ((bufferedEnd / duration)*100) + "%";
+      }
+    });
+
+    myAudio.addEventListener('timeupdate', function() {
+      var duration =  myAudio.duration;
+      if (duration > 0) {
+        document.getElementById('progress-amount').style.width = ((myAudio.currentTime / duration)*100) + "%";
+      }
+    });
+  }
+</script>
+</body>
+</html>
