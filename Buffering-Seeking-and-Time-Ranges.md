@@ -210,7 +210,7 @@ window.onload = function(){
 
 this should give you results similar to this, where light gray represent the buffered progress and green the played progress:
 
-
+![buffered progress displayed](https://raw.github.com/maboa/MDN/master/images/bufferedprogress.png)
 
 
 
