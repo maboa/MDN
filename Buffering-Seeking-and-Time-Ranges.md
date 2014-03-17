@@ -208,9 +208,22 @@ window.onload = function(){
 }
 `````
 
-this should give you results similar to this, where light gray represent the buffered progress and green the played progress:
+this should give you results similar to this, where the lighter grey represents the buffered progress and green the played progress:
 
 ![buffered progress displayed](https://raw.github.com/maboa/MDN/master/images/bufferedprogress.png)
+
+
+A quick word about Played
+-------------------------
+
+It’s worth mentioning the played property. ```played``` tells us which time ranges have been played within the media. For example:
+
+`````javascript
+var played = audio.played; // returns a TimeRanges object
+`````
+
+This could be useful for analysing what parts of your media is being watched or listened to.
+
 
 
 
