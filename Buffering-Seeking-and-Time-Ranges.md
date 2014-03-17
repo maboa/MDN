@@ -1,7 +1,7 @@
 Media Buffering, Seeking and Time Ranges
 ========================================
 
-Sometimes it's useful to know how much audio or video has downloaded or is playable without delay. 
+Sometimes it's useful to know how much audio or video has downloaded or is playable without delay - a good example of this is the buffered progress bar of an audio or video player.
 
 Buffered
 --------
@@ -9,7 +9,7 @@ Buffered
 The ```buffered``` attribute will tell us which parts of the media has been downloaded. It returns a ```TimeRanges``` object which will tell us which chunks of media have been downloaded. This is usually contiguous but if the user jumps about while media is buffering, it may contain holes.
 
 
-Consider we have created an audio element, 
+This will work with video too but consider we have created an audio element, 
 
 `````html
 <audio id="my-audio" controls src="music.mp3">
