@@ -121,7 +121,6 @@ The ```seekable``` attribute returns a ```TimeRanges``` object and tells use whi
 
 `````javascript
 var seekableTimeRanges = myAudio.seekable;
-
 `````
 
 Creating our own Buffering Feedback
@@ -131,10 +130,83 @@ If we wish to create our own custom player, we may want to provide feedback on h
 
 `````javascript
 var seekableEnd = myAudio.seekable.end(myAudio.seekable.length - 1);
-
 `````
 
 Note : ```myAudio.seekable.end(myAudio.seekable.length - 1)``` actually tells us the end point of the last time range that is seekable (not all seekable media). In practice this is good enough, as the browser either enables range requests or it doesn't. If it doesn't then ```audio.seekable``` will be equivalent to ```audio.buffered``` which will give a valid indication of the end of seekable media.
+
+However if range requests are enabled this value usually becomes the duration of the media almost instantly.
+
+Better perhaps to give an indication of how much media has actually downloaded, this what the browser's native players seem to display.
+
+So let's build this:
+
+`````css
+  .buffered { 
+    height: 20px; 
+    position: relative;
+    background: #555;
+    width: 300px;
+  }
+
+  #buffered-amount {
+    display: block;
+    height: 100%;
+    background-color: #777;
+    width: 0;
+  }
+
+  .progress { 
+    margin-top: -20px;
+    height: 20px;  
+    position: relative;
+    width: 300px;
+  }
+
+  #progress-amount {
+    display: block;
+    height: 100%;
+    background-color: #595;
+    width: 0;
+  }
+`````
+
+HTML :
+
+`````html
+<audio id="my-audio" preload controls>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+<div class="buffered">
+  <span id="buffered-amount"></span>
+</div>
+<div class="progress">
+  <span id="progress-amount"></span>
+</div>
+`````
+
+and the JavaScript :
+
+`````javascript
+  window.onload = function(){ 
+
+    var myAudio = document.getElementById('my-audio');
+
+    myAudio.addEventListener('progress', function() {
+      var bufferedEnd = myAudio.buffered.end(myAudio.buffered.length - 1);
+      var duration =  myAudio.duration;
+      if (duration > 0) {
+        document.getElementById('buffered-amount').style.width = ((bufferedEnd / duration)*100) + "%";
+      }
+    });
+
+    myAudio.addEventListener('timeupdate', function() {
+      var duration =  myAudio.duration;
+      if (duration > 0) {
+        document.getElementById('progress-amount').style.width = ((myAudio.currentTime / duration)*100) + "%";
+      }
+    });
+  }
+`````
 
 
 
