@@ -61,7 +61,7 @@ Audio Codec Support
 | Firefox 3.5+             | ✓   | ✓ *26+ |     | ✓       | ✓ *14+ |
 | Safari 5+                |     | ✓      | ✓   |         |        |
 | Chrome 6+                | ✓   | ✓      | ✓   | ✓ *9+   |        |
-| Opera 10.5+              | ✓   | ✓      |     |         |        |
+| Opera 10.5+              | ✓   |        |     |         |        |
 | Internet Expolrer 9+     |     | ✓      | ✓   |         |        |
 | Firefox Mobile           | ✓   | ✓      | ✓   | ✓       | ✓      |
 | Safari iOS3+             |     | ✓      | ✓   | ✓ *4.2+ |        |
