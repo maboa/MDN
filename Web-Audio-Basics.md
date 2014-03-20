@@ -674,5 +674,11 @@ The ```seeking``` event is fired when media is being sought.
 
 ```seeked``` occurs when the ```seeking``` attribute changes to false.
 
-More information on [Buffering, Seeking and Time Ranges](https://github.com/maboa/MDN/blob/master/Buffering-Seeking-and-Time-Ranges.md)
  
+See also
+--------
+
+- [Buffering, Seeking and Time Ranges](https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/buffering_seeking_time_ranges)
+- [Media events](https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Media_events)
+- [Using HTML5 audio and video](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video)
+- [Creating a cross-browser video player](https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/cross_browser_video_player)
