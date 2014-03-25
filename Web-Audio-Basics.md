@@ -275,7 +275,7 @@ if (myAudio.canPlayType('audio/mpeg')) {
 }
 `````
 
-In practice, we usually check if the result is truthy or falsey. Non empty strings are truthy.
+In practice, we find there is little difference between ```probably``` and ```maybe``` so we usually just check if the result is truthy or falsey. (Non empty strings are truthy).
 
 > Note - very early specs specified that the browser should return "no" instead of empty string, thankfully the number of people using these browsers are few and far between.
 
