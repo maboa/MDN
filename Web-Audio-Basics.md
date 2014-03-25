@@ -655,42 +655,6 @@ mySeekableTimeRanges = myAudio.seekable;
 
 The ```seekable``` method informs you of whether you can jump directly to that part of the media without further buffering.
 
-We are going to concentrate on buffered and build a buffering progress bar into our player but for more detail see the article on Buffering, Seeking and Time Ranges.
-
-Both ```buffered``` and ```seekable``` return a ```TimeRanges``` object. Simply put a TimeRanges object contains an array of Time Ranges that have been buffered, each of which contain a start and an end, for th purposes if this player we just want to find out where the end of the last time range is and to establish this we will use ```myAudio.buffered.end(myAudio.length - 1)```.
-
-So let's add another bar to indicate the amount of media buffered.
-
-`````css
-#buffered {
-   height: 5px;
-   background-color: blue;
-   width: 0;
-}
-
-`````
-
-The next move is to check ```myAudio.buffered.end(myAudio.length - 1)```. Remember ```buffered``` returns an array of TimeRanges so we want to access the end time to display the amount of audio buffered so far.
-
-Our ```timeUpdate``` event handler then becomes:
-
-`````javascript
-    var buffered = document.getElementById('buffered');
-    
-    myAudio.addEventListener('timeupdate', function() {
-      //sets the bar to the percentage played
-      bar.style.width = parseInt(((myAudio.currentTime / myAudio.duration) * 100), 10) + "%";
-
-      //sets buffered bar to percentage buffered
-      buffered.style.width = parseInt(((myAudio.buffered.end(myAudio.buffered.length - 1) / myAudio.duration) * 100), 10) + "%";
-    });
-
-`````
-
-Here we can see a version of the audio player with the audio fully buffered.
-
-![simple audio player with buffered bar](https://raw.github.com/maboa/MDN/master/images/audioplayer2.png)
-
 There are also a few events related to buffering:
 
 ### seeking
