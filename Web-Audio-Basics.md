@@ -167,9 +167,6 @@ Fallbacks
 
 Although the vast majority of browsers now support the audio element, you may want to cater for those that don't. Usually these browsers are catered for by using fallbacks written for plugins such as Adobe Flash or Microsoft Silverlight.
 
-Adding a Fallback
------------------
-
 Although most browsers support ```<audio>``` you may want to provide a fallback for those which don't. The simplest way is just to provide a link to the audio file as we have in the above example.
 
 Here's an example using the popular [Wordpress Standalone Player](http://wpaudioplayer.com/standalone/). You'll need to download the files and link to ```audio-player.js``` and ```player.swf``` like so:
