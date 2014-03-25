@@ -317,8 +317,8 @@ We can set up the audio in the HTML, without the controls attribute, since we cr
 </audio>
 
 <!-- we create our play and pause button next -->
-<a id="play" href="#">play</a>
-<a id="pause" href="#">pause</a>
+<button id="play">play</button>
+<button id="pause">pause</button>
 `````
 
 Next we attach some functionality to the player using JavaScript:
@@ -511,8 +511,8 @@ Consider this snippet of HTML:
 
 <div id="controls">
   <span id="loading">loading</span>
-  <a id="play" href="#" style="display:none">play</a>
-  <a id="pause" href="#" style="display:none" >pause</a>
+  <button id="play" style="display:none">play</button>
+  <button id="pause" style="display:none" >pause</button>
 </div>
 <div id="progress">
   <div id="bar"></div>
