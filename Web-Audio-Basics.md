@@ -9,7 +9,7 @@ Basic Audio
   <source src="audiofile.mp3" type="audio/mpeg">
   <source src="audiofile.ogg" type="audio/ogg">
   <!-- fallback for non supporting browsers goes here -->
-  Your browser does not support the audio element.
+  <a href="audiofile.mp3">download audio</a>
 </audio>
 `````
 
@@ -72,6 +72,33 @@ Audio Codec Support
 
 
 We are at the stage where nearly all browsers support MP3 for more details visit this page on [media format browser compatibility](https://developer.mozilla.org/en-US/docs/HTML/Supported_media_formats#Browser_compatibility).
+
+Adding a Fallback
+-----------------
+
+Although most browsers support ```<audio>``` you may want to provide a fallback for those who don't. The simplest way is just to provide a link to the audio file as we have in the above example.
+
+You may want to go further and provide a Flash or Silverlight fallback player.
+
+Here's an example using the popular [Wordpress Standalone Player](http://wpaudioplayer.com/standalone/). You'll need to download the files and link to ```audio-player.js``` and ```player.swf``` like so:
+
+`````html
+<audio controls>
+  <source src="audiofile.mp3" type="audio/mpeg">
+  <source src="audiofile.ogg" type="audio/ogg">
+  <!-- fallback for non supporting browsers goes here -->
+  <p id="audioplayer_1"><a href="audiofile.mp3">download audio</a></p>
+  <script type="text/javascript" src="audio-player.js"></script>
+  <script type="text/javascript">
+    AudioPlayer.setup("player.swf", {
+      width: 300
+    });
+    AudioPlayer.embed("audioplayer_1", {soundFile: "audiofile.mp3"});
+  </script>
+</audio>
+`````
+
+In the above case if the browser doesn't support ```<audio>``` it will try and load the Flash player, if Flash isn't installed then it will falback again to a strightforward link to the file. 
 
 
 Priming Audio with HTML Attributes
