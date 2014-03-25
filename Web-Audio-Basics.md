@@ -187,7 +187,7 @@ Here's an example using the popular [Wordpress Standalone Player](http://wpaudio
 </audio>
 `````
 
-In the above case if the browser doesn't support ```<audio>``` it will try and load the Flash player, if Flash isn't installed then it will falback again to a strightforward link to the file. 
+In the above case if the browser doesn't support ```<audio>``` it will try and load the Flash player, if Flash isn't installed then it will falback again to a straightforward link to the file. 
 
 > Note - you should be aware that Flash and Silverlight code require that the user has the appropriate plugin installed and significantly that the *browser cannot guarantee the security* aspects of code running on those plugin platforms.
 
