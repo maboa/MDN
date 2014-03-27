@@ -27,7 +27,6 @@ A Video Example
 First let's set up our video and playback rate controls in HTML :
 
 `````html
-
 <video id="myVideo" controls>
   <source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type='video/mp4' />
   <source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type='video/webm' />
@@ -37,6 +36,30 @@ First let's set up our video and playback rate controls in HTML :
   <input id="pbr" type="range" value="1" min="0.5" max="4" step="0.1" >
   <p>Playback Rate <span id="currentPbr">1</span></p>
 </form>
-
 `````
 
+Now we can attach some JavaScript to it :
+
+`````javascript
+window.onload = function () {
+ 
+  var v = document.getElementById("myVideo");
+  var p = document.getElementById("pbr");
+  var c = document.getElementById("currentPbr");
+
+  p.addEventListener('input',function(){
+    c.innerHTML = p.value;
+    v.playbackRate = p.value;
+  },false);
+
+};
+`````
+
+defaultPlaybackRate and ratechange
+----------------------------------
+
+In addition to playbackRate we also have ```defaultPlaybackRate``` which lets us set the default playback rate - the rate at which that the media resets to in the case that we change something like the source, or in some browsers when an ended event is generated. 
+
+We would usually set ```defaultPlaybackRate``` before playing the media while playbackRate allows us to change it during video play-back.
+
+We also have a new event called ```ratechange``` which fires every time the playbackRate changes. 
