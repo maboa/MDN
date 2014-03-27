@@ -36,8 +36,7 @@ First let's set up our video and playback rate controls in HTML :
   </video>
  
   <form>
-    <input id="pbr" type="range" value="1" 
-                    min="0.5" max="4" step="0.1" >
+    <input id="pbr" type="range" value="1" min="0.5" max="4" step="0.1" >
  
     <p>Playback Rate <span id="currentPbr">1</span></p>
   </form>
