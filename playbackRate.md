@@ -6,11 +6,9 @@ Playback Rate
 Here's an example:
 
 `````javascript
-
 var myAudio = document.createElement('audio');
 myAudio.setAttribute('src','audiofile.mp3');
 myAudio.playbackRate = 0.5;
-
 `````
 
 Here we create an ```audio``` element and set the ```src``` to a file of our choice. Next we set the ```playbackRate``` to 0.5 which represents half normal speed. The ```playbackRate``` is a multiple applied to the recorded rate.
