@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+   <p id="audioplayer_1"><a href="http://happyworm.com/audio/mp3/MLK.mp3">download audio</a></p>
+   <script type="text/javascript" src="audio-player.js"></script>
+   <script type="text/javascript">
+     AudioPlayer.setup("player.swf", {
+       width: 300
+     });
+     AudioPlayer.embed("audioplayer_1", {soundFile: "http://happyworm.com/audio/mp3/MLK.mp3"});
+   </script>
+</body>
+</html>
