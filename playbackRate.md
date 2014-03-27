@@ -27,16 +27,16 @@ A Video Example
 First let's set up our video and playback rate controls in HTML :
 
 `````html
-<div class="holder">
-  <video id="myVideo" controls>
-    <source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type='video/mp4' />
-    <source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type='video/webm' />
-  </video>
- 
-  <form>
-    <input id="pbr" type="range" value="1" min="0.5" max="4" step="0.1" >
-    <p>Playback Rate <span id="currentPbr">1</span></p>
-  </form>
-</div>
+
+<video id="myVideo" controls>
+  <source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type='video/mp4' />
+  <source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type='video/webm' />
+</video>
+
+<form>
+  <input id="pbr" type="range" value="1" min="0.5" max="4" step="0.1" >
+  <p>Playback Rate <span id="currentPbr">1</span></p>
+</form>
+
 `````
 
