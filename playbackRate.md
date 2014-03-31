@@ -75,7 +75,7 @@ Currently there are a few limitations and browser oddities to be aware of.
 * Most browsers stop playing audio below a playbackRate of 0.5 and above 4 - however, video will continue to play silently in these cases. 
 * IE9+ will switch to the default playback rate when an ```ended``` event is encountered.
 * Firefox generates a ratechange event when the media source is substituted.
-* iOS 7 you can only affect the ```playbackRate``` when the media is paused (not while it's playing).
+* On iOS 7 you can only affect the ```playbackRate``` when the media is paused (not while it's playing).
 
 
 Support
@@ -94,4 +94,4 @@ Support
 
 See Also:
 
-[Playback Rate Test](http://hyperaud.io/lab/pbr-test/)
+Hyperaudio's [Playback Rate Test](http://hyperaud.io/lab/pbr-test/)
