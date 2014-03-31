@@ -81,17 +81,17 @@ Currently there are a few limitations and browser oddities to be aware of.
 Support
 -------
 
-Chrome 20+ 	✔
-Firefox 20+ 	✔
-IE 9+ 	✔
-Safari 6+ 	✔
-Opera 15+ 	✔
-Mobile Chrome (Android) 	✖
-Mobile Firefox 24+ 	✔
-IE Mobile 	✖
-Mobile Safari 6+ (iOS) 	✔
-Opera Mobile 	✖
+* Chrome 20+ 	✔
+* Firefox 20+ 	✔
+* IE 9+ 	✔
+* Safari 6+ 	✔
+* Opera 15+ 	✔
+* Mobile Chrome (Android) 	✖
+* Mobile Firefox 24+ 	✔
+* IE Mobile 	✖
+* Mobile Safari 6+ (iOS) 	✔
+* Opera Mobile 	✖
 
 See Also:
 
-(Playback Rate Test)[http://hyperaud.io/lab/pbr-test/] 
+[Playback Rate Test](http://hyperaud.io/lab/pbr-test/)
