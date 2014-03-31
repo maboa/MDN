@@ -65,3 +65,33 @@ In addition to playbackRate we also have ```defaultPlaybackRate``` which lets us
 We would usually set ```defaultPlaybackRate``` before playing the media while playbackRate allows us to change it during video play-back.
 
 We also have a new event called ```ratechange``` which fires every time the playbackRate changes. 
+
+
+Limitations and Oddities
+------------------------
+
+Currently there are a few limitations and browser oddities to be aware of. 
+
+* Most browsers stop playing audio below a playbackRate of 0.5 and above 4 - however, video will continue to play silently in these cases. 
+* IE9+ will switch to the default playback rate when an ```ended``` event is encountered.
+* Firefox generates a ratechange event when the media source is substituted.
+* iOS 7 you can only affect the ```playbackRate``` when the media is paused (not while it's playing).
+
+
+Support
+-------
+
+Chrome 20+ 	✔
+Firefox 20+ 	✔
+IE 9+ 	✔
+Safari 6+ 	✔
+Opera 15+ 	✔
+Mobile Chrome (Android) 	✖
+Mobile Firefox 24+ 	✔
+IE Mobile 	✖
+Mobile Safari 6+ (iOS) 	✔
+Opera Mobile 	✖
+
+See Also:
+
+(Playback Rate Test)[http://hyperaud.io/lab/pbr-test/] 
