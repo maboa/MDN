@@ -13,7 +13,7 @@ Streaming technology is often employed to relay live events such as sports, conc
 Key Differences Between Streamed and Static Media
 -------------------------------------------------
 
-In this case we are using static media to describe media that is represented by a file, whether it be an mp3 or webm file, this file sits on a server and can be delivered like most other files, to the browser.
+In this case we are using static media to describe media that is represented by a file, whether it be an mp3 or webm file, this file sits on a server and can be delivered like most other files, to the browser. This is often known as VOD or AOD (Video On Demand / Audio On Demand).
 
 Streamed media lacks a finite start and end time as rather than a static file, it is a stream of data that the server passes on down the line to the browser. Usually we require different formats and special server-side software.
 
@@ -22,6 +22,10 @@ Streaming Protocols
 -------------------
 
 While static media is usually served over HTTP, there are several streaming protocols.
+
+### HTTP
+
+
 
 
 
