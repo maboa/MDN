@@ -5,5 +5,26 @@ Often shortened just to streaming, live streaming is the process of transmitting
 
 We're going to be concentrating on the process of streaming media to the browser.
 
-The key consideration of streaming media to a browser is the fact that rather than playing a finite file we are relaying a file that is being created on the fly, often media of a live event.
+The key consideration of streaming media to a browser is the fact that rather than playing a finite file we are relaying a file that is being created on the fly, a file that has no pre-determined start or end.
+
+Streaming technology is often employed to relay live events such as sports, concerts and more generally TV and Radio programmes that are output live.
+
+
+Key Differences Between Streamed and Static Media
+-------------------------------------------------
+
+In this case we are using static media to describe media that is represented by a file, whether it be an mp3 or webm file, this file sits on a server and can be delivered like most other files, to the browser.
+
+Streamed media lacks a finite start and end time as rather than a static file, it is a stream of data that the server passes on down the line to the browser. Usually we require different formats and special server-side software.
+
+
+Streaming Protocols
+-------------------
+
+While static media is usually served over HTTP, there are several streaming protocols.
+
+
+
+
+
 
