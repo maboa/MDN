@@ -56,6 +56,8 @@ window.onload = function () {
 `````
 We listen to the ```input``` changing which allows us to react to the playback rate control being changed.
 
+[Try out this example](http://jsbin.com/UGIxoJis/1/edit)
+
 
 defaultPlaybackRate and ratechange
 ----------------------------------
