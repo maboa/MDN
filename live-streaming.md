@@ -27,6 +27,10 @@ While static media is usually served over HTTP, there are several streaming prot
 
 For now HTTP is by far the most common protocol used to transfer media on demand or live and supported by browsers.
 
+### RTMP
+
+Real Time Messaging Protocol is a propriety protocol developed by Macromedia (now Adobe) and supported by Adobe Flash. RTMP comes in various flavours including RTMPE (Encrypted), RTMPS (Secure over SSL/TLS) and RTMPT (encapuslated within HTTP requests).
+
 ### RTSP
 
 Real Time Streaming Protocol (RTSP) controls media sessions between endpoints and is often used together with Real-time Transport Protocol (RTP) and with Real-time Control Protocol (RTCP) for media stream delivery. Using RTP with RTCP allows for adaptive streaming. Not yet supported natively in the browser.
@@ -39,11 +43,16 @@ In development and not backward compatible with RTSP 1.0
 
 Although the ```<audio>``` and ```<video>``` tags are protocol agnostic, no browser currently supports anything other than HTTP without requiring plugins.
 
+> Note: protocols other than HTTP may e subject to blocking from firewalls or proxy servers.
+
 A Quick Note on Adaptive Streaming
 ----------------------------------
 
-One of the main priorities for live streaming is to keep the player synchronized with the stream, adaptive streaming is a method for doing this in the case of low bandwith. The idea is that the data transfer rate is monitored and if it looks like it's not keeping up, we drop down to a lower bandwidth (and consequently lower quality) stream. In order to have this capability, we need to use protocols that facilitate this. 
+One of the main priorities for live streaming is to keep the player synchronized with the stream, adaptive streaming is a method for doing this in the case of low bandwith. The idea is that the data transfer rate is monitored and if it looks like it's not keeping up, we drop down to a lower bandwidth (and consequently lower quality) stream. In order to have this capability, we need to use protocols that facilitate this.
 
+
+File Formats
+------------
 
 
 
