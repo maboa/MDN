@@ -56,5 +56,14 @@ Although the ```<audio>``` and ```<video>``` tags are protocol agnostic, no brow
 File Formats
 ------------
 
+There are a few live streaming formats that are beginning to see support in the browser.
+
+### MPEG-DASH
+
+DASH stands for Dynamic Adaptive Streaming over HTTP and is a new format that has recently been adopted by Chrome and Internet Explorer 11 running on Windows 8.1
+
+### HLS
+
+
 
 
