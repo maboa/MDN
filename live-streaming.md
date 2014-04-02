@@ -21,10 +21,23 @@ Streamed media lacks a finite start and end time as rather than a static file, i
 Streaming Protocols
 -------------------
 
-While static media is usually served over HTTP, there are several streaming protocols.
+While static media is usually served over HTTP, there are several streaming protocols, let's take a look at the options.
 
 ### HTTP
 
+For now HTTP is by far the most common protocol used to transfer media on demand or live and supported by browsers.
+
+### RTSP
+
+Real Time Streaming Protocol (RTSP) controls media sessions between endpoints and is often used together with Real-time Transport Protocol (RTP) and with Real-time Control Protocol (RTCP) for media stream delivery. Using RTP with RTCP allows for adaptive streaming. 
+
+> Note: some vendors implement propriety transport protocols, such as RealNetworks and their Real Data Transport (RDT)
+
+### RTSP 2.0
+
+In development and not backward compatible with RTSP 1.0
+
+> Note: Although the ```<audio>``` and ```<video>``` tags are protocol agnostic, no browser currently supports anything other than HTTP without requiring plugins.
 
 
 
