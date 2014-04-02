@@ -42,7 +42,7 @@ Although the ```<audio>``` and ```<video>``` tags are protocol agnostic, no brow
 A Quick Note on Adaptive Streaming
 ----------------------------------
 
-One of the main priorities for live streaming is to keep the player synchronized with the stream, adaptive streaming is a method for doing this in the case of low bandwith. The idea is that the data transfer rate is monitored and if it looks like it's not keeping up we drop down to a lower bandwidth and consequently lower quality stream. In order to this we need to use protocols that facilitate this. 
+One of the main priorities for live streaming is to keep the player synchronized with the stream, adaptive streaming is a method for doing this in the case of low bandwith. The idea is that the data transfer rate is monitored and if it looks like it's not keeping up, we drop down to a lower bandwidth (and consequently lower quality) stream. In order to have this capability, we need to use protocols that facilitate this. 
 
 
 
