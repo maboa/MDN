@@ -35,7 +35,7 @@ For now HTTP is by far the most common protocol used to transfer media on demand
 
 ### RTMP
 
-Real Time Messaging Protocol is a propriety protocol developed by Macromedia (now Adobe) and supported by Adobe Flash. RTMP comes in various flavours including RTMPE (Encrypted), RTMPS (Secure over SSL/TLS) and RTMPT (encapuslated within HTTP requests).
+Real Time Messaging Protocol is a propriety protocol developed by Macromedia (now Adobe) and supported by the Adobe Flash plugin. RTMP comes in various flavours including RTMPE (Encrypted), RTMPS (Secure over SSL/TLS) and RTMPT (encapuslated within HTTP requests).
 
 ### RTSP
 
