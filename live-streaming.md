@@ -29,7 +29,7 @@ For now HTTP is by far the most common protocol used to transfer media on demand
 
 ### RTSP
 
-Real Time Streaming Protocol (RTSP) controls media sessions between endpoints and is often used together with Real-time Transport Protocol (RTP) and with Real-time Control Protocol (RTCP) for media stream delivery. Using RTP with RTCP allows for adaptive streaming. 
+Real Time Streaming Protocol (RTSP) controls media sessions between endpoints and is often used together with Real-time Transport Protocol (RTP) and with Real-time Control Protocol (RTCP) for media stream delivery. Using RTP with RTCP allows for adaptive streaming. Not yet supported natively in the browser.
 
 > Note: some vendors implement propriety transport protocols, such as RealNetworks and their Real Data Transport (RDT)
 
@@ -39,8 +39,10 @@ In development and not backward compatible with RTSP 1.0
 
 Although the ```<audio>``` and ```<video>``` tags are protocol agnostic, no browser currently supports anything other than HTTP without requiring plugins.
 
+A Quick Note on Adaptive Streaming
+----------------------------------
 
-
+One of the main priorities for live streaming is to keep the player synchronized with the stream, adaptive streaming is a method for doing this in the case of low bandwith. The idea is that the data transfer rate is monitored and if it looks like it's not keeping up we drop down to a lower bandwidth and consequently lower quality stream. In order to this we need to use protocols that facilitate this. 
 
 
 
