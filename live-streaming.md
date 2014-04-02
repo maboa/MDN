@@ -15,7 +15,13 @@ Key Differences Between Streamed and Static Media
 
 In this case we are using static media to describe media that is represented by a file, whether it be an mp3 or webm file, this file sits on a server and can be delivered like most other files, to the browser. This is often known as VOD or AOD (Video On Demand / Audio On Demand).
 
-Streamed media lacks a finite start and end time as rather than a static file, it is a stream of data that the server passes on down the line to the browser. Usually we require different formats and special server-side software.
+Streamed media lacks a finite start and end time as rather than a static file, it is a stream of data that the server passes on down the line to the browser and is often adaptive. Usually we require different formats and special server-side software.
+
+
+Adaptive Streaming
+------------------
+
+One of the main priorities for live streaming is to keep the player synchronized with the stream, adaptive streaming is a method for doing this in the case of low bandwith. The idea is that the data transfer rate is monitored and if it looks like it's not keeping up, we drop down to a lower bandwidth (and consequently lower quality) stream. In order to have this capability, we need to use protocols that facilitate this.
 
 
 Streaming Protocols
@@ -45,10 +51,6 @@ Although the ```<audio>``` and ```<video>``` tags are protocol agnostic, no brow
 
 > Note: protocols other than HTTP may e subject to blocking from firewalls or proxy servers.
 
-A Quick Note on Adaptive Streaming
-----------------------------------
-
-One of the main priorities for live streaming is to keep the player synchronized with the stream, adaptive streaming is a method for doing this in the case of low bandwith. The idea is that the data transfer rate is monitored and if it looks like it's not keeping up, we drop down to a lower bandwidth (and consequently lower quality) stream. In order to have this capability, we need to use protocols that facilitate this.
 
 
 File Formats
