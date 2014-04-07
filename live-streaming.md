@@ -64,6 +64,10 @@ DASH stands for Dynamic Adaptive Streaming over HTTP and is a new format that ha
 
 ### HLS
 
+HLS or HTTP Live Streaming is a protocol invented by Apple Inc and supported on iOS, Safari and latest versions of Android browser / Chrome.
+
+
+
 
 
 
