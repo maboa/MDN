@@ -53,10 +53,10 @@ Although the ```<audio>``` and ```<video>``` tags are protocol agnostic, no brow
 
 
 
-File Formats
-------------
+Video Streaming File Formats
+----------------------------
 
-There are a few live streaming formats that are beginning to see support in the browser.
+A couple of HTTP based live streaming video formats are beginning to see support in the browser.
 
 ### MPEG-DASH
 
@@ -64,10 +64,27 @@ DASH stands for Dynamic Adaptive Streaming over HTTP and is a new format that ha
 
 ### HLS
 
-HLS or HTTP Live Streaming is a protocol invented by Apple Inc and supported on iOS, Safari and latest versions of Android browser / Chrome.
+HLS or HTTP Live Streaming is a protocol invented by Apple Inc and supported on iOS, Safari and latest versions of Android browser / Chrome. HLS is also adaptive.
 
 
+Video Fallbacks
+---------------
 
+Between DASH and HLS we can cover a significant portion of modern browsers but we still need a fallback if we want to support the rest. One popular method used by audio/video libraries 
+
+One popular approach is to use a Flash fallback that supports RTMP. Of course we have the issue that we need to encode in three formats.
+
+
+Audio Streaming File Formats
+----------------------------
+
+### Opus
+
+Opus is a royalty free and open format that manages to optimise quality at various bit-rates for different types of audio. Music and speech can be optimised in different ways and Opus uses the SILK and CELT codecs to achieve this.
+
+Currently Opus is supported by Firefox and desktop and mobile as well as the latest versions of desktop Chrome and Opera.
+
+> Note: Opus is a mandatory format for WebRTC
 
 
 
