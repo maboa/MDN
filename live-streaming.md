@@ -70,7 +70,7 @@ HLS or HTTP Live Streaming is a protocol invented by Apple Inc and supported on 
 Video Fallbacks
 ---------------
 
-Between DASH and HLS we can cover a significant portion of modern browsers but we still need a fallback if we want to support the rest. One popular method used by audio/video libraries 
+Between DASH and HLS we can cover a significant portion of modern browsers but we still need a fallback if we want to support the rest.
 
 One popular approach is to use a Flash fallback that supports RTMP. Of course we have the issue that we need to encode in three formats.
 
