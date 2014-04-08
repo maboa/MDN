@@ -86,5 +86,41 @@ Currently Opus is supported by Firefox and desktop and mobile as well as the lat
 
 > Note: [Opus is a mandatory format](http://tools.ietf.org/html/draft-ietf-rtcweb-audio-05) for WebRTC browser implementations.
 
+### MP3, AAC, Ogg Vorbis
+
+Most common audio formats can be streamed using specific serverside technologies.
+
+> Note: It's potentially easier to stream audio using non streaming formats because unlike video there are no keyframes.
+
+
+Serverside Streaming Technologies
+---------------------------------
+
+In order to stream live audio and video you will need to run specific streaming software on your server or use third party services.
+
+### GStreamer
+
+GStreamer is an open source cross-platform multimedia framework that allows you to create a variety of media-handling components, including streaming components.
+
+Through it's plugin system GStreamer provides support for more than a hundred codecs (including MPEG-1, MPEG-2, MPEG-4, H.261, H.263, H.264, RealVideo, MP3, WMV, FLV)
+
+
+### SHOUTcast
+
+SHOUTcast is a cross-platform proprietary technology for streaming media. Developed by Nullsoft, it allows digital audio content in MP3 or AAC format, to be broadcast. For web use, SHOUTcast streams are transmiited over HTTP.
+
+### Icecast
+
+The Icecast server is an open source technology for streaming media. Maintained by Xiph.org Foundation it streams Ogg Vorbis/Theora as well as MP3 and AAC format via the SHOUTcast protocol.
+
+> Note: SHOUTcast and Icecast are among the most established and popular technologies, but there are [many more](http://en.wikipedia.org/wiki/List_of_streaming_media_systems#Servers).
+
+
+
+Streaming Services
+------------------
+
+Although you can install software like SHOUTcast and Icecast 
+
 
 
