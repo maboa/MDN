@@ -122,7 +122,7 @@ The Icecast server is an open source technology for streaming media. Maintained 
 Streaming Services
 ------------------
 
-Although you can install software like SHOUTcast and Icecast 
+Although you can install software like GStreamer, SHOUTcast and Icecast you will also find a lot of third party services that will do much of the work for you.
 
 
 
