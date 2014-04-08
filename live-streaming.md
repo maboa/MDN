@@ -104,6 +104,8 @@ GStreamer is an open source cross-platform multimedia framework that allows you 
 
 Through it's plugin system GStreamer provides support for more than a hundred codecs (including MPEG-1, MPEG-2, MPEG-4, H.261, H.263, H.264, RealVideo, MP3, WMV, FLV)
 
+GStreamer plugins such as souphttpclientsink exist to stream media over HTTP.
+
 
 ### SHOUTcast
 
