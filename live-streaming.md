@@ -104,7 +104,9 @@ GStreamer is an open source cross-platform multimedia framework that allows you 
 
 Through it's plugin system GStreamer provides support for more than a hundred codecs (including MPEG-1, MPEG-2, MPEG-4, H.261, H.263, H.264, RealVideo, MP3, WMV, FLV)
 
-GStreamer plugins such as souphttpclientsink exist to stream media over HTTP.
+GStreamer plugins such as [souphttpclientsink](http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-good-plugins/html/gst-plugins-good-plugins-plugin-soup.html) and [shout2send](http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-good-plugins/html/gst-plugins-good-plugins-plugin-shout2send.html) exist to stream media over HTTP. You can also integrate with Python's Twisted framework or use something like [Flumotion](http://www.flumotion.net/features/) (open source streaming software).
+
+For RTMP transfer you can use the [Nginx RTMP Module](https://github.com/arut/nginx-rtmp-module)
 
 
 ### SHOUTcast
@@ -138,5 +140,7 @@ See Also
 - [SHOUTcast](http://en.wikipedia.org/wiki/Shoutcast)
 - [GStreamer](http://en.wikipedia.org/wiki/GStreamer)
 - [Streaming GStreamer Piplines Via HTTP](https://coaxion.net/blog/2013/10/streaming-gstreamer-pipelines-via-http/)
+- [Streaming media using gstreamer on the web](http://www.svesoftware.com/passkeeper/cms/article/streaming-media-using-gstreamer-web/)
+- [GStreamer and Raspberry Pi](http://nginx-rtmp.blogspot.it/2013/07/gstreamer-and-raspberry-pi.html)
 - [Comparison of Streaming Media Systems](http://en.wikipedia.org/wiki/Comparison_of_streaming_media_systems)
 
