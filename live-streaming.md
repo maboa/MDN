@@ -124,7 +124,7 @@ Media Source Extensions (MSE)
 -----------------------------
 [Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) is a W3C working draft that plans to extend HTMLMediaElement to allow JavaScript to generate media streams for playback. Allowing JavaScript to generate streams facilitates a variety of use cases like adaptive streaming and time shifting live streams.
 
-For example, in theory you could implement MPEG-DASH using JavaScript while offloading the decoding to MSE.
+For example, in theory [you could implement MPEG-DASH using JavaScript while offloading the decoding to MSE](http://msopentech.com/blog/2014/01/03/streaming_video_player/).
 
 
 Streaming Services
@@ -150,5 +150,6 @@ See Also
 - [Streaming GStreamer Piplines Via HTTP](https://coaxion.net/blog/2013/10/streaming-gstreamer-pipelines-via-http/)
 - [Streaming media using gstreamer on the web](http://www.svesoftware.com/passkeeper/cms/article/streaming-media-using-gstreamer-web/)
 - [GStreamer and Raspberry Pi](http://nginx-rtmp.blogspot.it/2013/07/gstreamer-and-raspberry-pi.html)
+- [Acceptance of Media Source Extensions as W3C Candidate Recommendation will accelerate adoption of dash.js](http://msopentech.com/blog/2014/01/09/acceptance-media-source-extensions-w3c-candidate-recommendation-will-accelerate-adoption-dash-js/)
 - [Comparison of Streaming Media Systems](http://en.wikipedia.org/wiki/Comparison_of_streaming_media_systems)
 
