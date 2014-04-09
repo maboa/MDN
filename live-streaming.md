@@ -120,11 +120,19 @@ The Icecast server is an open source technology for streaming media. Maintained 
 > Note: SHOUTcast and Icecast are among the most established and popular technologies, but there are [many more](http://en.wikipedia.org/wiki/List_of_streaming_media_systems#Servers).
 
 
+Media Source Extensions (MSE)
+-----------------------------
+[Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) is a W3C working draft that plans to extend HTMLMediaElement to allow JavaScript to generate media streams for playback. Allowing JavaScript to generate streams facilitates a variety of use cases like adaptive streaming and time shifting live streams.
+
+For example, in theory you could implement MPEG-DASH using JavaScript while offloading the decoding to MSE.
+
 
 Streaming Services
 ------------------
 
-Although you can install software like GStreamer, SHOUTcast and Icecast you will also find a lot of third party services that will do much of the work for you.
+Although you can install software like GStreamer, SHOUTcast and Icecast you will also find [a lot of third party services](http://en.wikipedia.org/wiki/Comparison_of_streaming_media_systems) that will do much of the work for you.
+
+
 
 
 See Also
