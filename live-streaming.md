@@ -62,6 +62,8 @@ A couple of HTTP based live streaming video formats are beginning to see support
 
 DASH stands for Dynamic Adaptive Streaming over HTTP and is a new format that has recently been adopted by Chrome and Internet Explorer 11 running on Windows 8.1
 
+> Note: you can also [use WebM with the MPEG DASH adaptive streaming system] (http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification)
+
 ### HLS
 
 HLS or HTTP Live Streaming is a protocol invented by Apple Inc and supported on iOS, Safari and latest versions of Android browser / Chrome. HLS is also adaptive.
@@ -125,6 +127,8 @@ Media Source Extensions (MSE)
 [Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) is a W3C working draft that plans to extend HTMLMediaElement to allow JavaScript to generate media streams for playback. Allowing JavaScript to generate streams facilitates a variety of use cases like adaptive streaming and time shifting live streams.
 
 For example, in theory [you could implement MPEG-DASH using JavaScript while offloading the decoding to MSE](http://msopentech.com/blog/2014/01/03/streaming_video_player/).
+
+> Note: Time Shifting is the process of cosnuming a live stream some time after it happened.
 
 
 Streaming Services
