@@ -52,6 +52,14 @@ Although the ```<audio>``` and ```<video>``` tags are protocol agnostic, no brow
 > Note: protocols other than HTTP may be subject to blocking from firewalls or proxy servers.
 
 
+Media Source Extensions (MSE)
+-----------------------------
+[Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) is a W3C working draft that plans to extend HTMLMediaElement to allow JavaScript to generate media streams for playback. Allowing JavaScript to generate streams facilitates a variety of use cases like adaptive streaming and time shifting live streams.
+
+For example, in theory [you could implement MPEG-DASH using JavaScript while offloading the decoding to MSE](http://msopentech.com/blog/2014/01/03/streaming_video_player/).
+
+> Note: Time Shifting is the process of cosnuming a live stream some time after it happened.
+
 
 Video Streaming File Formats
 ----------------------------
@@ -60,7 +68,7 @@ A couple of HTTP based live streaming video formats are beginning to see support
 
 ### MPEG-DASH
 
-DASH stands for Dynamic Adaptive Streaming over HTTP and is a new format that has recently been adopted by Chrome and Internet Explorer 11 running on Windows 8.1
+DASH stands for Dynamic Adaptive Streaming over HTTP and is a new format that has recently been adopted by Chrome and Internet Explorer 11 running on Windows 8.1. It is supported via Media Source Extensions which are used by JavaScript libraries such as [DASH.js](https://github.com/Dash-Industry-Forum/dash.js/) This approach allows us to download chunks of the video stream using XHR and "append" the chunks to the stream that's played by the <video> element. So for example, if we detect that the network is slow, we can start requesting lower quality (smaller) chunks for the next segment. This technology also allows an advertisement segment to be appended/inserted into the stream.
 
 > Note: you can also [use WebM with the MPEG DASH adaptive streaming system] (http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification)
 
@@ -122,13 +130,7 @@ The Icecast server is an open source technology for streaming media. Maintained 
 > Note: SHOUTcast and Icecast are among the most established and popular technologies, but there are [many more](http://en.wikipedia.org/wiki/List_of_streaming_media_systems#Servers).
 
 
-Media Source Extensions (MSE)
------------------------------
-[Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) is a W3C working draft that plans to extend HTMLMediaElement to allow JavaScript to generate media streams for playback. Allowing JavaScript to generate streams facilitates a variety of use cases like adaptive streaming and time shifting live streams.
 
-For example, in theory [you could implement MPEG-DASH using JavaScript while offloading the decoding to MSE](http://msopentech.com/blog/2014/01/03/streaming_video_player/).
-
-> Note: Time Shifting is the process of cosnuming a live stream some time after it happened.
 
 
 Streaming Services
