@@ -47,7 +47,7 @@ Real Time Streaming Protocol (RTSP) controls media sessions between endpoints an
 
 In development and not backward compatible with RTSP 1.0
 
-Although the ```<audio>``` and ```<video>``` tags are protocol agnostic, no browser currently supports anything other than HTTP without requiring plugins.
+Although the ```<audio>``` and ```<video>``` tags are protocol agnostic, no browser currently supports anything other than HTTP without requiring plugins, although this looks set to change.
 
 > Note: protocols other than HTTP may be subject to blocking from firewalls or proxy servers.
 
