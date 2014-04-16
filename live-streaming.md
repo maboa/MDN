@@ -41,7 +41,11 @@ Real Time Messaging Protocol is a propriety protocol developed by Macromedia (no
 
 Real Time Streaming Protocol (RTSP) controls media sessions between endpoints and is often used together with Real-time Transport Protocol (RTP) and with Real-time Control Protocol (RTCP) for media stream delivery. Using RTP with RTCP allows for adaptive streaming. Not yet supported natively in the browser.
 
-> Note: some vendors implement propriety transport protocols, such as RealNetworks and their Real Data Transport (RDT)
+> Note 1: [Firefox OS 1.3 supports RTSP](http://www.mozilla.org/en-US/firefox/os/notes/1.3/). 
+
+> Note 2: some vendors implement propriety transport protocols, such as RealNetworks and their Real Data Transport (RDT)
+
+
 
 ### RTSP 2.0
 
@@ -50,6 +54,22 @@ In development and not backward compatible with RTSP 1.0
 Although the ```<audio>``` and ```<video>``` tags are protocol agnostic, no browser currently supports anything other than HTTP without requiring plugins, although this looks set to change.
 
 > Note: protocols other than HTTP may be subject to blocking from firewalls or proxy servers.
+
+
+Specifying Various Protocols
+----------------------------
+
+The process of specifying the various protocols is reassuringly familiar if you are used to working with media over HTTP.
+
+For example:
+
+`````html
+<video src="rtsp://myhost.com/mymedia.format">
+ <!-- Fallback here -->
+</video>
+
+`````
+
 
 
 Media Source Extensions (MSE)
@@ -124,6 +144,8 @@ For RTMP transfer you can use the [Nginx RTMP Module](https://github.com/arut/ng
 ### SHOUTcast
 
 SHOUTcast is a cross-platform proprietary technology for streaming media. Developed by Nullsoft, it allows digital audio content in MP3 or AAC format, to be broadcast. For web use, SHOUTcast streams are transmiited over HTTP.
+
+> Note: [SHOUTcast urls may require a semi-colon to be appended to it](http://stackoverflow.com/questions/2743279/how-could-i-play-a-shoutcast-icecast-stream-using-html5).
 
 ### Icecast
 
