@@ -173,6 +173,7 @@ See Also
 - [Dynamic Adaptive Streaming over HTTP (MPEG-DASH)](http://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP)
 - [MPEG-DASH Media Source Demo](http://dash-mse-test.appspot.com/media.html)
 - [Dynamic Streaming over HTTP](http://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP)
+- [The State of MPEG-DASH Deployment](http://www.streamingmediaglobal.com/Articles/Editorial/Featured-Articles/The-State-of-MPEG-DASH-Deployment-96144.aspx)
 - [Media Source Extensions (W3C)](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html)
 - [Icecast](http://en.wikipedia.org/wiki/Icecast)
 - [SHOUTcast](http://en.wikipedia.org/wiki/Shoutcast)
