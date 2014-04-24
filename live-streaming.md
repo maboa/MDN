@@ -113,6 +113,7 @@ HLS can also be decoded using JavaScript which means we can support latest versi
 | Android                  | ✓      |           |              |
 
 [1] Via JavaScript and MSE
+
 [2] Via JavaScript and a CORS Proxy
 
 
