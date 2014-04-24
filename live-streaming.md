@@ -100,20 +100,20 @@ HLS can also be decoded using JavaScript which means we can support latest versi
 
 | Browser                  | DASH   | HLS       | Opus (Audio) |
 | ------------------------ | ------ | --------- | ------------ |
-| Firefox 32               | ✓ *    | ✓ * *     | ✓ 14+        |
+| Firefox 32               | ✓ [1]  | ✓ [2]     | ✓ 14+        |
 | Safari 6+                |        | ✓         |              | 
-| Chrome 24+               | ✓ *    | ✓         |              | 
-| Opera  20+               | ✓ *    |           |              |
-| Internet Explorer 10+    | ✓ 11   | ✓ * *     |              |
+| Chrome 24+               | ✓ [1]  | ✓         |              | 
+| Opera  20+               | ✓ [1]  |           |              |
+| Internet Explorer 10+    | ✓ 11   | ✓ [2]     |              |
 | Firefox Mobile           | ✓      | ✓         | ✓            | 
 | Safari iOS6+             |        | ✓         |              | 
-| Chrome Mobile            | ✓      | ✓ * *     |              | 
-| Opera Mobile             | ✓ *    | ✓         |              | 
-| Internet Explorer Mobile | ✓ 11   | ✓ * *     |              | 
+| Chrome Mobile            | ✓      | ✓ [2]     |              | 
+| Opera Mobile             | ✓ [1]  | ✓         |              | 
+| Internet Explorer Mobile | ✓ 11   | ✓ [2]     |              | 
 | Android                  | ✓      |           |              |
 
-* Via JavaScript and MSE
-* * Via JavaScript and a CORS Proxy
+[1] Via JavaScript and MSE
+[2] Via JavaScript and a CORS Proxy
 
 
 Video Fallbacks
