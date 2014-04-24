@@ -98,6 +98,24 @@ HLS or HTTP Live Streaming is a protocol invented by Apple Inc and supported on 
 HLS can also be decoded using JavaScript which means we can support latest versions of Firefox, Chrome and Internet Explorer 10+. See this [HTTP Live Streaming JavaScript player](https://github.com/RReverser/mpegts).
 
 
+| Browser                  | DASH   | HLS       | Opus (Audio) |
+| ------------------------ | ------ | --------- | ------------ |
+| Firefox 32               | ✓ *    | ✓ * *     | ✓ 14+        |
+| Safari 6+                |        | ✓         |              | 
+| Chrome 24+               | ✓ *    | ✓         |              | 
+| Opera  20+               | ✓ *    |           |              |
+| Internet Explorer 10+    | ✓ 11   | ✓ * *     |              |
+| Firefox Mobile           | ✓      | ✓         | ✓            | 
+| Safari iOS6+             |        | ✓         |              | 
+| Chrome Mobile            | ✓      | ✓ * *     |              | 
+| Opera Mobile             | ✓ *    | ✓         |              | 
+| Internet Explorer Mobile | ✓ 11   | ✓ * *     |              | 
+| Android                  | ✓      |           |              |
+
+* Via JavaScript and MSE
+* * Via JavaScript and a CORS Proxy
+
+
 Video Fallbacks
 ---------------
 
