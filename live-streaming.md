@@ -110,6 +110,8 @@ HLS or HTTP Live Streaming is a protocol invented by Apple Inc and supported on 
 
 HLS can also be decoded using JavaScript which means we can support latest versions of Firefox, Chrome and Internet Explorer 10+. See this [HTTP Live Streaming JavaScript player](https://github.com/RReverser/mpegts).
 
+At the start of the streaming session an [extended M3U (m3u8) playlist](http://en.wikipedia.org/wiki/M3U8#Extended_M3U_directives) is downloaded. This contains the metadata for the various sub-streams that are provided.
+
 
 | Browser                  | DASH   | HLS       | Opus (Audio) |
 | ------------------------ | ------ | --------- | ------------ |
@@ -202,6 +204,7 @@ See Also
 - [HTTP Live Streaming](http://en.wikipedia.org/wiki/HTTP_Live_Streaming)
 - [HLS Browser Support](http://www.jwplayer.com/html5/hls/)
 - [HTTP Live Streaming JavaScript player](https://github.com/RReverser/mpegts)
+- [The Basics of HTTP Live Streaming](http://www.larryjordan.biz/app_bin/wordpress/archives/2369)
 - [Dynamic Adaptive Streaming over HTTP (MPEG-DASH)](http://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP)
 - [MPEG-DASH Media Source Demo](http://dash-mse-test.appspot.com/media.html)
 - [DASH Reference Client](http://dashif.org/reference/players/javascript/1.0.0/index.html)
