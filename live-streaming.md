@@ -15,13 +15,26 @@ Key Differences Between Streamed and Static Media
 
 In this case we are using static media to describe media that is represented by a file, whether it be an mp3 or webm file, this file sits on a server and can be delivered like most other files, to the browser. This is often known as VOD or AOD (Video On Demand / Audio On Demand).
 
-Streamed media lacks a finite start and end time as rather than a static file, it is a stream of data that the server passes on down the line to the browser and is often adaptive. Usually we require different formats and special server-side software.
+Live streamed media lacks a finite start and end time as rather than a static file, it is a stream of data that the server passes on down the line to the browser and is often adaptive. Usually we require different formats and special server-side software.
 
 
 Adaptive Streaming
 ------------------
 
-One of the main priorities for live streaming is to keep the player synchronized with the stream, adaptive streaming is a method for doing this in the case of low bandwith. The idea is that the data transfer rate is monitored and if it looks like it's not keeping up, we drop down to a lower bandwidth (and consequently lower quality) stream. In order to have this capability, we need to use formats that facilitate this. Live streaming formats generally allow adaptive streaming by breaking streams into a series of small segments and making those segments avialable at different qualities and bit rates.
+One of the main priorities for live streaming is to keep the player synchronized with the stream, adaptive streaming is a method for doing this in the case of low bandwith. The idea is that the data transfer rate is monitored and if it looks like it's not keeping up, we drop down to a lower bandwidth (and consequently lower quality) stream. In order to have this capability, we need to use formats that facilitate this. Live streaming formats generally allow adaptive streaming by breaking streams into a series of small segments and making those segments available at different qualities and bit rates.
+
+
+Streaming Audio and Video on Demand
+-----------------------------------
+
+Streaming technology is not used exclusively for live streams. It can also be used instead of the traditional progressive download method for Audio and Video on demand:
+
+There are a couple of advantages :
+
+- Latency is generally lower so media will start playing more quickly
+- Adaptive streaming allows better experiences on a variety of devices
+
+
 
 
 Streaming Protocols
