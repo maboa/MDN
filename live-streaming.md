@@ -29,11 +29,11 @@ Streaming Audio and Video on Demand
 
 Streaming technology is not used exclusively for live streams. It can also be used instead of the traditional progressive download method for Audio and Video on demand:
 
-There are a couple of advantages :
+There are several of advantages :
 
 - Latency is generally lower so media will start playing more quickly
-- Adaptive streaming allows better experiences on a variety of devices
-
+- Adaptive streaming makes for better experiences on a variety of devices
+- Media is downloaded just in time which makes bandwidth use more efficient
 
 
 
