@@ -22,9 +22,13 @@ Volume is also one of those properties that is often disabled by mobile browsers
 
 ### Buffering
 
-Likely in an attempt to give control to users regarding mobile network data use, we may also find that buffering is disabled. Buffering is the process of the browser downloading the media in advance, which we often need to do to ensure smooth play back.
+Likely an attempt to mitigate runaway mobile network data use, we may also find that buffering is disabled. Buffering is the process of the browser downloading the media in advance, which we often need to do to ensure smooth play back.
 
 ### Concurrent Audio Playback
+
+A requirement of many games is to play more than one piece of audio contemporarily. Although the situation is set to get better with the adoption of the Web Audio API. Currently using the vanilla audio element will result in patchy results on mobile.
+
+
 
 ### Pages on Home Screens
 
