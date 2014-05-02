@@ -30,15 +30,16 @@ A requirement of many games is to play more than one piece of audio contemporari
 
 Take this example where we attempt to play three pieces of audio at the same time, on mobile browsers we get the following results.
 
---------------------------------------
-| Browser        | Contemporary Play |
---------------------------------------
-| Chrome Mobile  |         N         |
---------------------------------------
-| Firefox Mobile |         Y         |
---------------------------------------
-| Opera Mobile   |         N         |
---------------------------------------
+
+| Mobile Browser    | Version |     |
+| ----------------- | ------- | --- |
+| Chrome (Android)  | 32+     |  N  |
+| Firefox (Android) | 26+     |  Y  |
+| IE Mobile         | 10+     |  ?  |
+| Opera Mobile      | 11+     |  N  |
+| Safari (iOS)      | 5+      |  ?  |
+| Android Browser   | 2.3+    |  ?  |
+| Blackberry        | 7+      |  ?  |
 
 ### Pages on Home Screens
 
