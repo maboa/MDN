@@ -40,14 +40,15 @@ Take [this example](http://jsbin.com/visihopa) where we attempt to play three pi
 
 | Mobile Browser    | Version | Concurrent | Autoplay |
 | ----------------- | ------- | ---------- | -------- |
-| Chrome (Android)  | 32+     |  N         |          |
-| Firefox (Android) | 26+     |  Y         |          |
+| Chrome (Android)  | 32+     |  N         |   N      |
+| Firefox (Android) | 26+     |  Y         |   Y      |
 | IE Mobile         | 10+     |  ?         |          |
-| Opera Mobile      | 11+     |  N         |          |
-| Safari (iOS)      | 7+      | Y/N [1]    |          |
+| Opera Mobile      | 11+     |  N         |   Y      |
+| Safari (iOS)      | 7+      | Y/N [1]    |   N [2]  |
 | Android Browser   | 2.3+    |  ?         |          |
 
 > Note 1 : Safari has issues playing if you try and start all pieces of audio contempororarily. If you stagger playbcak you may have limited success.
 
+> Note 2: It has been reported to work on Safari iOS6 if you add your page to home screen.
 
 
