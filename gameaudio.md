@@ -40,7 +40,9 @@ Take [this example](http://jsbin.com/visihopa) where we attempt to play three pi
 | Safari (iOS)      | 7+      | Y/N |
 | Android Browser   | 2.3+    |  ?  |
 
-```Note 1 : Safari has issues playing if you try and start all pieces of audio contempororarily. If you stagger playbcak you may have limited success.
+> Note 1 : Safari has issues playing if you try and start all pieces of audio contempororarily. If you stagger playbcak you may have limited success.
+
+
 
 ### Pages on Home Screens
 
