@@ -28,7 +28,7 @@ Likely an attempt to mitigate runaway mobile network data use, we may also find 
 
 A requirement of many games is to play more than one piece of audio contemporarily. Although the situation is set to get better with the adoption of the Web Audio API. Currently using the vanilla audio element will result in patchy results on mobile.
 
-Take [this example][(http://jsbin.com/visihopa) where we attempt to play three pieces of audio at the same time, on mobile browsers we get the following results. 
+Take [this example](http://jsbin.com/visihopa) where we attempt to play three pieces of audio at the same time, on mobile browsers we get the following results. 
 
 
 | Mobile Browser    | Version |     |
