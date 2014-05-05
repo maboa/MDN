@@ -10,7 +10,7 @@ Mobile
 
 By far the most difficult platforms to provide support for are mobile. Unfortunately these are also the platforms that people often use to play games. There's a couple of differences between desktop and mobile browsers that may have caused broswer vendors to make choices that then make mobile difficult for games audio developers to work with.
 
-> Note - Pages on Home Screens : An important thing to note is that adding a web app to your mobile home screen may change its capabilities.
+
 
 
 ### Autoplay
@@ -18,6 +18,8 @@ By far the most difficult platforms to provide support for are mobile. Unfortuna
 Many mobile browsers will simply ignore any instructions to autoplay audio. Playback for audio needs to be started by a user initiated event. This means you will have to structure your audio playback to take account of that. This is usually mitigated against by loading the audio in advance and starting any -- say -- background music in advance so that playback occurs when a start button is pressed. 
 
 For more passive audio autoplay, for example background music that starting as soon as a game loads, one trick is to detect any user initiated event and play back at that point.
+
+> Note - adding a web app to your mobile home screen may change its capabilities. In the case of autoplay and iOS, this appears to be the case currently.
 
 
 
