@@ -74,9 +74,12 @@ myAudio.pause();
 
 `````
 
-> **Note 1** On mobile we may need to trigger this code from a user initiated event. Perhaps the 'start' button being pressed? 
+You'll need to sample the current time to know when to stop. If you space your individual sounds by at least 500ms then using the timeUpdate event which fires every 250ms should be sufficient. Your files may be slightly longer than they strictly need to be, but silence compresses well.
 
-> **Note 2** Watch out for bitrates. Encoding your audio at lower bitrates means smaller file sizes but lower seeking accuracy.
+
+> **Note 1** : On mobile we may need to trigger this code from a user initiated event. Perhaps the 'start' button being pressed? 
+
+> **Note 2** : Watch out for bitrates. Encoding your audio at lower bitrates means smaller file sizes but lower seeking accuracy.
 
 
 See Also
