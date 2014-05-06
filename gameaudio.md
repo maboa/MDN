@@ -12,7 +12,6 @@ By far the most difficult platforms to provide support for are mobile. Unfortuna
 
 
 
-
 ### Autoplay
 
 Many mobile browsers will simply ignore any instructions to autoplay audio. Playback for audio needs to be started by a user initiated event. This means you will have to structure your audio playback to take account of that. This is usually mitigated against by loading the audio in advance and starting any -- say -- background music in advance so that playback occurs when a start button is pressed. 
@@ -51,8 +50,29 @@ Simple autoplay functionality is tested with [this example](http://jsbin.com/ruf
 | Safari (iOS)      | 7+      | Y/N [1]    |   N [2]  |
 | Android Browser   | 2.3+    |  ?         |          |
 
-> **Note 1** : Safari has issues playing if you try and start all pieces of audio contempororarily. If you stagger playbcak you may have limited success.
+> **Note 1** : Safari has issues playing if you try and start all pieces of audio contempororarily. If you stagger playback you may have limited success.
 
 > **Note 2** : It has been reported to work on Safari iOS6 if you add your page to home screen.
+
+
+Mobile Workarounds
+------------------
+
+Although mobile browsers can present problems, there are ways to work around these issues.
+
+### Audio Sprites
+
+Audio sprites take their name from CSS sprites - a visual technique for using CSS with a single graphic resource to break it into a series of sprites. We can apply the same principle to audio so that rather than have a series of small audio files that take time to load and play, we have one larger audio file containing all the smaller audio snippets we need. To play those audio parts we just use established start and stop times.
+
+The advantage is that we can prime one piece of audio and have our sprites ready to go. To do this we can just play and instantly pause the larger piece of audio. You'll also reduce the number of server requests and save bandwidth.
+
+`````javascript
+var myAudio = createElement("audio");
+myAudio.src = "mysprite.mp3";
+myAudio.play();
+myAudio.pause();
+
+`````
+
 
 
