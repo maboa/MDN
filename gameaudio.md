@@ -74,5 +74,9 @@ myAudio.pause();
 
 `````
 
-> **Note** that on mobile we may need to trigger this code from a user initiated event. Perhaps the 'start' button being pressed? 
+> **Note 1** On mobile we may need to trigger this code from a user initiated event. Perhaps the 'start' button being pressed? 
+
+> **Note 2** Watch out for bitrates. Encoding your audio at lower bitrates means smaller file sizes but lower seeking accuracy.
+
+
 
