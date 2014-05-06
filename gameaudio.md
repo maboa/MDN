@@ -74,5 +74,5 @@ myAudio.pause();
 
 `````
 
-
+> **Note** that on mobile we may need to trigger this code from a user initiated event. Perhaps the 'start' button being pressed? 
 
