@@ -76,6 +76,48 @@ myAudio.pause();
 
 You'll need to sample the current time to know when to stop. If you space your individual sounds by at least 500ms then using the timeUpdate event which fires every 250ms should be sufficient. Your files may be slightly longer than they strictly need to be, but silence compresses well.
 
+Here's an example of an audio sprite player - first let's set up the user interface in HTML:
+
+`````html
+<audio id="myAudio" src="jPlayer.org/tmp/countdown.mp3"></audio>
+<button type="button" data-start="18" data-stop="19">0</button>
+<button type="button" data-start="16" data-stop="17">1</button>
+<button type="button" data-start="14" data-stop="15">2</button>
+<button type="button" data-start="12" data-stop="13">3</button>
+<button type="button" data-start="10" data-stop="11">4</button>
+<button type="button" data-start="8"  data-stop="9">5</button>
+<button type="button" data-start="6"  data-stop="7">6</button>
+<button type="button" data-start="4"  data-stop="5">7</button>
+<button type="button" data-start="2"  data-stop="3">8</button>
+<button type="button" data-start="0"  data-stop="1">9</button>
+`````
+
+Now we have buttons with start and stop time in seconds. The countdown MP3 file consists of a number being spoken every 2 seconds, the idea is that we play back that number when the corresponding button is pressed.
+
+Let's add some JavaScript to make this work:
+
+`````javascript
+var myAudio = document.getElementById('myAudio');
+var buttons = document.getElementsByTagName('button');
+var stopTime = 0;
+
+for (var i = 0; i < buttons.length; i++) {
+  buttons[i].onclick = function() {
+    myAudio.currentTime = this.getAttribute("data-start");
+    stopTime = this.getAttribute("data-stop");
+    myAudio.play();
+  };
+}
+
+myAudio.addEventListener('timeupdate', function() {
+  if (this.currentTime > stopTime) {
+    this.pause();
+  }
+}, false);
+`````
+
+[Try it out](http://jsbin.com/yezezoqa/1/)
+
 
 > **Note 1** : On mobile we may need to trigger this code from a user initiated event. Perhaps the 'start' button being pressed? 
 
