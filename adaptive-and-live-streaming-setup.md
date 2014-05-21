@@ -15,4 +15,5 @@ The good news is that once we have encoded our media in the appropriate format w
 MPEG-DASH Encoding
 ------------------
 
-One useful piece of software for encoding to MPEG-DASH is [Dash Encoder](https://github.com/slederer/DASHEncoder) 
+One useful piece of software for encoding to MPEG-DASH is [Dash Encoder](https://github.com/slederer/DASHEncoder) Please note that you will need to be comfortable with make files and installing dependencies to get it up and running.
+
