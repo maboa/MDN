@@ -17,7 +17,10 @@ MPEG-DASH Encoding
 
 One useful piece of software for encoding to MPEG-DASH is [Dash Encoder](https://github.com/slederer/DASHEncoder) 
 
-> Please note that you will need to be comfortable with make files and installing dependencies to get it up and running.
+> *Note 1* You will need to be comfortable with make files and installing dependencies to get it up and running.
+
+> *Note 2* Since MPEG-DASH decoding is done partially using JavaScript and MSE files are often grabbed using XHR which means that same origin rules apply.
+
 
 Once encoded your file structure should look something like this:
 
@@ -30,6 +33,7 @@ See Also
 - [DASHEncoder](https://github.com/slederer/DASHEncoder)
 - [Dynamic Adaptive Streaming over HTTP Dataset](http://www-itec.uni-klu.ac.at/bib/files/p89-lederer.pdf)
 - [Adaptive Streaming in the Field](http://www.streamingmedia.com/Articles/Editorial/Featured-Articles/Adaptive-Streaming-in-the-Field-73017.aspx)
+- [MPEG DASH Media Source Demo](https://dash-mse-test.appspot.com/media.html)
 - [HTTP Live Streaming](https://developer.apple.com/streaming/)
 
 
