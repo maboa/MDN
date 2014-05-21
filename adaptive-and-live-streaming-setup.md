@@ -23,3 +23,15 @@ Once encoded your file structure should look something like this:
 
 
 
+See Also
+--------
+
+- [ITEC – Dynamic Adaptive Streaming over HTTP](http://www-itec.uni-klu.ac.at/dash/?page_id=207)
+- [DASHEncoder](https://github.com/slederer/DASHEncoder)
+- [Dynamic Adaptive Streaming over HTTP Dataset](http://www-itec.uni-klu.ac.at/bib/files/p89-lederer.pdf)
+- [Adaptive Streaming in the Field](http://www.streamingmedia.com/Articles/Editorial/Featured-Articles/Adaptive-Streaming-in-the-Field-73017.aspx)
+- [HTTP Live Streaming](https://developer.apple.com/streaming/)
+
+
+
+
