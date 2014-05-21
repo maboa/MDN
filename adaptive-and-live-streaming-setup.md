@@ -19,3 +19,7 @@ One useful piece of software for encoding to MPEG-DASH is [Dash Encoder](https:/
 
 > Please note that you will need to be comfortable with make files and installing dependencies to get it up and running.
 
+Once encoded your file structure should look something like this:
+
+
+
