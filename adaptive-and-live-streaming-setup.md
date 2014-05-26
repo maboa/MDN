@@ -10,11 +10,12 @@ In order to adaptive stream media we need to split the media up into chunks. We 
 
 The good news is that once we have encoded our media in the appropriate format we pretty good to go. For adaptive streaming over HTTP no special serverside components are required.
 
+Both MPEG-DASH and HLS use a playlist format to structure the component piece of media that make the possible streams. Various bitrate streams are broken into segments and placed in appropriate server folders - we provide the media players with a link to lookup files or playlists which specify the name and location of these stream folders.
 
 
 MPEG-DASH Encoding
 ------------------
-
+
 One useful piece of software for encoding to MPEG-DASH is [Dash Encoder](https://github.com/slederer/DASHEncoder) 
 
 > *Note 1* You will need to be comfortable with make files and installing dependencies to get it up and running.
@@ -22,7 +23,25 @@ One useful piece of software for encoding to MPEG-DASH is [Dash Encoder](https:/
 > *Note 2* Since MPEG-DASH decoding is done partially using JavaScript and MSE files are often grabbed using XHR which means that same origin rules apply.
 
 
-Once encoded your file structure should look something like this:
+Once encoded your file structure may look something like this:
+
+`````
+play list ->                /segments/news.mp4.mpd
+  
+main segment folder ->      /segments/main/
+
+100 Kbps segment folder ->  /segments/main/news100 contains (1.m4s, 2.m4s, 3.m4s ... )
+
+200 Kbps segment folder ->  /segments/main/news200 contains (1.m4s, 2.m4s, 3.m4s ... )
+
+300 Kbps segment folder ->  /segments/main/news300 contains (1.m4s, 2.m4s, 3.m4s ... )
+
+400 Kbps segment folder ->  /segments/main/news400 contains (1.m4s, 2.m4s, 3.m4s ... )
+
+              
+`````
+
+
 
 
 
