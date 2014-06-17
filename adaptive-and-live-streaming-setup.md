@@ -94,7 +94,7 @@ The playlist or .mpd file contains XML that explicitly lists where all the vario
   
 `````
 
-As you can see, the mpd file tells the browser where the various pieces of media are located, we also include meta data such as mimeType and codecs.
+As you can see, the mpd file tells the browser where the various pieces of media are located, we also include meta data such as mimeType and codecs. [TODO - find out startwithSAP, duration and mediaRange do - there is scant info about all this!]
 
 
 See Also
