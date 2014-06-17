@@ -22,6 +22,9 @@ One useful piece of software for encoding to MPEG-DASH is [Dash Encoder](https:/
 
 > *Note 2* Since MPEG-DASH decoding is done partially using JavaScript and MSE files are often grabbed using XHR which means that same origin rules apply.
 
+DASHEncoder uses [MP4Box](http://gpac.wp.mines-telecom.fr/mp4box/dash/) so you may want to use this directly.
+
+If you use WebM you can use the methods shown in this tutorial [DASH Adaptive Streaming for HTML 5 Video](https://developer.mozilla.org/en-US/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video)
 
 Once encoded your file structure may look something like this:
 
@@ -42,24 +45,46 @@ main segment folder ->      /segments/main/
 The playlist or .mpd file contains XML that explicitly lists where all the various bitrate files reside.
 
 `````xml
-<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:mpeg:DASH:schema:MPD:2011" xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011" profiles="urn:mpeg:dash:profile:isoff-main:2011" type="static" mediaPresentationDuration="PT0H9M56.46S" minBufferTime="PT1.0S">
-<BaseURL>
-http://www-itec.uni-klu.ac.at/ftp/datasets/mmsys12/BigBuckBunny/bunny_1s/
-</BaseURL>
-<Period start="PT0S">
-<AdaptationSet bitstreamSwitching="true">
-<Representation id="0" codecs="avc1" mimeType="video/mp4" width="320" height="240" startWithSAP="1" bandwidth="46986">
-<SegmentBase>
-<Initialization sourceURL="bunny_1s_50kbit/bunny_50kbit_dashNonSeg.mp4" range="0-862"/>
-</SegmentBase>
-<SegmentList duration="1">
-<SegmentURL media="bunny_1s_50kbit/bunny_50kbit_dashNonSeg.mp4" mediaRange="863-7113"/>
-<SegmentURL media="bunny_1s_50kbit/bunny_50kbit_dashNonSeg.mp4" mediaRange="7114-14104"/>
-<SegmentURL media="bunny_1s_50kbit/bunny_50kbit_dashNonSeg.mp4" mediaRange="14105-17990"/>
-
-...
-
-
+<?xml version="1.0"?>
+  <MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:mpeg:DASH:schema:MPD:2011"  xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011" profiles="urn:mpeg:dash:profile:isoff-main:2011" type="static" mediaPresentationDuration="PT0H9M56.46S">
+    <BaseURL>
+      http://example.com/segments
+    </BaseURL>
+    <Period start="PT0S">
+      <AdaptationSet bitstreamSwitching="true">
+      <Representation id="0" codecs="avc1" mimeType="video/mp4" width="320" height="240" startWithSAP="1" bandwidth="46986">
+        <SegmentBase>
+          <Initialization sourceURL="main/news100/1.m4s" range="0-862"/>
+        </SegmentBase>
+        <SegmentList duration="1">
+          <SegmentURL media="main/news100/2.m4s" mediaRange="863-7113"/>
+          <SegmentURL media="main/news100/3.m4s" mediaRange="7114-14104"/>
+          <SegmentURL media="main/news100/4.m4s" mediaRange="14105-17990"/>
+        </SegmentList>
+      </Representation>
+      <Representation id="1" codecs="avc1" mimeType="video/mp4" width="320" height="240" startWithSAP="1" bandwidth="91932">
+        <SegmentBase>
+          <Initialization sourceURL="main/news200/1.m4s" range="0-864"/>
+        </SegmentBase>
+        <SegmentList duration="1">
+          <SegmentURL media="main/news200/2.m4s" mediaRange="865-11523"/>
+          <SegmentURL media="main/news200/3.m4s" mediaRange="11524-25621"/>
+          <SegmentURL media="main/news200/4.m4s" mediaRange="25622-33693"/>
+        </SegmentList>
+      </Representation>
+      <Representation id="1" codecs="avc1" mimeType="video/mp4" width="320" height="240" startWithSAP="1" bandwidth="270370">
+        <SegmentBase>
+          <Initialization sourceURL="main/news300/1.m4s" range="0-865"/>
+        </SegmentBase>
+        <SegmentList duration="1">
+          <SegmentURL media="main/news300/2.m4s" mediaRange="866-26970"/>
+          <SegmentURL media="main/news300/3.m4s" mediaRange="26971-72543"/>
+          <SegmentURL media="main/news300/4.m4s" mediaRange="72544-95972"/>
+        </SegmentList>
+      </Representation>
+    </AdaptationSet>
+  </Period>
+</MPD>
 `````
 
 [XML EXPLANATION GOES HERE]
@@ -70,11 +95,14 @@ See Also
 
 - [ITEC – Dynamic Adaptive Streaming over HTTP](http://www-itec.uni-klu.ac.at/dash/?page_id=207)
 - [DASHEncoder](https://github.com/slederer/DASHEncoder)
+- [MP4Box](http://gpac.wp.mines-telecom.fr/mp4box)
 - [Dynamic Adaptive Streaming over HTTP Dataset](http://www-itec.uni-klu.ac.at/bib/files/p89-lederer.pdf)
 - [Adaptive Streaming in the Field](http://www.streamingmedia.com/Articles/Editorial/Featured-Articles/Adaptive-Streaming-in-the-Field-73017.aspx)
 - [MPEG DASH Media Source Demo](https://dash-mse-test.appspot.com/media.html)
 - [HTTP Live Streaming](https://developer.apple.com/streaming/)
 - [MPEG-DASH and streaming reference and resources (MSDN)](http://msdn.microsoft.com/en-us/library/dn551370(v=vs.85).aspx)
+- [DASH Adaptive Streaming for HTML 5 Video](https://developer.mozilla.org/en-US/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video)
+- 
 
 
 
