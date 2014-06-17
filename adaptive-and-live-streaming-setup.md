@@ -41,8 +41,25 @@ main segment folder ->      /segments/main/
 
 The playlist or .mpd file contains XML that explicitly lists where all the various bitrate files reside.
 
-`````
-[XML EXAMPLE GOES HERE]
+`````xml
+<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:mpeg:DASH:schema:MPD:2011" xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011" profiles="urn:mpeg:dash:profile:isoff-main:2011" type="static" mediaPresentationDuration="PT0H9M56.46S" minBufferTime="PT1.0S">
+<BaseURL>
+http://www-itec.uni-klu.ac.at/ftp/datasets/mmsys12/BigBuckBunny/bunny_1s/
+</BaseURL>
+<Period start="PT0S">
+<AdaptationSet bitstreamSwitching="true">
+<Representation id="0" codecs="avc1" mimeType="video/mp4" width="320" height="240" startWithSAP="1" bandwidth="46986">
+<SegmentBase>
+<Initialization sourceURL="bunny_1s_50kbit/bunny_50kbit_dashNonSeg.mp4" range="0-862"/>
+</SegmentBase>
+<SegmentList duration="1">
+<SegmentURL media="bunny_1s_50kbit/bunny_50kbit_dashNonSeg.mp4" mediaRange="863-7113"/>
+<SegmentURL media="bunny_1s_50kbit/bunny_50kbit_dashNonSeg.mp4" mediaRange="7114-14104"/>
+<SegmentURL media="bunny_1s_50kbit/bunny_50kbit_dashNonSeg.mp4" mediaRange="14105-17990"/>
+
+...
+
+
 `````
 
 [XML EXPLANATION GOES HERE]
@@ -57,7 +74,7 @@ See Also
 - [Adaptive Streaming in the Field](http://www.streamingmedia.com/Articles/Editorial/Featured-Articles/Adaptive-Streaming-in-the-Field-73017.aspx)
 - [MPEG DASH Media Source Demo](https://dash-mse-test.appspot.com/media.html)
 - [HTTP Live Streaming](https://developer.apple.com/streaming/)
-
+- [MPEG-DASH and streaming reference and resources (MSDN)](http://msdn.microsoft.com/en-us/library/dn551370(v=vs.85).aspx)
 
 
 
