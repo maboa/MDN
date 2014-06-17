@@ -74,6 +74,7 @@ The playlist or .mpd file contains XML that explicitly lists where all the vario
             <SegmentURL media="main/news200/4.m4s" mediaRange="25622-33693"/>
           </SegmentList>
         </Representation>
+        
         <Representation id="1" codecs="avc1" mimeType="video/mp4" width="320" height="240" startWithSAP="1" bandwidth="270370">
           <SegmentBase>
             <Initialization sourceURL="main/news300/1.m4s" range="0-865"/>
@@ -84,13 +85,16 @@ The playlist or .mpd file contains XML that explicitly lists where all the vario
             <SegmentURL media="main/news300/4.m4s" mediaRange="72544-95972"/>
           </SegmentList>
         </Representation>
+        
+        ...
+        
       </AdaptationSet>
     </Period>
   </MPD>
   
 `````
 
-[XML EXPLANATION GOES HERE]
+As you can see, the mpd file tells the browser where the various pieces of media are located, we also include meta data such as mimeType and codecs.
 
 
 See Also
