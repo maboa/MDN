@@ -52,39 +52,42 @@ The playlist or .mpd file contains XML that explicitly lists where all the vario
     </BaseURL>
     <Period start="PT0S">
       <AdaptationSet bitstreamSwitching="true">
-      <Representation id="0" codecs="avc1" mimeType="video/mp4" width="320" height="240" startWithSAP="1" bandwidth="46986">
-        <SegmentBase>
-          <Initialization sourceURL="main/news100/1.m4s" range="0-862"/>
-        </SegmentBase>
-        <SegmentList duration="1">
-          <SegmentURL media="main/news100/2.m4s" mediaRange="863-7113"/>
-          <SegmentURL media="main/news100/3.m4s" mediaRange="7114-14104"/>
-          <SegmentURL media="main/news100/4.m4s" mediaRange="14105-17990"/>
-        </SegmentList>
-      </Representation>
-      <Representation id="1" codecs="avc1" mimeType="video/mp4" width="320" height="240" startWithSAP="1" bandwidth="91932">
-        <SegmentBase>
-          <Initialization sourceURL="main/news200/1.m4s" range="0-864"/>
-        </SegmentBase>
-        <SegmentList duration="1">
-          <SegmentURL media="main/news200/2.m4s" mediaRange="865-11523"/>
-          <SegmentURL media="main/news200/3.m4s" mediaRange="11524-25621"/>
-          <SegmentURL media="main/news200/4.m4s" mediaRange="25622-33693"/>
-        </SegmentList>
-      </Representation>
-      <Representation id="1" codecs="avc1" mimeType="video/mp4" width="320" height="240" startWithSAP="1" bandwidth="270370">
-        <SegmentBase>
-          <Initialization sourceURL="main/news300/1.m4s" range="0-865"/>
-        </SegmentBase>
-        <SegmentList duration="1">
-          <SegmentURL media="main/news300/2.m4s" mediaRange="866-26970"/>
-          <SegmentURL media="main/news300/3.m4s" mediaRange="26971-72543"/>
-          <SegmentURL media="main/news300/4.m4s" mediaRange="72544-95972"/>
-        </SegmentList>
-      </Representation>
-    </AdaptationSet>
-  </Period>
-</MPD>
+      
+        <Representation id="0" codecs="avc1" mimeType="video/mp4" width="320" height="240" startWithSAP="1" bandwidth="46986">
+          <SegmentBase>
+            <Initialization sourceURL="main/news100/1.m4s" range="0-862"/>
+          </SegmentBase>
+          <SegmentList duration="1">
+            <SegmentURL media="main/news100/2.m4s" mediaRange="863-7113"/>
+            <SegmentURL media="main/news100/3.m4s" mediaRange="7114-14104"/>
+            <SegmentURL media="main/news100/4.m4s" mediaRange="14105-17990"/>
+          </SegmentList>
+        </Representation>
+        
+        <Representation id="1" codecs="avc1" mimeType="video/mp4" width="320" height="240" startWithSAP="1" bandwidth="91932">
+          <SegmentBase>
+            <Initialization sourceURL="main/news200/1.m4s" range="0-864"/>
+          </SegmentBase>
+          <SegmentList duration="1">
+            <SegmentURL media="main/news200/2.m4s" mediaRange="865-11523"/>
+            <SegmentURL media="main/news200/3.m4s" mediaRange="11524-25621"/>
+            <SegmentURL media="main/news200/4.m4s" mediaRange="25622-33693"/>
+          </SegmentList>
+        </Representation>
+        <Representation id="1" codecs="avc1" mimeType="video/mp4" width="320" height="240" startWithSAP="1" bandwidth="270370">
+          <SegmentBase>
+            <Initialization sourceURL="main/news300/1.m4s" range="0-865"/>
+          </SegmentBase>
+          <SegmentList duration="1">
+            <SegmentURL media="main/news300/2.m4s" mediaRange="866-26970"/>
+            <SegmentURL media="main/news300/3.m4s" mediaRange="26971-72543"/>
+            <SegmentURL media="main/news300/4.m4s" mediaRange="72544-95972"/>
+          </SegmentList>
+        </Representation>
+      </AdaptationSet>
+    </Period>
+  </MPD>
+  
 `````
 
 [XML EXPLANATION GOES HERE]
