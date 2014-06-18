@@ -94,8 +94,25 @@ The playlist or .mpd file contains XML that explicitly lists where all the vario
   
 `````
 
-As you can see, the mpd file tells the browser where the various pieces of media are located, we also include meta data such as mimeType and codecs. [TODO - find out startwithSAP, duration and mediaRange do - there is scant info about all this!]
+The MPD file tells the browser where the various pieces of media are located, it also includes meta data such as mimeType and codecs and there are other details such as byte-ranges in there too. Generally these files will be generated for you.
 
+Once you have generated your MPD file you can reference it from within the video tag.
+
+`````html
+<video src="my.mpd" type="video.mp4"></video>
+`````
+
+it might be wise to provide a fallback:
+
+`````html
+<video>
+  <source src="my.mpd" type="video.mp4">
+  <!-- fallback -->
+  <source src="my.mp4" type="video.mp4">
+</video>
+`````
+
+HLS (HTTP Live Steaming Encoding)
 
 See Also
 --------
@@ -109,7 +126,5 @@ See Also
 - [HTTP Live Streaming](https://developer.apple.com/streaming/)
 - [MPEG-DASH and streaming reference and resources (MSDN)](http://msdn.microsoft.com/en-us/library/dn551370(v=vs.85).aspx)
 - [DASH Adaptive Streaming for HTML 5 Video](https://developer.mozilla.org/en-US/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video)
-- 
-
 
 
