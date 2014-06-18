@@ -117,9 +117,10 @@ it might be wise to provide a fallback:
 </video>
 `````
 
-> Note - this relies on dash.js and the browser implementing [Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html), see the latest [dash.js reference player](http://dashif.org/reference/players/javascript/index.html) 
+> Note - this relies on [dash.js](https://github.com/Dash-Industry-Forum/dash.js/) and the browser implementing [Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html), see the latest [dash.js reference player](http://dashif.org/reference/players/javascript/index.html) 
 
 HLS (HTTP Live Steaming Encoding)
+---------------------------------
 
 See Also
 --------
@@ -134,4 +135,4 @@ See Also
 - [MPEG-DASH and streaming reference and resources (MSDN)](http://msdn.microsoft.com/en-us/library/dn551370(v=vs.85).aspx)
 - [DASH Adaptive Streaming for HTML 5 Video](https://developer.mozilla.org/en-US/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video)
 - [DASH.js Wiki](https://github.com/Dash-Industry-Forum/dash.js/wiki)
-
+- [DASH.js Google Group](https://groups.google.com/forum/#!forum/dashjs)
