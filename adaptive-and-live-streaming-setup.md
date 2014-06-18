@@ -96,7 +96,11 @@ The playlist or .mpd file contains XML that explicitly lists where all the vario
 
 The MPD file tells the browser where the various pieces of media are located, it also includes meta data such as mimeType and codecs and there are other details such as byte-ranges in there too. Generally these files will be generated for you.
 
+> Note - You can also split out your audio and video streams which can then be prioritised and served separately depending on bandwidth. 
+
 Once you have generated your MPD file you can reference it from within the video tag.
+
+
 
 `````html
 <video src="my.mpd" type="video.mp4"></video>
@@ -106,11 +110,14 @@ it might be wise to provide a fallback:
 
 `````html
 <video>
-  <source src="my.mpd" type="video.mp4">
+  <source src="my.mpd" type="video/mp4">
   <!-- fallback -->
-  <source src="my.mp4" type="video.mp4">
+  <source src="my.mp4" type="video/mp4">
+  <source src="my.webm" type="video/webm">
 </video>
 `````
+
+> Note - this relies on dash.js and the browser implementing [Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html), see the latest [dash.js reference player](http://dashif.org/reference/players/javascript/index.html) 
 
 HLS (HTTP Live Steaming Encoding)
 
@@ -126,5 +133,5 @@ See Also
 - [HTTP Live Streaming](https://developer.apple.com/streaming/)
 - [MPEG-DASH and streaming reference and resources (MSDN)](http://msdn.microsoft.com/en-us/library/dn551370(v=vs.85).aspx)
 - [DASH Adaptive Streaming for HTML 5 Video](https://developer.mozilla.org/en-US/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video)
-
+- [DASH.js Wiki](https://github.com/Dash-Industry-Forum/dash.js/wiki)
 
