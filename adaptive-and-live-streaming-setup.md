@@ -117,7 +117,7 @@ it might be wise to provide a fallback:
 </video>
 `````
 
-> Note - this relies on [dash.js](https://github.com/Dash-Industry-Forum/dash.js/) and the browser implementing [Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html), see the latest [dash.js reference player](http://dashif.org/reference/players/javascript/index.html) 
+> Note - MPEG-DASH playback relies on [dash.js](https://github.com/Dash-Industry-Forum/dash.js/) and the browser implementing [Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html), see the latest [dash.js reference player](http://dashif.org/reference/players/javascript/index.html) 
 
 HLS (HTTP Live Steaming Encoding)
 ---------------------------------
