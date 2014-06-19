@@ -15,6 +15,8 @@ Both MPEG-DASH and HLS use a playlist format to structure the component piece of
 
 MPEG-DASH Encoding
 ------------------
+
+MPEG-DASH, is an adaptive bitrate streaming technique that enables streaming of media content over the Internet delivered from conventional HTTP web servers.
 
 One useful piece of software for encoding to MPEG-DASH is [Dash Encoder](https://github.com/slederer/DASHEncoder) 
 
@@ -121,6 +123,8 @@ it might be wise to provide a fallback:
 
 HLS (HTTP Live Steaming Encoding)
 ---------------------------------
+
+HTTP Live Streaming (HLS) is an HTTP-based media streaming protocol implemented by Apple Inc. It's incoprorated into iOS and OSX platforms and works well on [mobile and desktop Safari and most Android devices with some caveats](http://www.jwplayer.com/html5/hls/).
 
 See Also
 --------
