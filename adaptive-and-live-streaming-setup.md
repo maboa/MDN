@@ -144,6 +144,10 @@ Apple also provides a File Segmenter for Mac, that takes a suitably encoded file
 
 The HLS Index File (much like MPEG-DASH's .mpd file) contains the information on where all the media segments reside and other meta data such as bandwidth application.
 
+Apple uses the M3U8 format (an extension of its .m3u playlist format) for their index files.
+
+An example can be found below.
+
 `````
 #EXT-X-VERSION:3
 #EXTM3U
@@ -162,6 +166,7 @@ http://media.example.com/segment2.ts
 #EXT-X-ENDLIST
 `````
 
+Comprehensive information on how to encode media for Apple's HLS format can be found on Apple's Developer Pages.
 
 See Also
 --------
@@ -178,3 +183,4 @@ See Also
 - [DASH.js Wiki](https://github.com/Dash-Industry-Forum/dash.js/wiki)
 - [DASH.js Google Group](https://groups.google.com/forum/#!forum/dashjs)
 - [What is HLS (HTTP-Live-Streaming)?](http://www.streamingmedia.com/Articles/Editorial/What-Is-.../What-is-HLS-(HTTP-Live-Streaming)-78221.aspx)
+- [HTTP Live Streaming Overview](https://developer.apple.com/library/ios/documentation/networkinginternet/conceptual/streamingmediaguide/Introduction/Introduction.html)
