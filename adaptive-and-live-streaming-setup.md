@@ -128,19 +128,19 @@ HTTP Live Streaming (HLS) is an HTTP-based media streaming protocol implemented 
 
 Media is usually encoded as MPEG-4 (H.264 video and AAC audio) and packaged into an MPEG-2 Transport Stream which is then broken into segments and saved as one or more .ts media files. Apple provides tools to convert media files to the appropriate format.
 
-#Media Encoder
+###Media Encoder
 
 For live stream encoding [Adobe provide a Media Encoder](http://www.adobe.com/support/downloads/product.jsp?product=160&platform=Macintosh) for Mac.
 
-#Stream Segmenter
+###Stream Segmenter
 
 The Stream Segmenter provided by Apple for Mac platforms, takes a media stream from a local network and splits media into equally sized media files together with an index file.
 
-#File Segmenter
+###File Segmenter
 
 Apple also provides a File Segmenter for Mac, that takes a suitably encoded file, splits it up and produces a index file much similarly to the Stream Segmenter.
 
-#Index Files (Playlists)
+###Index Files (Playlists)
 
 The HLS Index File (much like MPEG-DASH's .mpd file) contains the information on where all the media segments reside and other meta data such as bandwidth application.
 
