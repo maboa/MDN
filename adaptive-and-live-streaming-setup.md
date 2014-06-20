@@ -182,5 +182,6 @@ See Also
 - [DASH Adaptive Streaming for HTML 5 Video](https://developer.mozilla.org/en-US/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video)
 - [DASH.js Wiki](https://github.com/Dash-Industry-Forum/dash.js/wiki)
 - [DASH.js Google Group](https://groups.google.com/forum/#!forum/dashjs)
+- [Akamai Dash Diagnostic Player](http://mediapm.edgesuite.net/dash/public/support-player/current/index.html)
 - [What is HLS (HTTP-Live-Streaming)?](http://www.streamingmedia.com/Articles/Editorial/What-Is-.../What-is-HLS-(HTTP-Live-Streaming)-78221.aspx)
 - [HTTP Live Streaming Overview](https://developer.apple.com/library/ios/documentation/networkinginternet/conceptual/streamingmediaguide/Introduction/Introduction.html)
