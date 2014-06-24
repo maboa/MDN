@@ -32,3 +32,34 @@ Video for the web can be specified:
   <a href="videofile.mp4">download video</a>
 </video>
 `````
+
+JavaScript
+----------
+
+You can create audio on the fly like this:
+
+`````javascript
+var myAudio = document.createElement('audio');
+
+if (myAudio.canPlayType('audio/mpeg')) {
+  myAudio.setAttribute('src','audiofile.mp3');
+}
+
+if (myAudio.canPlayType('audio/ogg')) {
+  myAudio.setAttribute('src','audiofile.ogg');
+}
+`````
+
+Video similarly:
+
+`````javascript
+var myVideo = document.createElement('video');
+
+if (myVideo.canPlayType('video/mp4')) {
+  myVideo.setAttribute('src','videofile.mp4');
+}
+
+if (myAudio.canPlayType('video/webm')) {
+  myVideo.setAttribute('src','videofile.webm');
+}
+`````
