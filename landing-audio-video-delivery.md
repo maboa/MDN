@@ -59,7 +59,7 @@ if (myVideo.canPlayType('video/mp4')) {
   myVideo.setAttribute('src','videofile.mp4');
 }
 
-if (myAudio.canPlayType('video/webm')) {
+if (myVideo.canPlayType('video/webm')) {
   myVideo.setAttribute('src','videofile.webm');
 }
 `````
