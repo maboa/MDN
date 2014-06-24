@@ -100,6 +100,50 @@ The MPD file tells the browser where the various pieces of media are located, it
 
 > Note - You can also split out your audio and video streams which can then be prioritised and served separately depending on bandwidth. 
 
+###Ondemand Profile
+
+MPEG-DASH also allows something known as an 'ondemand profile'. This profile will allow switching between streams 'on demand' - that is to say that you only need provide a set of contiguous files and specify the bandwidth for each one and the appropriate file will be chosen automatically and switched mid-stream if the bandwidth changes.
+
+Here's a simple example that provides an audio track representation and four separate video representations.
+
+`````
+<?xml version="1.0" encoding="UTF-8"?>
+<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="urn:mpeg:dash:schema:mpd:2011"
+  xsi:schemaLocation="urn:mpeg:dash:schema:mpd:2011 DASH-MPD.xsd"
+  type="static"
+  mediaPresentationDuration="PT654S"
+  minBufferTime="PT2S"
+  profiles="urn:mpeg:dash:profile:isoff-on-demand:2011">
+
+  <BaseURL>http://example.com/ondemand/</BaseURL>
+  <Period>
+    <!-- English Audio -->
+    <AdaptationSet mimeType="audio/mp4" codecs="mp4a.40.5" lang="en" subsegmentAlignment="true" subsegmentStartsWithSAP="1">
+      <Representation id="1" bandwidth="64000">
+        <BaseURL>ElephantsDream_AAC48K_064.mp4.dash</BaseURL>
+      </Representation>
+    </AdaptationSet>
+    <!-- Video -->
+    <AdaptationSet mimeType="video/mp4" codecs="avc1.42401E" subsegmentAlignment="true" subsegmentStartsWithSAP="1">
+      <Representation id="2" bandwidth="100000" width="480" height="360">
+        <BaseURL>ElephantsDream_H264BPL30_0100.264.dash</BaseURL>
+      </Representation>
+      <Representation id="3" bandwidth="175000" width="480" height="360">
+        <BaseURL>ElephantsDream_H264BPL30_0175.264.dash</BaseURL>
+      </Representation>
+      <Representation id="4" bandwidth="250000" width="480" height="360">
+        <BaseURL>ElephantsDream_H264BPL30_0250.264.dash</BaseURL>
+      </Representation>
+      <Representation id="5" bandwidth="500000" width="480" height="360">
+        <BaseURL>ElephantsDream_H264BPL30_0500.264.dash</BaseURL>
+      </Representation>
+    </AdaptationSet>
+  </Period>
+</MPD>
+
+`````
+
 Once you have generated your MPD file you can reference it from within the video tag.
 
 
