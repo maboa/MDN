@@ -102,7 +102,7 @@ The MPD file tells the browser where the various pieces of media are located, it
 
 ###Ondemand Profile
 
-MPEG-DASH also allows something known as an 'ondemand profile'. This profile will allow switching between streams 'on demand' - that is to say that you only need provide a set of contiguous files and specify the bandwidth for each one and the appropriate file will be chosen automatically and switched mid-stream if the bandwidth changes.
+MPEG-DASH also allows something known as an 'ondemand profile'. This profile will allow switching between streams 'on demand' - that is to say that you only need provide a set of contiguous files and specify the bandwidth for each one and the appropriate file will be chosen automatically.
 
 Here's a simple example that provides an audio track representation and four separate video representations.
 
