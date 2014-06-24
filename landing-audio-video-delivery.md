@@ -2,10 +2,7 @@ Audio and Video Delivery
 ========================
 
 
-HTML
-----
-
-Audio for the web can be specified:
+###HTML Audio
 
 `````html
 <audio controls>
@@ -19,7 +16,7 @@ Audio for the web can be specified:
 </audio>
 `````
 
-Video for the web can be specified:
+###HTML Video
 
 `````html
 <video controls width="640" height="480">
@@ -33,10 +30,7 @@ Video for the web can be specified:
 </video>
 `````
 
-JavaScript
-----------
-
-You can create audio on the fly like this:
+###JavaScript Audio
 
 `````javascript
 var myAudio = document.createElement('audio');
@@ -50,7 +44,7 @@ if (myAudio.canPlayType('audio/ogg')) {
 }
 `````
 
-Video similarly:
+###JavaScript Video
 
 `````javascript
 var myVideo = document.createElement('video');
