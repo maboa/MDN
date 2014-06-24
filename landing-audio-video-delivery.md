@@ -15,7 +15,7 @@ Audio for the web can be specified:
 </audio>
 `````
 
-Video on the web can be specified:
+Video for the web can be specified:
 
 `````html
 <video controls width="640" height="480">
