@@ -106,7 +106,7 @@ MPEG-DASH also allows something known as an 'ondemand profile'. This profile wil
 
 Here's a simple example that provides an audio track representation and four separate video representations.
 
-`````
+`````xml
 <?xml version="1.0" encoding="UTF-8"?>
 <MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns="urn:mpeg:dash:schema:mpd:2011"
