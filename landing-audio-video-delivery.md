@@ -31,7 +31,6 @@ The code above will create an audio player that attempts to preload as much audi
   <source src="videofile.webm" type="video/webm">
   
   <!-- specifying subtitle files -->
-  
   <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
   <track src="subtitles_no.vtt" kind="subtitles" srclang="no" label="Norwegian">
   
