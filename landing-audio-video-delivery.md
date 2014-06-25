@@ -5,7 +5,7 @@ Audio and Video Delivery
 ###HTML Audio
 
 `````html
-<audio controls>
+<audio controls preload="auto">
   <source src="audiofile.mp3" type="audio/mpeg">
   
   <!-- fallback for browsers that don't suppport mp3 -->
@@ -16,19 +16,31 @@ Audio and Video Delivery
 </audio>
 `````
 
+The code above will create an audio player that attempts to preload as much audio as possible for smooth playback.
+
+Note: preload may be ignored by some mobile browsers.
+
+
 ###HTML Video
 
 `````html
-<video controls width="640" height="480">
+<video controls width="640" height="480" poster="initialimage.png" autoplay muted>
   <source src="videofile.mp4" type="video/mp4">
   
   <!-- fallback for browsers that don't suppport mp4 -->
   <source src="videofile.webm" type="video/webm">
   
+  <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+  <track src="subtitles_no.vtt" kind="subtitles" srclang="no" label="Norwegian">
+  
   <!-- fallback for browsers that don't support video tag -->
   <a href="videofile.mp4">download video</a>
 </video>
 `````
+
+The code above creates a video player of dimensions 640x480 pixels, displaying a poster image until the video is played. We instruct the video to autoplay but to be muted by default.
+
+Note: autoplay may be ignored by some mobile browsers.
 
 ###JavaScript Audio
 
