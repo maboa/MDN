@@ -18,7 +18,7 @@ Audio and Video Delivery
 
 The code above will create an audio player that attempts to preload as much audio as possible for smooth playback.
 
-Note: preload may be ignored by some mobile browsers.
+> Note: preload may be ignored by some mobile browsers.
 
 
 ###HTML Video
@@ -40,7 +40,7 @@ Note: preload may be ignored by some mobile browsers.
 
 The code above creates a video player of dimensions 640x480 pixels, displaying a poster image until the video is played. We instruct the video to autoplay but to be muted by default.
 
-Note: autoplay may be ignored by some mobile browsers.
+> Note: autoplay may be ignored by some mobile browsers.
 
 ###JavaScript Audio
 
