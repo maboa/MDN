@@ -72,3 +72,35 @@ if (myVideo.canPlayType('video/webm')) {
   myVideo.setAttribute('src','videofile.webm');
 }
 `````
+
+###Web Audio API
+
+`````javascript
+var context;
+var request; 
+var source;
+
+try { 
+  context = new (window.AudioContext || window.webkitAudioContext)();
+  request = new XMLHttpRequest(); 
+  request.open("GET","myaudio.mp3",true); 
+  request.responseType = "arraybuffer"; 
+  
+  request.onload = function() { 
+    context.decodeAudioData(request.response, function(buffer) { 
+      source = context.createBufferSource();  
+      source.buffer = buffer; 
+      source.connect(context.destination); 
+      // auto play
+      source.noteOn(0); 
+    }); 
+  }; 
+  
+  request.send(); 
+  
+} catch(e) { 
+  alert('web audio api not supported'); 
+} 
+
+
+`````
