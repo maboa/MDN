@@ -52,12 +52,17 @@ var myAudio = document.createElement('audio');
 
 if (myAudio.canPlayType('audio/mpeg')) {
   myAudio.setAttribute('src','audiofile.mp3');
-}
-
-if (myAudio.canPlayType('audio/ogg')) {
+} else if (myAudio.canPlayType('audio/ogg')) {
   myAudio.setAttribute('src','audiofile.ogg');
 }
+
+myAudio.currentTime = 5;
+myAudio.play();
 `````
+
+We set the source of the audio depending on the type of audio file the browser supports we then set the play-head 5 seconds in and attempt to play.
+
+> Note: Play will be ignored by some mobile browsers unless issued by a user-initiated event.
 
 ###JavaScript Video
 
@@ -66,12 +71,14 @@ var myVideo = document.createElement('video');
 
 if (myVideo.canPlayType('video/mp4')) {
   myVideo.setAttribute('src','videofile.mp4');
-}
-
-if (myVideo.canPlayType('video/webm')) {
+} else if (myVideo.canPlayType('video/webm')) {
   myVideo.setAttribute('src','videofile.webm');
 }
+
+myVideo.width = 480;
+myVideo.height = 320;
 `````
+We set the source of the video depending on the type of video file the browser supports we then set the width and height of the video.
 
 ###Web Audio API
 
@@ -104,3 +111,5 @@ try {
 
 
 `````
+
+In this example we retrieve an MP3 file via XHR, load it into a source and play it.
