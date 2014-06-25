@@ -20,7 +20,7 @@ The code above will create an audio player that attempts to preload as much audi
 
 > Note: preload may be ignored by some mobile browsers.
 
-For further info see [Cross Brwoser Audio Basics (HTML5 Audio In Detail)](https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/Cross-browser_audio_basics#HTML5_audio_in_detail)
+For further info see [Cross Browser Audio Basics (HTML5 Audio In Detail)](https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/Cross-browser_audio_basics#HTML5_audio_in_detail)
 
 
 ###HTML Video
