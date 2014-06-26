@@ -17,8 +17,93 @@ MPEG-DASH Encoding
 ------------------
 
 MPEG-DASH, is an adaptive bitrate streaming technique that enables streaming of media content over the Internet delivered from conventional HTTP web servers.
+
+A media presentation description (MPD) file is used to hold the information on the various streams, bandwidths that the they are associated with. You add the URL to the MPD file to the source of the video element instead of pointing directly to the media file as you would with static media.
+
+The MPD file tells the browser where the various pieces of media are located, it also includes meta data such as mimeType and codecs and there are other details such as byte-ranges in there too. The MPD file is XML based and in many cases will be generated for you.
+
+There are a few profiles we can use. We're going to take a look at Ondemand profile for Video On Demand (VOD) and the LIVE profile.
+
+For live services streaming, the LIVE profile is a requirement. The switching capabilities are identical between the profiles. 
+
+Other reasons to use LIVE profile over Ondemand for VOD content may be:
+
+1. Your client or server does not support range requests
+2. Your server/CDN cannot cache range requests efficiently
+3. Your server/CDN cannot prefetch range requests efficiently
+4. The SIDX* is large and having to load it first slows down startup a little 
+5. You want to use the original files for both DASH and other forms of delivery (such as [Microsoft Smooth Streaming](http://www.microsoft.com/silverlight/smoothstreaming/)) as a transition strategy
+6. You can use the same media files for both live transmission and VOD at a later stage
+
+*SIDX or SegmentIndexBox is a structure describing a segment by giving its earliest presentation time and other meta-data. 
+
+
+###Ondemand Profile
+
+This profile will allow switching between streams 'on demand' - that is to say that you only need provide a set of contiguous files and specify the bandwidth for each one and the appropriate file will be chosen automatically.
+
+Here's a simple example that provides an audio track representation and four separate video representations.
+
+`````xml
+<?xml version="1.0" encoding="UTF-8"?>
+<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="urn:mpeg:dash:schema:mpd:2011"
+  xsi:schemaLocation="urn:mpeg:dash:schema:mpd:2011 DASH-MPD.xsd"
+  type="static"
+  mediaPresentationDuration="PT654S"
+  minBufferTime="PT2S"
+  profiles="urn:mpeg:dash:profile:isoff-on-demand:2011">
+
+  <BaseURL>http://example.com/ondemand/</BaseURL>
+  <Period>
+    <!-- English Audio -->
+    <AdaptationSet mimeType="audio/mp4" codecs="mp4a.40.5" lang="en" subsegmentAlignment="true" subsegmentStartsWithSAP="1">
+      <Representation id="1" bandwidth="64000">
+        <BaseURL>ElephantsDream_AAC48K_064.mp4.dash</BaseURL>
+      </Representation>
+    </AdaptationSet>
+    <!-- Video -->
+    <AdaptationSet mimeType="video/mp4" codecs="avc1.42401E" subsegmentAlignment="true" subsegmentStartsWithSAP="1">
+      <Representation id="2" bandwidth="100000" width="480" height="360">
+        <BaseURL>ElephantsDream_H264BPL30_0100.264.dash</BaseURL>
+      </Representation>
+      <Representation id="3" bandwidth="175000" width="480" height="360">
+        <BaseURL>ElephantsDream_H264BPL30_0175.264.dash</BaseURL>
+      </Representation>
+      <Representation id="4" bandwidth="250000" width="480" height="360">
+        <BaseURL>ElephantsDream_H264BPL30_0250.264.dash</BaseURL>
+      </Representation>
+      <Representation id="5" bandwidth="500000" width="480" height="360">
+        <BaseURL>ElephantsDream_H264BPL30_0500.264.dash</BaseURL>
+      </Representation>
+    </AdaptationSet>
+  </Period>
+</MPD>
+
+`````
+
+Once you have generated your MPD file you can reference it from within the video tag.
+
+
+
+`````html
+<video src="my.mpd" type="video.mp4"></video>
+`````
+
+it might be wise to provide a fallback:
+
+`````html
+<video>
+  <source src="my.mpd" type="video/mp4">
+  <!-- fallback -->
+  <source src="my.mp4" type="video/mp4">
+  <source src="my.webm" type="video/webm">
+</video>
+`````
+
+###LIVE Profile
 
-One useful piece of software for encoding to MPEG-DASH is [Dash Encoder](https://github.com/slederer/DASHEncoder) 
+A useful piece of software for encoding to MPEG-DASH is [Dash Encoder](https://github.com/slederer/DASHEncoder) 
 
 > *Note 1* You will need to be comfortable with make files and installing dependencies to get it up and running.
 
@@ -96,74 +181,9 @@ The playlist or .mpd file contains XML that explicitly lists where all the vario
   
 `````
 
-The MPD file tells the browser where the various pieces of media are located, it also includes meta data such as mimeType and codecs and there are other details such as byte-ranges in there too. Generally these files will be generated for you.
-
-> Note - You can also split out your audio and video streams which can then be prioritised and served separately depending on bandwidth. 
-
-###Ondemand Profile
-
-MPEG-DASH also allows something known as an 'ondemand profile'. This profile will allow switching between streams 'on demand' - that is to say that you only need provide a set of contiguous files and specify the bandwidth for each one and the appropriate file will be chosen automatically.
-
-Here's a simple example that provides an audio track representation and four separate video representations.
-
-`````xml
-<?xml version="1.0" encoding="UTF-8"?>
-<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns="urn:mpeg:dash:schema:mpd:2011"
-  xsi:schemaLocation="urn:mpeg:dash:schema:mpd:2011 DASH-MPD.xsd"
-  type="static"
-  mediaPresentationDuration="PT654S"
-  minBufferTime="PT2S"
-  profiles="urn:mpeg:dash:profile:isoff-on-demand:2011">
-
-  <BaseURL>http://example.com/ondemand/</BaseURL>
-  <Period>
-    <!-- English Audio -->
-    <AdaptationSet mimeType="audio/mp4" codecs="mp4a.40.5" lang="en" subsegmentAlignment="true" subsegmentStartsWithSAP="1">
-      <Representation id="1" bandwidth="64000">
-        <BaseURL>ElephantsDream_AAC48K_064.mp4.dash</BaseURL>
-      </Representation>
-    </AdaptationSet>
-    <!-- Video -->
-    <AdaptationSet mimeType="video/mp4" codecs="avc1.42401E" subsegmentAlignment="true" subsegmentStartsWithSAP="1">
-      <Representation id="2" bandwidth="100000" width="480" height="360">
-        <BaseURL>ElephantsDream_H264BPL30_0100.264.dash</BaseURL>
-      </Representation>
-      <Representation id="3" bandwidth="175000" width="480" height="360">
-        <BaseURL>ElephantsDream_H264BPL30_0175.264.dash</BaseURL>
-      </Representation>
-      <Representation id="4" bandwidth="250000" width="480" height="360">
-        <BaseURL>ElephantsDream_H264BPL30_0250.264.dash</BaseURL>
-      </Representation>
-      <Representation id="5" bandwidth="500000" width="480" height="360">
-        <BaseURL>ElephantsDream_H264BPL30_0500.264.dash</BaseURL>
-      </Representation>
-    </AdaptationSet>
-  </Period>
-</MPD>
-
-`````
-
-Once you have generated your MPD file you can reference it from within the video tag.
-
-
-
-`````html
-<video src="my.mpd" type="video.mp4"></video>
-`````
-
-it might be wise to provide a fallback:
-
-`````html
-<video>
-  <source src="my.mpd" type="video/mp4">
-  <!-- fallback -->
-  <source src="my.mp4" type="video/mp4">
-  <source src="my.webm" type="video/webm">
-</video>
-`````
-
 > Note - MPEG-DASH playback relies on [dash.js](https://github.com/Dash-Industry-Forum/dash.js/) and the browser implementing [Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html), see the latest [dash.js reference player](http://dashif.org/reference/players/javascript/index.html) 
+
+
 
 HLS Encoding
 ------------
