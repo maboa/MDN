@@ -25,7 +25,7 @@ The MPD file tells the browser where the various pieces of media are located, it
 
 There are a few profiles we can use. We're going to take a look at Ondemand profile for Video On Demand (VOD) and the LIVE profile.
 
-For live services streaming, the LIVE profile is a requirement. The switching capabilities are identical between the profiles. 
+For live services streaming, the LIVE profile is a requirement. The stream switching capabilities are identical between the profiles. 
 
 Other reasons to use LIVE profile over Ondemand for VOD content may be:
 
