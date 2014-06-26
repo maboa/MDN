@@ -18,9 +18,10 @@ MPEG-DASH Encoding
 
 MPEG-DASH, is an adaptive bitrate streaming technique that enables streaming of media content over the Internet delivered from conventional HTTP web servers.
 
-A media presentation description (MPD) file is used to hold the information on the various streams, bandwidths that the they are associated with. You add the URL to the MPD file to the source of the video element instead of pointing directly to the media file as you would with static media.
+A media presentation description (MPD) file is used to hold the information on the various streams and the bandwidths they are associated with. 
+In your video source (src) attribute you point to the MPD instead of to the media file as you would with non-adaptive media.
 
-The MPD file tells the browser where the various pieces of media are located, it also includes meta data such as mimeType and codecs and there are other details such as byte-ranges in there too. The MPD file is XML based and in many cases will be generated for you.
+The MPD file tells the browser where the various pieces of media are located, it also includes meta data such as mimeType and codecs and there are other details such as byte-ranges in there too - it is an XML document and in many cases will be generated for you.
 
 There are a few profiles we can use. We're going to take a look at Ondemand profile for Video On Demand (VOD) and the LIVE profile.
 
@@ -29,8 +30,8 @@ For live services streaming, the LIVE profile is a requirement. The switching ca
 Other reasons to use LIVE profile over Ondemand for VOD content may be:
 
 1. Your client or server does not support range requests
-2. Your server/CDN cannot cache range requests efficiently
-3. Your server/CDN cannot prefetch range requests efficiently
+2. Your server cannot cache range requests efficiently
+3. Your server cannot prefetch range requests efficiently
 4. The SIDX* is large and having to load it first slows down startup a little 
 5. You want to use the original files for both DASH and other forms of delivery (such as [Microsoft Smooth Streaming](http://www.microsoft.com/silverlight/smoothstreaming/)) as a transition strategy
 6. You can use the same media files for both live transmission and VOD at a later stage
