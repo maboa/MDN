@@ -241,6 +241,7 @@ See Also
 - [Dynamic Adaptive Streaming over HTTP Dataset](http://www-itec.uni-klu.ac.at/bib/files/p89-lederer.pdf)
 - [Adaptive Streaming in the Field](http://www.streamingmedia.com/Articles/Editorial/Featured-Articles/Adaptive-Streaming-in-the-Field-73017.aspx)
 - [MPEG DASH Media Source Demo](https://dash-mse-test.appspot.com/media.html)
+- [DASH Streaming Support](http://gpac.wp.mines-telecom.fr/2012/02/01/dash-support/)
 - [HTTP Live Streaming](https://developer.apple.com/streaming/)
 - [MPEG-DASH and streaming reference and resources (MSDN)](http://msdn.microsoft.com/en-us/library/dn551370(v=vs.85).aspx)
 - [DASH Adaptive Streaming for HTML 5 Video](https://developer.mozilla.org/en-US/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video)
