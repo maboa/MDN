@@ -128,7 +128,7 @@ In this example we retrieve an MP3 file via XHR, load it into a source and play 
 
 The API supports use cases ranging from simple clear key decryption to high value video (given an appropriate user agent implementation). License/key exchange is controlled by the application, facilitating the development of robust playback applications supporting a range of content decryption and protection technologies.
 
-One of the principle uses of EME is to allow browsers to implement [DRM (Digital Rights Management)](http://en.wikipedia.org/wiki/Digital_rights_management) which helps protect web-based content (especially video) from being copied.
+One of the principle uses of EME is to allow browsers to implement [DRM (Digital Rights Management)](http://en.wikipedia.org/wiki/Digital_rights_management) which helps prevent web-based content (especially video) from being copied.
 
 ###Adaptive Streaming
 
