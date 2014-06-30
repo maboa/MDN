@@ -36,7 +36,7 @@ Other reasons to use LIVE profile over Ondemand for VOD content may be:
 5. You want to use the original files for both DASH and other forms of delivery (such as [Microsoft Smooth Streaming](http://www.microsoft.com/silverlight/smoothstreaming/)) as a transition strategy
 6. You can use the same media files for both live transmission and VOD at a later stage
 
-*SIDX or SegmentIndexBox is a structure describing a segment by giving its earliest presentation time and other meta-data. 
+*SIDX or SegmentIndexBox is a structure describing a segment by giving its earliest presentation time and other meta-data and can often make up a large portion of the MPD file. 
 
 
 ###Ondemand Profile
@@ -91,7 +91,7 @@ Once you have generated your MPD file you can reference it from within the video
 <video src="my.mpd" type="video.mp4"></video>
 `````
 
-it might be wise to provide a fallback:
+it might be wise to provide a fallback for browsers that don't yet support MPEG-DASH:
 
 `````html
 <video>
@@ -249,5 +249,6 @@ See Also
 - [DASH.js Wiki](https://github.com/Dash-Industry-Forum/dash.js/wiki)
 - [DASH.js Google Group](https://groups.google.com/forum/#!forum/dashjs)
 - [Akamai Dash Diagnostic Player](http://mediapm.edgesuite.net/dash/public/support-player/current/index.html)
+- [Dynamic Adaptive Streaming over HTTP: From Content Creation to Consumption](http://www.slideshare.net/christian.timmerer/dynamic-adaptive-streaming-over-http-from-content-creation-to-consumption)
 - [What is HLS (HTTP-Live-Streaming)?](http://www.streamingmedia.com/Articles/Editorial/What-Is-.../What-is-HLS-(HTTP-Live-Streaming)-78221.aspx)
 - [HTTP Live Streaming Overview](https://developer.apple.com/library/ios/documentation/networkinginternet/conceptual/streamingmediaguide/Introduction/Introduction.html)
