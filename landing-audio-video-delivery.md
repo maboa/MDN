@@ -45,7 +45,7 @@ The code above creates a video player of dimensions 640x480 pixels, displaying a
 
 > Note: autoplay may be ignored by some mobile browsers.
 
-For further info see (<video>)[https://developer.mozilla.org/en/docs/Web/HTML/Element/video]
+For further info see [<video>](https://developer.mozilla.org/en/docs/Web/HTML/Element/video)
 
 ###JavaScript Audio
 
