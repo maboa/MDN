@@ -45,7 +45,7 @@ The code above creates a video player of dimensions 640x480 pixels, displaying a
 
 > Note: autoplay may be ignored by some mobile browsers.
 
-For further info see [video element](https://developer.mozilla.org/en/docs/Web/HTML/Element/video)
+For further info see [video element](https://developer.mozilla.org/en/docs/Web/HTML/Element/video) and [Creating a cross-browser video player](https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/cross_browser_video_player)
 
 ###JavaScript Audio
 
@@ -110,8 +110,6 @@ try {
 } catch(e) { 
   alert('web audio api not supported'); 
 } 
-
-
 `````
 
 In this example we retrieve an MP3 file via XHR, load it into a source and play it.
@@ -135,3 +133,12 @@ One of the principle uses of EME is to allow browsers to implement [DRM (Digital
 New formats and protocols are being rolled out to facilitate adaptive streaming. Adaptive streaming media means that the bandwidth and typically quality of the stream can change in real-time in reaction to the user's available bandwidth. Adaptive streaming is often used in conjunction with live streaming where smooth delivery of audio or video is paramount. 
 
 For further info see [Live streaming web audio and video](https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video)
+
+See also
+--------
+
+- [Buffering, Seeking and Time Ranges](https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/buffering_seeking_time_ranges)
+- [Media events](https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Media_events)
+- [Using HTML5 audio and video](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video)
+- [HTMLVideoElement](https://developer.mozilla.org/en/docs/Web/API/HTMLVideoElement)
+- [Media Source](https://developer.mozilla.org/en-US/docs/Web/API/MediaSource)
