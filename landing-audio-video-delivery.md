@@ -137,8 +137,8 @@ For further info see [Live streaming web audio and video](https://developer.mozi
 See also
 --------
 
-- [Buffering, Seeking and Time Ranges](https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/buffering_seeking_time_ranges)
 - [Media events](https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Media_events)
 - [Using HTML5 audio and video](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video)
 - [HTMLVideoElement](https://developer.mozilla.org/en/docs/Web/API/HTMLVideoElement)
 - [Media Source](https://developer.mozilla.org/en-US/docs/Web/API/MediaSource)
+- [Buffering, Seeking and Time Ranges](https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/buffering_seeking_time_ranges)
