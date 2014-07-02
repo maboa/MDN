@@ -85,32 +85,34 @@ We set the source of the video depending on the type of video file the browser s
 ###Web Audio API
 
 `````javascript
-var context;
-var request; 
-var source;
+  var context;
+  var request; 
+  var source;
 
-try { 
-  context = new (window.AudioContext || window.webkitAudioContext)();
-  request = new XMLHttpRequest(); 
-  request.open("GET","myaudio.mp3",true); 
-  request.responseType = "arraybuffer"; 
-  
-  request.onload = function() { 
-    context.decodeAudioData(request.response, function(buffer) { 
-      source = context.createBufferSource();  
-      source.buffer = buffer; 
-      source.connect(context.destination); 
-      // auto play
-      source.noteOn(0); 
-    }); 
-  }; 
-  
-  request.send(); 
-  
-} catch(e) { 
-  alert('web audio api not supported'); 
-} 
+  try { 
+    context = new (window.AudioContext || window.webkitAudioContext)();
+    request = new XMLHttpRequest(); 
+    request.open("GET","http://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3",true); 
+    request.responseType = "arraybuffer"; 
+
+    request.onload = function() { 
+      context.decodeAudioData(request.response, function(buffer) { 
+        source = context.createBufferSource();  
+        source.buffer = buffer; 
+        source.connect(context.destination); 
+        // auto play
+        source.start(0); // start was previously noteOn
+      }); 
+    }; 
+
+    request.send(); 
+
+  } catch(e) { 
+    alert('web audio api not supported'); 
+  } 
 `````
+
+[Try it for yourself](http://jsbin.com/facutone/1/edit?js)
 
 In this example we retrieve an MP3 file via XHR, load it into a source and play it.
 
