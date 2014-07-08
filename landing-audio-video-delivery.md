@@ -147,7 +147,7 @@ for subtitles can also be provided through media libraries.
 
 There's also an increasing number of libaries that take advantage of the newer Web Audio API and we're also seeing specialized libraries for manipulating video appear.
 
-[More info on audio/video libraries[()
+[More info on audio/video libraries]()
 
 
 See also
