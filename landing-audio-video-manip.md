@@ -11,7 +11,7 @@ Video Manipulation
 
 The ability to read the pixel values of each frame of video can be very useful.
 
-##### Video and Canvas
+### Video and Canvas
 
 Canvas is a new way of drawing into web pages, it is very powerful and can be coupled tightly with video.
 
@@ -78,4 +78,9 @@ var processor = {
     return; 
   } 
 };  
+`````
+
+Once the page has loaded you can call 
+`````javascript
+processor.doLoad()
 `````
