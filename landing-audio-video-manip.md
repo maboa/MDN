@@ -87,7 +87,7 @@ processor.doLoad()
 
 ####Note 1
 
-Due to potential security issues if your video is on a different domain to your code, you'll need to enable (CORS)[http://en.wikipedia.org/wiki/Cross-origin_resource_sharing] on your video server.
+Due to potential security issues if your video is on a different domain to your code, you'll need to enable [CORS(Cross Origin Resource Sharing)](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) on your video server.
 
 ####Note 2
 
