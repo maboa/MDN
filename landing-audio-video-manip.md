@@ -87,10 +87,19 @@ processor.doLoad()
 
 ####Note 1
 
-Due to potential security issues if your video is on a different domain to your code, you'll need to enable [CORS(Cross Origin Resource Sharing)](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) on your video server.
+Due to potential security issues if your video is on a different domain to your code, you'll need to enable [CORS (Cross Origin Resource Sharing)](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) on your video server.
 
 ####Note 2
 
-The above is a minimal example of how to manipulate video with canvas, for effciency you may consider using requestAnimationFrame instead of setTimeout for browsers that support it. 
+The above is a minimal example of how to manipulate video with canvas, for efficiency you may consider using requestAnimationFrame instead of setTimeout for browsers that support it. 
 
+See Also: [Manipulating Video Using Canvas](https://developer.mozilla.org/en-US/docs/Web/HTML/Manipulating_video_using_canvas)
+
+###Video and WebGL
+
+WebGL is a powerful API that uses canvas to (typically) render three-dimensional scenes. You can combine WebGL and the video element to create video textures, which means you can put video inside 3D scenes.
+
+See Also: [Using the Video frames as a Texture](https://developer.mozilla.org/en-US/docs/Web/WebGL/Animating_textures_in_WebGL#Using_the_video_frames_as_a_texture)
+
+You can also use a JavaScript library built upon WebGL - [THREE.js](http://threejs.org) to [achieve this effect](http://stemkoski.github.io/Three.js/Video.html) 
 
