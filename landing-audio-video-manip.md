@@ -45,7 +45,7 @@ var processor = {
     var self = this;  
     setTimeout(function () {  
       self.timerCallback();  
-    }, 0);  
+    }, 16); // roughly 60 frames per second  
   }, 
 
   doLoad: function() { 
@@ -84,3 +84,13 @@ Once the page has loaded you can call
 `````javascript
 processor.doLoad()
 `````
+
+####Note 1
+
+Due to potential security issues if your video is on a different domain to your code, you'll need to enable (CORS)[http://en.wikipedia.org/wiki/Cross-origin_resource_sharing] on your video server.
+
+####Note 2
+
+The above is a minimal example of how to manipulate video with canvas, for effciency you may consider using requestAnimationFrame instead of setTimeout for browsers that support it. 
+
+
