@@ -140,9 +140,7 @@ For further info see [Live streaming web audio and video](https://developer.mozi
 Audio/Video JavaScript Libraries
 --------------------------------
 
-A number of audio and video JavaScript libaries exist. 
-
-The most popular libraries allow you to choose a consistent player design over a number of browsers and provide a fallback for browsers that don't support audio and video natively. Fallbacks often use Adobe Flash or Microsoft Silverlight plugins. Other functionality such as the track element
+A number of audio and video JavaScript libaries exist.The most popular libraries allow you to choose a consistent player design over all browsers and provide a fallback for browsers that don't support audio and video natively. Fallbacks often use Adobe Flash or Microsoft Silverlight plugins. Other functionality such as the track element
 for subtitles can also be provided through media libraries.
 
 There's also an increasing number of libaries that take advantage of the newer Web Audio API and we're also seeing specialized libraries for manipulating video appear.
