@@ -61,6 +61,27 @@ The code above creates a video player of dimensions 640x480 pixels, displaying a
 
 For further info see [video element](https://developer.mozilla.org/en/docs/Web/HTML/Element/video) and [Creating a cross-browser video player](https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/cross_browser_video_player)
 
+###Audio and Video Fallback
+
+You can create a more comprehensive Fallback using Flash. Using [flashmediaelement.swf](https://github.com/johndyer/mediaelement/blob/master/build/flashmediaelement.swf) is one way.
+
+`````html
+<audio controls>
+  <source src="audiofile.mp3" type="audio/mpeg">
+  <source src="audiofile.ogg" type="audio/ogg">
+  <!-- fallback for non supporting browsers goes here -->
+  <a href="audiofile.mp3">download audio</a>
+  <object width="320" height="30" type="application/x-shockwave-flash" data="flashmediaelement.swf">
+    <param name="movie" value="flashmediaelement.swf" />
+    <param name="flashvars" value="controls=true&isvideo=false&file=audiofile.mp3" />
+  </object>
+</audio>
+`````
+
+The process is very similar with video - just remember to set `````isvideo=true`````.
+
+[More options for Fallbacks](https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/Cross-browser_audio_basics#Fallbacks).
+
 ###JavaScript Audio
 
 `````javascript
