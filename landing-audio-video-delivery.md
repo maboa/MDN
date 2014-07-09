@@ -185,13 +185,9 @@ if (navigator.getUserMedia) {
 
 function onSuccess(stream) {
     var video = document.getElementById('webcam');
-    var videoSource;
-    
-    videoSource = window.URL.createObjectURL(stream);
     video.autoplay = true;
-    video.src = videoSource;
+    video.src = window.URL.createObjectURL(stream);
 }
-
 
 function onError() {
     alert('There has been a problem retreiving the streams - are you running on file:/// or did you disallow access?');
