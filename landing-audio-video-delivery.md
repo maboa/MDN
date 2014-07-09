@@ -1,6 +1,11 @@
 Audio and Video Delivery
 ========================
 
+We can deliver audio and video on the web in a number of ways, ranging from 'static' media files to adaptive live streams. 
+
+This article is intended as a starting point for exploring the various delivery mechanisms of web based media and compatibility with popular browsers.
+
+Whether we are dealing with pre-recorded audio files or live streams, the mechanism for making them available through the browser remains the same.
 
 ###HTML Audio
 
