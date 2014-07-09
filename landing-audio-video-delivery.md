@@ -5,7 +5,16 @@ We can deliver audio and video on the web in a number of ways, ranging from 'sta
 
 This article is intended as a starting point for exploring the various delivery mechanisms of web based media and compatibility with popular browsers.
 
-Whether we are dealing with pre-recorded audio files or live streams, the mechanism for making them available through the browser remains the same.
+The Audio and Video Elements
+----------------------------
+
+Whether we are dealing with pre-recorded audio files or live streams, the mechanism for making them available through the browser's audio and video elements remains pretty-much the same. Currently to support all browsers we need to specify two formats although with the adoption of mp3 and mp4 formats by Firefox this is changing fast.
+
+``````
+Check format 1 --> If supported format 1 set as source
+               --> If not supported check format 2 --> If supported format 2 set as source
+                                                   --> If format 1 and format 2 not supported provide a fallback
+``````
 
 ###HTML Audio
 
