@@ -8,8 +8,12 @@ This article is intended as a starting point for exploring the various delivery 
 The Audio and Video Elements
 ----------------------------
 
-Whether we are dealing with pre-recorded audio files or live streams, the mechanism for making them available through the browser's audio and video elements remains pretty-much the same. Currently to support all browsers we need to specify two formats although with the adoption of mp3 and mp4 formats by Firefox this is changing fast.
+Whether we are dealing with pre-recorded audio files or live streams, the mechanism for making them available through the browser's audio and video elements remains pretty-much the same. Currently to support all browsers we need to specify two formats although with the adoption of mp3 and mp4 formats in Firefox and Opera, this is changing fast.
 
+[Audio Codec Compatibility Table](https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/Cross-browser_audio_basics#Audio_Codec_Support) and [Audio/Video Codec Compatibility Table](https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats#Browser_compatibility)
+
+
+(Below - Intended as a Flow Chart)
 ``````
 Check format 1 --> If supported set format 1 as source
                --> If not supported check format 2 --> If supported set format 2 as source
