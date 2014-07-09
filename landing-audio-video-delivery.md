@@ -155,6 +155,49 @@ We set the source of the video depending on the type of video file the browser s
 
 In this example we retrieve an MP3 file via XHR, load it into a source and play it.
 
+###getUserMedia / Stream API
+
+It's also possible to plug a live stream from a webcam and/or microphone using `````getUserMedia````` and the Stream API. This makes up part of a wider technology known as WebRTC (Web Real-Time Communications) and is compatible with the atest versions of Chrome, Firefox and Opera.
+
+To grab the stream from your webcam, first set up a video element:
+
+`````html
+<video id="webcam" width="480" height="360"></video>
+`````
+
+Next, if supported connect the webcam source to the video element:
+
+`````javascript
+navigator.getUserMedia ||
+  (navigator.getUserMedia = navigator.mozGetUserMedia ||
+  navigator.webkitGetUserMedia || navigator.msGetUserMedia);
+
+window.URL = window.URL || window.webkitURL || window.mozURL || window.msURL;
+
+if (navigator.getUserMedia) {
+    navigator.getUserMedia({
+        video: true,
+        audio: false
+    }, onSuccess, onError);
+} else {
+    alert('getUserMedia is not supported in this browser.');
+}
+
+function onSuccess(stream) {
+    var video = document.getElementById('webcam');
+    var videoSource;
+    
+    videoSource = window.URL.createObjectURL(stream);
+    video.autoplay = true;
+    video.src = videoSource;
+}
+
+
+function onError() {
+    alert('There has been a problem retreiving the streams - are you running on file:/// or did you disallow access?');
+}
+`````
+
 ###Media Source Extensions (MSE)
 
 
