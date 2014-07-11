@@ -221,7 +221,28 @@ Audio/Video JavaScript Libraries
 A number of audio and video JavaScript libaries exist. The most popular libraries allow you to choose a consistent player design over all browsers and provide a fallback for browsers that don't support audio and video natively. Fallbacks often use Adobe Flash or Microsoft Silverlight plugins. Other functionality such as the track element
 for subtitles can also be provided through media libraries.
 
+Popular libraries that extend the audio and video element are:
+
+###Audio only
+- [SoundManager](http://www.schillmania.com/projects/soundmanager2/)
+
+###Video only
+- [FlowPlayer](https://flowplayer.org/) 
+- [JWPlayer](http://www.jwplayer.com)
+- [SublimeVideo](http://www.sublimevideo.net/)
+- [Video.js](http://www.videojs.com/)
+
+
+###Audio and Video
+- [jPlayer](http://jPlayer.org)
+- [mediaelement.ks](http://mediaelementjs.com/)
+
+
 There's also an increasing number of libaries that take advantage of the newer Web Audio API and we're also seeing specialized libraries for manipulating video appear.
+
+###Web Audio API
+- [AudioContext monkeypatch](https://github.com/cwilso/AudioContext-MonkeyPatch)
+
 
 [More info on audio/video libraries]()
 
