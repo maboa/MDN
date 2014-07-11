@@ -235,9 +235,9 @@ Popular libraries that extend the audio and video element are:
 - [SoundManager](http://www.schillmania.com/projects/soundmanager2/)
 
 ###Video only
-- [FlowPlayer](https://flowplayer.org/) 
-- [JWPlayer](http://www.jwplayer.com)
-- [SublimeVideo](http://www.sublimevideo.net/)
+- [flowplayer](https://flowplayer.org/) Free with a flowplayer logo watermark. Open source (GPL licensed)
+- [JWPlayer](http://www.jwplayer.com) Requires registration to download. Open Source Edition (Creative Commons License)
+- [SublimeVideo](http://www.sublimevideo.net/) Requires registration. Form based set up with domain specific link to library.
 - [Video.js](http://www.videojs.com/)
 
 
