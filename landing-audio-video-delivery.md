@@ -235,21 +235,21 @@ Popular libraries that extend the audio and video element are:
 - [SoundManager](http://www.schillmania.com/projects/soundmanager2/)
 
 ###Video only
-- [flowplayer](https://flowplayer.org/) Gratis with a flowplayer logo watermark. Open source (GPL licensed)
-- [JWPlayer](http://www.jwplayer.com) Requires registration to download. Open Source Edition (Creative Commons License)
-- [SublimeVideo](http://www.sublimevideo.net/) Requires registration. Form based set up with domain specific link to CDN hosted library.
-- [Video.js](http://www.videojs.com/) Gratis and Open Source (Apache 2 Licensed)
+- [flowplayer](https://flowplayer.org/) - Gratis with a flowplayer logo watermark. Open source (GPL licensed)
+- [JWPlayer](http://www.jwplayer.com) - Requires registration to download. Open Source Edition (Creative Commons License)
+- [SublimeVideo](http://www.sublimevideo.net/) - Requires registration. Form based set up with domain specific link to CDN hosted library.
+- [Video.js](http://www.videojs.com/) - Gratis and Open Source (Apache 2 Licensed)
 
 
 ###Audio and Video
-- [jPlayer](http://jPlayer.org) Gratis and Open Source (MIT Licensed)
-- [mediaelement.js](http://mediaelementjs.com/) Gratis and Open Source (MIT Licensed)
+- [jPlayer](http://jPlayer.org) - Gratis and Open Source (MIT Licensed)
+- [mediaelement.js](http://mediaelementjs.com/) - Gratis and Open Source (MIT Licensed)
 
 
 There's also an increasing number of libaries that take advantage of the newer Web Audio API and we're also seeing specialized libraries for manipulating video appear.
 
 ###Web Audio API
-- [AudioContext monkeypatch](https://github.com/cwilso/AudioContext-MonkeyPatch) (A polyfill for older versions of the Web Audio API) Open Source (Apache 2 Licensed)
+- [AudioContext monkeypatch](https://github.com/cwilso/AudioContext-MonkeyPatch) - (A polyfill for older versions of the Web Audio API) - Open Source (Apache 2 Licensed)
 
 
 [More info on audio/video libraries]()
