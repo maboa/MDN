@@ -235,13 +235,13 @@ Popular libraries that extend the audio and video element are:
 
 ###Audio and Video
 - [jPlayer](http://jPlayer.org)
-- [mediaelement.ks](http://mediaelementjs.com/)
+- [mediaelement.js](http://mediaelementjs.com/)
 
 
 There's also an increasing number of libaries that take advantage of the newer Web Audio API and we're also seeing specialized libraries for manipulating video appear.
 
 ###Web Audio API
-- [AudioContext monkeypatch](https://github.com/cwilso/AudioContext-MonkeyPatch)
+- [AudioContext monkeypatch](https://github.com/cwilso/AudioContext-MonkeyPatch) (A polyfill for older versions of the Web Audio API)
 
 
 [More info on audio/video libraries]()
