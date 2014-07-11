@@ -105,6 +105,14 @@ We set the source of the audio depending on the type of audio file the browser s
 
 > Note: Play will be ignored by some mobile browsers unless issued by a user-initiated event.
 
+It's also possible to feed a an audio element base64 encoded wav file, allowing to generate audio on the fly.
+
+`````html
+<audio id="player" src="data:audio/x-wav;base64,UklGRvC..."></audio>
+`````
+[Speak.js](https://github.com/kripken/speak.js/) employs this technique. [Try the demo](http://speak-demo.herokuapp.com).
+
+
 ###JavaScript Video
 
 `````javascript
