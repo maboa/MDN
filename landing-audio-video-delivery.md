@@ -233,7 +233,7 @@ Having issues playing back audio or video? Try the following check-list.
 
 Use the following verified sources within your audio and video elements to check support.
 
-- Audio MP3 - (type="audio/mpeg") -  [http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3](http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3) ([try it]())
+- Audio MP3 - (type="audio/mpeg") - [http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3](http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3) ([try it]())
 - Audio MP4 - (type="audio/mp4") - [http://jPlayer.org/audio/m4a/Miaow-01-Tempered-song.m4a](http://jPlayer.org/audio/m4a/Miaow-01-Tempered-song.m4a) ([try it]())
 - Audio Ogg - (type="audio/ogg") - [http://jPlayer.org/audio/ogg/Miaow-01-Tempered-song.ogg](http://jPlayer.org/audio/ogg/Miaow-01-Tempered-song.ogg) ([try it]())
 
