@@ -242,7 +242,6 @@ Use the following verified sources within your audio and video elements to check
 - Video Ogg - (type="video/ogg") - [http://jPlayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv](http://jPlayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv) ([try it]())
 
 
-
 Audio/Video JavaScript Libraries
 --------------------------------
 
