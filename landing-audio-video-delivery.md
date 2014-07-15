@@ -229,7 +229,7 @@ Debugging Audio / Video Issues
 
 Having issues playing back audio or video? Try the following check-list.
 
-###Does the browser support your formats?
+###Does the browser support supplied formats?
 
 Use the following verified sources within your audio and video elements to check support.
 
@@ -240,6 +240,43 @@ Use the following verified sources within your audio and video elements to check
 - Video MP4 - (type="video/mp4") - [http://jPlayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v](http://jPlayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v) ([try it]())
 - Video WebM - (type="video/webm") - [http://jPlayer.org/video/webm/Big_Buck_Bunny_Trailer.webm](http://jPlayer.org/video/webm/Big_Buck_Bunny_Trailer.webm) ([try it]())
 - Video Ogg - (type="video/ogg") - [http://jPlayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv](http://jPlayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv) ([try it]())
+
+
+If these don't play then the browser you are testing doesn't support the given format. Consider using a different format or using a fallback.
+
+If these work but the files you are supplying don't, there are two possible issues:
+
+###1. The media server is not delivering the correct mime types with file
+
+Although this is usutally supported, you may need to add the following to your media server's .htaccess file.
+
+`````
+# AddType TYPE/SUBTYPE EXTENSION
+ 
+AddType audio/mpeg mp3
+AddType audio/mp4 m4a
+AddType audio/ogg ogg
+AddType audio/ogg oga
+ 
+AddType video/mp4 mp4
+AddType video/mp4 m4v
+AddType video/ogg ogv
+AddType video/webm webm
+AddType video/webm webmv
+
+`````
+
+###2. Your files have been encoded incorrectly
+
+Your files may have be encoded incorrectly - try encoding using on one of the following encoders:
+
+- Audacity
+- Miro
+- Firefogg
+- FFmpeg2theora
+- Handbrake
+- Vid.ly
+- Archive.org
 
 
 Audio/Video JavaScript Libraries
