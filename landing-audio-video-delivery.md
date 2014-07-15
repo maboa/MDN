@@ -237,9 +237,9 @@ Use the following verified sources within your audio and video elements to check
 - Audio MP4 - (type="audio/mp4") - [http://jPlayer.org/audio/m4a/Miaow-01-Tempered-song.m4a](http://jPlayer.org/audio/m4a/Miaow-01-Tempered-song.m4a) ([try it]())
 - Audio Ogg - (type="audio/ogg") - [http://jPlayer.org/audio/ogg/Miaow-01-Tempered-song.ogg](http://jPlayer.org/audio/ogg/Miaow-01-Tempered-song.ogg) ([try it]())
 
-- Video MP4 - (type="video/mp4") - [http://jPlayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v](http://jPlayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v)
-- Video WebM - (type="video/webm") - [http://jPlayer.org/video/webm/Big_Buck_Bunny_Trailer.webm](http://jPlayer.org/video/webm/Big_Buck_Bunny_Trailer.webm)
-- Video Ogg - (type="video/ogg") - [http://jPlayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv](http://jPlayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv)
+- Video MP4 - (type="video/mp4") - [http://jPlayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v](http://jPlayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v) ([try it]())
+- Video WebM - (type="video/webm") - [http://jPlayer.org/video/webm/Big_Buck_Bunny_Trailer.webm](http://jPlayer.org/video/webm/Big_Buck_Bunny_Trailer.webm) ([try it]())
+- Video Ogg - (type="video/ogg") - [http://jPlayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv](http://jPlayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv) ([try it]())
 
 
 
