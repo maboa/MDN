@@ -220,7 +220,27 @@ One of the principle uses of EME is to allow browsers to implement [DRM (Digital
 
 New formats and protocols are being rolled out to facilitate adaptive streaming. Adaptive streaming media means that the bandwidth and typically quality of the stream can change in real-time in reaction to the user's available bandwidth. Adaptive streaming is often used in conjunction with live streaming where smooth delivery of audio or video is paramount. 
 
+
 For further info see [Live streaming web audio and video](https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video)
+
+
+Debugging Audio / Video Issues
+------------------------------
+
+Having issues playing back audio or video? Try the following check-list.
+
+###Does the browser support your formats?
+
+Use the following verified sources within your audio and video elements to check support.
+
+- Audio MP3 - (type="audio/mpeg") -  [http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3](http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3) ([try it]())
+- Audio MP4 - (type="audio/mp4") - [http://jPlayer.org/audio/m4a/Miaow-01-Tempered-song.m4a](http://jPlayer.org/audio/m4a/Miaow-01-Tempered-song.m4a) ([try it]())
+- Audio Ogg - (type="audio/ogg") - [http://jPlayer.org/audio/ogg/Miaow-01-Tempered-song.ogg](http://jPlayer.org/audio/ogg/Miaow-01-Tempered-song.ogg) ([try it]())
+
+- Video MP4 - (type="video/mp4") - [http://jPlayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v](http://jPlayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v)
+- Video WebM - (type="video/webm") - [http://jPlayer.org/video/webm/Big_Buck_Bunny_Trailer.webm](http://jPlayer.org/video/webm/Big_Buck_Bunny_Trailer.webm)
+- Video Ogg - (type="video/ogg") - [http://jPlayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv](http://jPlayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv)
+
 
 
 Audio/Video JavaScript Libraries
