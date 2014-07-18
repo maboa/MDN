@@ -220,6 +220,14 @@ One of the principle uses of EME is to allow browsers to implement [DRM (Digital
 
 New formats and protocols are being rolled out to facilitate adaptive streaming. Adaptive streaming media means that the bandwidth and typically quality of the stream can change in real-time in reaction to the user's available bandwidth. Adaptive streaming is often used in conjunction with live streaming where smooth delivery of audio or video is paramount. 
 
+The main formats used for adaptive streaming are [HLS](https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video#HLS) and [MPEG-DASH](https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video#MPEG-DASH) 
+
+MSE has been designed with DASH in mind. MSE defines byte streams according to ISOBMFF and M2TS (both supported in DASH, the latter supported in HLS).
+
+Generally speaking, if you are interested in standards, are looking for flexibility or wish to support most modern browsers you are probably better of with DASH. 
+
+> Note. Currently Safari does not support DASH although dash.js will work on newer versions of Safari scheduled for release with OSX Yosemite.
+
 
 For further info see [Live streaming web audio and video](https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video)
 
