@@ -228,6 +228,9 @@ Generally speaking, if you are interested in standards, are looking for flexibil
 
 > Note. Currently Safari does not support DASH although dash.js will work on newer versions of Safari scheduled for release with OSX Yosemite.
 
+DASH also provides a number of profiles including simple onDemand profiles that no preprocessing and splitting up of media files.
+
+There are also a number of cloud based services that will convert your media to both HLS and DASH.
 
 For further info see [Live streaming web audio and video](https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video)
 
@@ -278,13 +281,14 @@ AddType video/webm webmv
 
 Your files may have be encoded incorrectly - try encoding using on one of the following encoders:
 
-- Audacity
-- Miro
-- Firefogg
-- FFmpeg2theora
-- Handbrake
-- Vid.ly
-- Archive.org
+- [Audacity](http://audacity.sourceforge.net/)
+- [Miro](http://www.getmiro.com/)
+- [Handbrake](http://handbrake.fr/)
+- [Firefogg](http://firefogg.org/)
+- [FFmpeg2](https://www.ffmpeg.org/)
+- [Libav](https://libav.org/)
+- [Vid.ly](http://m.vid.ly/)
+- [Archive.org](https://archive.org/)
 
 
 Audio/Video JavaScript Libraries
