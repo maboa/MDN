@@ -222,7 +222,7 @@ New formats and protocols are being rolled out to facilitate adaptive streaming.
 
 The main formats used for adaptive streaming are [HLS](https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video#HLS) and [MPEG-DASH](https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video#MPEG-DASH) 
 
-MSE has been designed with DASH in mind. MSE defines byte streams according to ISOBMFF and M2TS (both supported in DASH, the latter supported in HLS).
+MSE has been designed with DASH in mind. MSE defines byte streams according to [ISOBMFF](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/isobmff-byte-stream-format.html) and [M2TS](http://en.wikipedia.org/wiki/M2ts) (both supported in DASH, the latter supported in HLS).
 
 Generally speaking, if you are interested in standards, are looking for flexibility or wish to support most modern browsers you are probably better of with DASH. 
 
