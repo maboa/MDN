@@ -244,13 +244,13 @@ Having issues playing back audio or video? Try the following check-list.
 
 Use the following verified sources within your audio and video elements to check support.
 
-- Audio MP3 - (type="audio/mpeg") - [http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3](http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3) ([try it]())
-- Audio MP4 - (type="audio/mp4") - [http://jPlayer.org/audio/m4a/Miaow-01-Tempered-song.m4a](http://jPlayer.org/audio/m4a/Miaow-01-Tempered-song.m4a) ([try it]())
-- Audio Ogg - (type="audio/ogg") - [http://jPlayer.org/audio/ogg/Miaow-01-Tempered-song.ogg](http://jPlayer.org/audio/ogg/Miaow-01-Tempered-song.ogg) ([try it]())
+- Audio MP3 - (type="audio/mpeg") - [http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3](http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3) ([try it]http://jsbin.com/gekatoge/1/edit))
+- Audio MP4 - (type="audio/mp4") - [http://jPlayer.org/audio/m4a/Miaow-01-Tempered-song.m4a](http://jPlayer.org/audio/m4a/Miaow-01-Tempered-song.m4a) ([try it](http://jsbin.com/gekatoge/2/edit))
+- Audio Ogg - (type="audio/ogg") - [http://jPlayer.org/audio/ogg/Miaow-01-Tempered-song.ogg](http://jPlayer.org/audio/ogg/Miaow-01-Tempered-song.ogg) ([try it](http://jsbin.com/gekatoge/4/edit))
 
-- Video MP4 - (type="video/mp4") - [http://jPlayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v](http://jPlayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v) ([try it]())
-- Video WebM - (type="video/webm") - [http://jPlayer.org/video/webm/Big_Buck_Bunny_Trailer.webm](http://jPlayer.org/video/webm/Big_Buck_Bunny_Trailer.webm) ([try it]())
-- Video Ogg - (type="video/ogg") - [http://jPlayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv](http://jPlayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv) ([try it]())
+- Video MP4 - (type="video/mp4") - [http://jPlayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v](http://jPlayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v) ([try it](http://jsbin.com/gekatoge/5/edit))
+- Video WebM - (type="video/webm") - [http://jPlayer.org/video/webm/Big_Buck_Bunny_Trailer.webm](http://jPlayer.org/video/webm/Big_Buck_Bunny_Trailer.webm) ([try it](http://jsbin.com/gekatoge/6/edit))
+- Video Ogg - (type="video/ogg") - [http://jPlayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv](http://jPlayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv) ([try it](http://jsbin.com/gekatoge/7/edit))
 
 
 If these don't play then the browser you are testing doesn't support the given format. Consider using a different format or using a fallback.
