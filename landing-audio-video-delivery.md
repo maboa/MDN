@@ -234,6 +234,31 @@ There are also a number of cloud based services that will convert your media to 
 
 For further info see [Live streaming web audio and video](https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video)
 
+Mediastream Recording
+---------------------
+
+New standards are being rolled out to allow your browser to grab media from your mic or camera using getUserMedia and record it using a new MediaRecorder API.
+
+You effectively take the stream you receive from getUserMedia, pass it to the MediaRecorder, take the resulting output and feed it to your audio or video source*.
+
+The main mechanism is outline below.
+
+`````javascript
+var onSuccess = function(stream) {
+
+  var mediaRecorder = new MediaRecorder(stream);
+
+  mediaRecorder.ondataavailable = function(e) {
+    var audio = document.createElement('audio');
+    audio.src = window.URL.createObjectURL(e.data);
+  }
+}
+
+navigator.getUserMedia({audio:true}, onSuccess);
+`````
+See [MediaRecorder API](https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder_API) for more details.
+
+> Note. This is only supported in Firefox and only for audio, however there are some interesting workarounds including a library called [RecordRTC](https://github.com/muaz-khan/WebRTC-Experiment/tree/master/RecordRTC).
 
 Debugging Audio / Video Issues
 ------------------------------
@@ -279,7 +304,7 @@ AddType video/webm webmv
 
 ###2. Your files have been encoded incorrectly
 
-Your files may have be encoded incorrectly - try encoding using on one of the following encoders:
+Your files may have been encoded incorrectly - try encoding using on one of the following encoders:
 
 - [Audacity](http://audacity.sourceforge.net/)
 - [Miro](http://www.getmiro.com/)
