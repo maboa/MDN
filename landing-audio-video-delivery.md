@@ -202,6 +202,32 @@ function onError() {
 }
 `````
 
+Mediastream Recording
+---------------------
+
+New standards are being rolled out to allow your browser to grab media from your mic or camera using getUserMedia and record it using a new MediaRecorder API.
+
+You effectively take the stream you receive from getUserMedia, pass it to the MediaRecorder, take the resulting output and feed it to your audio or video source*.
+
+The main mechanism is outline below.
+
+`````javascript
+var onSuccess = function(stream) {
+
+  var mediaRecorder = new MediaRecorder(stream);
+
+  mediaRecorder.ondataavailable = function(e) {
+    var audio = document.createElement('audio');
+    audio.src = window.URL.createObjectURL(e.data);
+  }
+}
+
+navigator.getUserMedia({audio:true}, onSuccess);
+`````
+See [MediaRecorder API](https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder_API) for more details.
+
+> *Note. This is only supported in Firefox and only for audio, however there are some interesting workarounds including a library called [RecordRTC](https://github.com/muaz-khan/WebRTC-Experiment/tree/master/RecordRTC).
+
 ###Media Source Extensions (MSE)
 
 
@@ -234,31 +260,7 @@ There are also a number of cloud based services that will convert your media to 
 
 For further info see [Live streaming web audio and video](https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video)
 
-Mediastream Recording
----------------------
 
-New standards are being rolled out to allow your browser to grab media from your mic or camera using getUserMedia and record it using a new MediaRecorder API.
-
-You effectively take the stream you receive from getUserMedia, pass it to the MediaRecorder, take the resulting output and feed it to your audio or video source*.
-
-The main mechanism is outline below.
-
-`````javascript
-var onSuccess = function(stream) {
-
-  var mediaRecorder = new MediaRecorder(stream);
-
-  mediaRecorder.ondataavailable = function(e) {
-    var audio = document.createElement('audio');
-    audio.src = window.URL.createObjectURL(e.data);
-  }
-}
-
-navigator.getUserMedia({audio:true}, onSuccess);
-`````
-See [MediaRecorder API](https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder_API) for more details.
-
-> Note. This is only supported in Firefox and only for audio, however there are some interesting workarounds including a library called [RecordRTC](https://github.com/muaz-khan/WebRTC-Experiment/tree/master/RecordRTC).
 
 Debugging Audio / Video Issues
 ------------------------------
@@ -355,4 +357,6 @@ See also
 - [Using HTML5 audio and video](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video)
 - [HTMLVideoElement](https://developer.mozilla.org/en/docs/Web/API/HTMLVideoElement)
 - [Media Source](https://developer.mozilla.org/en-US/docs/Web/API/MediaSource)
+- [Easy audio capture with the MediaRecorder API](https://hacks.mozilla.org/2014/06/easy-audio-capture-with-the-mediarecorder-api/)
+- [Media Recording Example](https://github.com/PinZhang/sample-codes/blob/master/html5/media_recording.html)
 - [Buffering, Seeking and Time Ranges](https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/buffering_seeking_time_ranges)
