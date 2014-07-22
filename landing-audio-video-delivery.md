@@ -318,6 +318,18 @@ Your files may have been encoded incorrectly - try encoding using on one of the 
 - [Archive.org](https://archive.org/)
 
 
+Customising Your Media Player
+-----------------------------
+
+You may decide that you want your audio or video player to have a consistent look across browsers, or just wish to tweak it to match your site. The general technique for achieving this is to omit the controls attribute so that the default browser controls are not displayed, then use JavaScript to link your controls to the audio/video API.
+
+If you need something extra, it's possible to add features that are not currently present in default players, such as play-back rate, quality stream switches or even audio spectrums. You can also choose how to make your player responsive - for example you might remove the progress-bar under certain conditions.
+
+You may detect click, touch and/or keyboard events to trigger actions such as play, pause and scrubbing. It's often important to remember keyboard controls for user convenience and accessibility.
+
+
+
+
 Audio/Video JavaScript Libraries
 --------------------------------
 
