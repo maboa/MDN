@@ -323,11 +323,54 @@ Customising Your Media Player
 
 You may decide that you want your audio or video player to have a consistent look across browsers, or just wish to tweak it to match your site. The general technique for achieving this is to omit the controls attribute so that the default browser controls are not displayed, then use JavaScript to link your controls to the audio/video API.
 
-If you need something extra, it's possible to add features that are not currently present in default players, such as play-back rate, quality stream switches or even audio spectrums. You can also choose how to make your player responsive - for example you might remove the progress-bar under certain conditions.
+If you need something extra, it's possible to add features that are not currently present in default players, such as play-back rate, quality stream-switches or even audio spectrums. You can also choose how to make your player responsive - for example you might remove the progress-bar under certain conditions.
 
 You may detect click, touch and/or keyboard events to trigger actions such as play, pause and scrubbing. It's often important to remember keyboard controls for user convenience and accessibility.
 
+A quick example - first set up your audio and custom controls in HTML:
 
+`````html
+  <audio id="my-audio" src="http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3"></audio>
+  <button id="my-control">play</button>
+
+`````
+
+add a but of JavaScript to detect events to play and pause the audio:
+
+`````javascript
+window.onload = function() {
+  
+  var myAudio = document.getElementById('my-audio');
+  var myControl = document.getElementById('my-control');
+  
+  function switchState() {
+    if (myAudio.paused == true) {
+      myAudio.play();
+      myControl.innerHTML = "pause";
+    } else {
+      myAudio.pause();
+      myControl.innerHTML = "play";
+    }
+  }
+  
+  function checkKey(e) {
+    if (e.keycode == 32 ) { //spacebar
+      switchState();
+    }
+  }
+  
+  myControl.addEventListener('click', function() {
+    switchState();
+  }, false);
+  
+  window.addEventListener( "keypress", checkKey, false );
+} 
+
+`````
+
+[Try it out here](http://jsbin.com/jujeladu/2/edit).
+
+[Creating your own custom audio player](https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/Cross-browser_audio_basics#Creating_your_own_custom_audio_player)
 
 
 Audio/Video JavaScript Libraries
