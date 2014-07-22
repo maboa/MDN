@@ -411,6 +411,7 @@ See also
 - [Media events](https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Media_events)
 - [Using HTML5 audio and video](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video)
 - [HTMLVideoElement](https://developer.mozilla.org/en/docs/Web/API/HTMLVideoElement)
+- [Cross-browser audio basics](https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/Cross-browser_audio_basics)
 - [Media Source](https://developer.mozilla.org/en-US/docs/Web/API/MediaSource)
 - [Easy audio capture with the MediaRecorder API](https://hacks.mozilla.org/2014/06/easy-audio-capture-with-the-mediarecorder-api/)
 - [Media Recording Example](https://github.com/PinZhang/sample-codes/blob/master/html5/media_recording.html)
