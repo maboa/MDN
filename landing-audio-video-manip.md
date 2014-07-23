@@ -85,13 +85,9 @@ Once the page has loaded you can call
 processor.doLoad()
 `````
 
-####Note 1
+>Note 1 : Due to potential security issues if your video is on a different domain to your code, you'll need to enable [CORS (Cross Origin Resource Sharing)](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) on your video server.
 
-Due to potential security issues if your video is on a different domain to your code, you'll need to enable [CORS (Cross Origin Resource Sharing)](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) on your video server.
-
-####Note 2
-
-The above is a minimal example of how to manipulate video with canvas, for efficiency you may consider using requestAnimationFrame instead of setTimeout for browsers that support it. 
+>Note 2 : The above is a minimal example of how to manipulate video with canvas, for efficiency you may consider using requestAnimationFrame instead of setTimeout for browsers that support it. 
 
 See Also: [Manipulating Video Using Canvas](https://developer.mozilla.org/en-US/docs/Web/HTML/Manipulating_video_using_canvas)
 
@@ -122,4 +118,23 @@ myVideo.playbackRate = 2;
 
 More info [HTML5 playbackRate explained](https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/HTML5_playbackRate_explained)
 
->Note this works with the audio element too but in both cases while the rate changes the pitch doesn't. To manipulate the audio's pitch you need to use the Web Audio API.
+>Note : this works with the audio element too but in both cases while the rate changes the pitch doesn't. To manipulate the audio's pitch you need to use the Web Audio API.
+
+
+Audio Manipulation
+------------------
+
+PlaybackRate aside in order to manipulate audio efficently you'll need to use the Web Audio API. We can use the audio track of an audio or video element, here's a video example:
+
+HTML:
+`````html
+<video id="my-video" controls src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"></video>
+`````
+
+JavaScript:
+`````javascript
+var audioSource = context.createMediaElementSource(document.getElementById("my-video"));
+var filter = context.createBiquadFilter();
+audioSource.connect(filter);
+filter.connect(context.destination);
+`````
