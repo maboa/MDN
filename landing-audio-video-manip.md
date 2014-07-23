@@ -122,4 +122,4 @@ myVideo.playbackRate = 2;
 
 More info [HTML5 playbackRate explained](https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/HTML5_playbackRate_explained)
 
->>>Note this works with the audio element too but in both cases while the rate changes the pitch doesn't. To manipulate the audio's pitch you need to use the Web Audio API.
+>Note this works with the audio element too but in both cases while the rate changes the pitch doesn't. To manipulate the audio's pitch you need to use the Web Audio API.
