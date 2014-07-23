@@ -107,10 +107,12 @@ You can also use a JavaScript library built upon WebGL - [THREE.js](http://three
 
 We can also adjust the rate that audio and video plays back using an attribute of the audio and video element called playBackRate. PlaybackRate is number that represents a multiple to be applied to rate of playback - 0.5 represents half-speed while 2 represents double speed.
 
+HTML:
 `````html
 <video id="my-video" controls src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"></video>
 `````
 
+JavaScript:
 `````javascript
 var myVideo = document.getElementById('my-video');
 myVideo.playbackRate = 2;
