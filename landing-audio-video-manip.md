@@ -163,5 +163,24 @@ filter.type = "lowshelf";
 `````
 See [BiquadFilterNode](https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode)
 
+###Convolutions and Impulses
+
+It's also possible to apply impulse responses to audio using the convolver node. An impulse response is the sound created after a brief impulse of sound (like a hand clap). An impulse response will signify the environment in which the impulse was created (echo etc).
+
+Example:
+
+`````Javascript
+var convolver = context.createConvolver();
+convolver.buffer = this.impulseResponseBuffer;
+// Connect the graph.
+source.connect(convolver);
+convolver.connect(context.destination);
+`````
+
+See [Developing Game Audio with the Web Audio API (Room effects and filters)](http://www.html5rocks.com/en/tutorials/webaudio/games/#toc-room)
+
+You can also try out some [Convolution Effects in Real-Time](http://chromium.googlecode.com/svn/trunk/samples/audio/convolution-effects.html)
+
+
 ###Spatial Audio
 
