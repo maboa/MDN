@@ -124,11 +124,11 @@ More info [HTML5 playbackRate explained](https://developer.mozilla.org/en-US/App
 Audio Manipulation
 ------------------
 
-PlaybackRate aside in order to manipulate audio efficently you'll need to use the Web Audio API. We can use the audio track of an audio or video element, here's a video example:
+PlaybackRate aside, to manipulate audio you'll typically use the Web Audio API. We can use the audio track of an audio or video element, here's a video example:
 
 HTML:
 `````html
-<video id="my-video" controls src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"></video>
+<video id="my-video" controls src="myvideo.mp4" type="video/mp4"></video>
 `````
 
 JavaScript:
@@ -138,3 +138,5 @@ var filter = context.createBiquadFilter();
 audioSource.connect(filter);
 filter.connect(context.destination);
 `````
+
+> Note: unless you have CORS enabled, to avoid security issues your video should be on the same domain as your code.
