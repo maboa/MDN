@@ -140,3 +140,22 @@ filter.connect(context.destination);
 `````
 
 > Note: unless you have CORS enabled, to avoid security issues your video should be on the same domain as your code.
+
+Common filters can be applied to nodes:
+
+- Low Pass - allows frequencies below the cutoff frequency to pass through and attenuates frequencies above the cutoff
+- High Pass - allows frequencies above the cutoff frequency to pass through and attenuates frequencies below the cutoff
+- Band Pass - allows a range of frequencies to pass through and attenuates the frequencies below and above this frequency range
+- Low Shelf - allows all frequencies through, but adds a boost (or attenuation) to the lower frequencies
+- High Shelf - allows all frequencies through, but adds a boost (or attenuation) to the higher frequencies
+- Peaking - allows all frequencies through, but adds a boost (or attenuation) to a range of frequencies
+- Notch - allows all frequencies through, except for a set of frequencies
+- Allpass - allows all frequencies through, but changes the phase relationship between the various frequencies
+
+Example:
+
+JavaScript:
+`````javascript
+var filter = context.createBiquadFilter();
+filter.type = "lowshelf";
+`````
