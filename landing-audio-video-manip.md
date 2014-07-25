@@ -124,7 +124,9 @@ More info [HTML5 playbackRate explained](https://developer.mozilla.org/en-US/App
 Audio Manipulation
 ------------------
 
-PlaybackRate aside, to manipulate audio you'll typically use the Web Audio API. We can use the audio track of an audio or video element, here's a video example:
+PlaybackRate aside, to manipulate audio you'll typically use the Web Audio API. We can use the audio track of an audio or video element.
+
+###Audio Filters
 
 HTML:
 `````html
@@ -160,4 +162,6 @@ var filter = context.createBiquadFilter();
 filter.type = "lowshelf";
 `````
 See [BiquadFilterNode](https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode)
+
+###Spatial Audio
 
