@@ -184,5 +184,5 @@ Try out some [Convolution Effects in Real-Time](http://chromium.googlecode.com/s
 
 ###Spatial Audio
 
-We can also position audio using a panner node. A panner node allows us to define a source cone as well as postional and directional elments - all in 3D space.  
+We can also position audio using a panner node. A panner node allows us to define a source cone as well as postional and directional elements - all in 3D space.  
 
