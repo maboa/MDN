@@ -186,3 +186,18 @@ Try out some [Convolution Effects in Real-Time](http://chromium.googlecode.com/s
 
 We can also position audio using a panner node. A panner node allows us to define a source cone as well as postional and directional elements - all in 3D space.  
 
+Example:
+
+`````Javascript
+var panner = context.createPanner();
+panner.coneOuterGain = 0.2;
+panner.coneOuterAngle = 120;
+panner.coneInnerAngle = 0;
+
+panner.connect(context.destination);
+source.connect(panner);
+source.start(0);
+  
+// Position the listener at the origin.
+context.listener.setPosition(0, 0, 0);
+`````
