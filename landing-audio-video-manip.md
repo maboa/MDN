@@ -201,3 +201,18 @@ source.start(0);
 // Position the listener at the origin.
 context.listener.setPosition(0, 0, 0);
 `````
+
+###JavaScript Codecs
+
+It's also possible to manipulate audio at a low level using JavaScript. This can be useful should you want to create audio codecs. 
+
+Libraries currently exist for the following formats :
+
+- AAC - ([AAC.js](https://github.com/audiocogs/aac.js))
+- ALAC - ([alac.js](https://github.com/audiocogs/alac.js))
+- FLAC - ([flac.js](https://github.com/audiocogs/flac.js))
+- MP3 - ([mp3.js](https://github.com/audiocogs/mp3.js))
+- Opus - ([Opus.js](https://github.com/audiocogs/opus.js))
+- Vorbis - ([vorbis.js](https://github.com/audiocogs/vorbis.js))
+
+
