@@ -221,6 +221,6 @@ Libraries currently exist for the following formats :
 See Also
 --------
 
-[Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
-[AudioContext](https://developer.mozilla.org/en-US/docs/Web/API/AudioContext)
-[Various Web Audio API Examples](https://github.com/mdn/)
+- [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
+- [AudioContext](https://developer.mozilla.org/en-US/docs/Web/API/AudioContext)
+- [Various Web Audio API Examples](https://github.com/mdn/)
