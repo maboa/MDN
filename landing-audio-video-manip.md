@@ -202,6 +202,8 @@ source.start(0);
 context.listener.setPosition(0, 0, 0);
 `````
 
+More info on [Spatial Audio](https://developer.mozilla.org/en-US/docs/Web/API/AudioContext.createPanner) 
+
 ###JavaScript Codecs
 
 It's also possible to manipulate audio at a low level using JavaScript. This can be useful should you want to create audio codecs. 
