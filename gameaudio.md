@@ -36,7 +36,7 @@ A requirement of many games is to play more than one piece of audio at the same 
 
 ### Testing and Support
 
-Contemporary audio play-back is tested using [this example](http://jsbin.com/visihopa) where we attempt to play three pieces of audio at the same time using the standard audio API. 
+Concurrent audio play-back is tested using [this example](http://jsbin.com/visihopa) where we attempt to play three pieces of audio at the same time using the standard audio API. 
 
 Simple autoplay functionality is tested with [this example](http://jsbin.com/rufinihi).
 
