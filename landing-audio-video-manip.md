@@ -223,7 +223,7 @@ Libraries currently exist for the following formats :
 - Opus - ([Opus.js](https://github.com/audiocogs/opus.js))
 - Vorbis - ([vorbis.js](https://github.com/audiocogs/vorbis.js))
 
-[Try out a few demos](http://audiocogs.org/codecs/). Audiocogs also provide a JavaScript Framework - [Aurora.js](http://audiocogs.org/codecs/) intended to help you author your own codecs.
+[Try out a few demos](http://audiocogs.org/codecs/). Audiocogs also provide a Framework - [Aurora.js](http://audiocogs.org/codecs/) intended to help you author your own codecs in JavaScript.
 
 
 See Also
