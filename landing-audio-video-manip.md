@@ -99,6 +99,12 @@ See Also: [Using the Video frames as a Texture](https://developer.mozilla.org/en
 
 You can also use a JavaScript library built upon WebGL - [THREE.js](http://threejs.org) to [achieve this effect](http://stemkoski.github.io/Three.js/Video.html) 
 
+Another THREE.js example: [The Video Cube](https://github.com/chrisdavidmills/threejs-video-cube)
+
+Further Info: [Animating Textures in WebGL](https://developer.mozilla.org/en-US/docs/Web/WebGL/Animating_textures_in_WebGL)
+
+
+
 ###Playback Rate
 
 We can also adjust the rate that audio and video plays back using an attribute of the audio and video element called playBackRate. PlaybackRate is number that represents a multiple to be applied to rate of playback - 0.5 represents half-speed while 2 represents double speed.
