@@ -116,7 +116,7 @@ myAudio.addEventListener('timeupdate', function() {
 }, false);
 `````
 
-[Try it out](http://jsbin.com/yezezoqa/1/)
+[Try it out](https://thimble.webmaker.org/project/87621/remix)
 
 
 > **Note 1** : On mobile we may need to trigger this code from a user initiated event. Perhaps the 'start' button being pressed? 
