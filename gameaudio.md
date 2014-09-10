@@ -38,7 +38,7 @@ A requirement of many games is to play more than one piece of audio at the same 
 
 Concurrent audio play-back is tested using [this example](http://jsbin.com/visihopa) where we attempt to play three pieces of audio at the same time using the standard audio API. 
 
-Simple autoplay functionality is tested with [this example](http://jsbin.com/rufinihi).
+Simple autoplay functionality is tested with [this example](http://jsbin.com/rufinihi) (https://thimble.webmaker.org/en-US/project/87782/remix)(http://jsfiddle.net/4qra96gc/).
 
 
 | Mobile Browser    | Version | Concurrent | Autoplay |
@@ -47,12 +47,13 @@ Simple autoplay functionality is tested with [this example](http://jsbin.com/ruf
 | Firefox (Android) | 26+     |  Y         |   Y      |
 | IE Mobile         | 10+     |  ?         |          |
 | Opera Mobile      | 11+     |  N         |   Y      |
-| Safari (iOS)      | 7+      | Y/N [1]    |   N [2]  |
+| Safari (iOS)      | 7+      | Y/N [*]    |   N      |
 | Android Browser   | 2.3+    |  ?         |          |
 
-> **Note 1** : Safari has issues playing if you try and start all pieces of audio contempororarily. If you stagger playback you may have limited success.
+> **Note** : Safari has issues playing if you try and start all pieces of audio contempororarily. If you stagger playback you may have limited success.
 
-> **Note 2** : It has been reported to work on Safari iOS6 if you add your page to home screen.
+
+
 
 
 Mobile Workarounds
