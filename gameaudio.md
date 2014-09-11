@@ -53,9 +53,6 @@ Simple autoplay functionality is tested with [this example](http://jsbin.com/ruf
 > **Note** : Safari has issues playing if you try and start all pieces of audio contempororarily. If you stagger playback you may have limited success.
 
 
-
-
-
 Mobile Workarounds
 ------------------
 
@@ -123,6 +120,23 @@ myAudio.addEventListener('timeupdate', function() {
 > **Note 1** : On mobile we may need to trigger this code from a user initiated event. Perhaps the 'start' button being pressed? 
 
 > **Note 2** : Watch out for bitrates. Encoding your audio at lower bitrates means smaller file sizes but lower seeking accuracy.
+
+Music
+-----
+Music in games can have a powerful emotional effect. You can mix and match various music samples and assuming you can control the volume of your audio element you could cross-fade different musical pieces. Using the [playbackRate](https://developer.mozilla.org/en-US/Apps/Build/Audio_and_video_delivery/HTML5_playbackRate_explained) method you can even adjust the speed of your music without affecting the pitch.
+
+All this is possible using the standard audio element and associated API but becomes much easier with the more advanced Web Audio API.
+
+
+Web Audio API for Games
+-----------------------
+
+Now supported in all modern browsers bar Internet Explorer and Opera Mini an acceptable approach for many is to use the Web Audio API. The Web Audio API is an advanced audio JavaScript API that is ideally suited to gaming. Developers can generate audio and manipulating audio samples aswell as position sound in 3D game space.
+
+A feasible strategy would be to provide basic audio using the standard audio element and enhance the experience using the Web Audio API where supported.
+
+Significantly iOS Safari now supports the Web Audio API, which means it's now possible to write web-based games with native-quality audio on these platforms.
+
 
 
 See Also
