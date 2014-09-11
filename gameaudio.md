@@ -38,7 +38,7 @@ A requirement of many games is to play more than one piece of audio at the same 
 
 Concurrent audio play-back is tested using [this example](http://jsfiddle.net/aqyvgcz2/) where we attempt to play three pieces of audio at the same time using the standard audio API. 
 
-Simple autoplay functionality is tested with [this example](http://jsbin.com/rufinihi) (https://thimble.webmaker.org/en-US/project/87782/remix)(http://jsfiddle.net/4qra96gc/).
+Simple autoplay functionality is tested with [this example](http://jsfiddle.net/4qra96gc/).
 
 
 | Mobile Browser    | Version | Concurrent | Autoplay |
@@ -114,7 +114,7 @@ myAudio.addEventListener('timeupdate', function() {
 }, false);
 `````
 
-[Try it out](https://thimble.webmaker.org/project/87621/remix)
+[Try it out](http://jsfiddle.net/59vwaame/)
 
 
 > **Note 1** : On mobile we may need to trigger this code from a user initiated event. Perhaps the 'start' button being pressed? 
