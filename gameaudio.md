@@ -130,3 +130,4 @@ See Also
 
 - [Making HTML5 Audio Actually Work on Mobile](http://pupunzi.open-lab.com/2013/03/13/making-html5-audio-actually-work-on-mobile/)
 - [Audio Sprites (and fixes for iOS)](http://remysharp.com/2010/12/23/audio-sprites/)
+- [Developing Game Audio with the Web Audio API](http://www.html5rocks.com/en/tutorials/webaudio/games/)
