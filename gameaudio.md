@@ -131,11 +131,14 @@ All this is possible using the standard audio element and associated API but bec
 Web Audio API for Games
 -----------------------
 
-Now supported in all modern browsers bar Internet Explorer and Opera Mini an acceptable approach for many is to use the Web Audio API. The Web Audio API is an advanced audio JavaScript API that is ideally suited to gaming. Developers can generate audio and manipulating audio samples aswell as position sound in 3D game space.
+Now supported in all modern browsers bar Internet Explorer and Opera Mini an acceptable approach for many is to use the Web Audio API. The Web Audio API is an advanced audio JavaScript API that is ideally suited to gaming. Developers can generate audio and manipulating audio samples as well as position sound in 3D game space.
 
 A feasible strategy would be to provide basic audio using the standard audio element and enhance the experience using the Web Audio API where supported.
 
 Significantly iOS Safari now supports the Web Audio API, which means it's now possible to write web-based games with native-quality audio on these platforms.
+
+As the Web Audio API allows precise timing and control of audio play-back we can use it to play samples at specific moments which is a crucial immersive aspect of gaming.
+
 
 
 
@@ -144,4 +147,4 @@ See Also
 
 - [Making HTML5 Audio Actually Work on Mobile](http://pupunzi.open-lab.com/2013/03/13/making-html5-audio-actually-work-on-mobile/)
 - [Audio Sprites (and fixes for iOS)](http://remysharp.com/2010/12/23/audio-sprites/)
-- [Developing Game Audio with the Web Audio API](http://www.html5rocks.com/en/tutorials/webaudio/games/)
+- [Developing Game Audio with the Web Audio API (HTML5Rocks)](http://www.html5rocks.com/en/tutorials/webaudio/games/)
