@@ -45,10 +45,10 @@ Simple autoplay functionality is tested with [this example](http://jsfiddle.net/
 | ----------------- | ------- | ---------- | -------- |
 | Chrome (Android)  | 32+     |  N         |   N      |
 | Firefox (Android) | 26+     |  Y         |   Y      |
-| IE Mobile         | 10+     |  ?         |          |
+| IE Mobile         | 10+     |  ?         |   ?      |
 | Opera Mobile      | 11+     |  N         |   Y      |
 | Safari (iOS)      | 7+      | Y/N [*]    |   N      |
-| Android Browser   | 2.3+    |  ?         |          |
+| Android Browser   | 2.3+    |  N         |   N      |
 
 > **Note** : Safari has issues playing if you try and start all pieces of audio contempororarily. If you stagger playback you may have limited success.
 
