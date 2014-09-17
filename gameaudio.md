@@ -140,6 +140,21 @@ Significantly iOS Safari now supports the Web Audio API, which means it's now po
 As the Web Audio API allows precise timing and control of audio play-back we can use it to play samples at specific moments which is a crucial immersive aspect of gaming.
 
 
+Background Music with the Web Audio API
+---------------------------------------
+
+Although we can use the audio element to deliver linear background music that doesn't change in reaction to your game environment, the Web Audio API is ideal for implementing a more dynamic musical experience. You may want music to change depending on whether you are trying to build suspense or encourage the player in some way. Music is an important part of the gaming experience and depending on the type of game you are making you may wish to invest significant effort into getting it right.
+
+One way you can make your soundtrack more dynamic is by splitting it up into component loops or tracks. This often the way that musicians compose music anyway and the Web Audio API is extremely good at keeping these parts in sync. Once you have the various tracks that make up your piece you can bring tracks in and out as appropriate.
+
+We can also apply filters or effects to music. Is your character in a cave? Increase the echo. Maybe you have underwater scenes - apply a filter that muffles the sound.
+
+Let's look at the methods of dynamically adjusting music from it's base tracks.
+
+### Loading Your Tracks
+
+With the Web Audio API you can load your separate tracks and loops using XHR, which means you can load them asynchronously or in parallel. You can also load them synchronously if it makes sense to do it that way - this might mean parts of your music are ready earlier and you can start playing them, while others load.
+
 
 
 See Also
