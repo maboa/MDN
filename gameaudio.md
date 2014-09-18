@@ -153,7 +153,7 @@ Let's look at the methods of dynamically adjusting music from it's base tracks.
 
 ### Loading Your Tracks
 
-With the Web Audio API you can load your separate tracks and loops using XHR, which means you can load them asynchronously or in parallel. You can also load them synchronously if it makes sense to do it that way - this might mean parts of your music are ready earlier and you can start playing them, while others load.
+With the Web Audio API you can load separate tracks and loops individually using XHR, which means you can load them synchronously or in parallel. Loading synchronously might mean parts of your music are ready earlier and you can start playing them, while others load.
 
 
 
