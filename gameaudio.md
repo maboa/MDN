@@ -196,7 +196,7 @@ function playTrack(url) {
         console.log('context.currentTime '+context.currentTime);
 
         if (offset == 0) {
-          source.start(0,0);
+          source.start();
           offset = context.currentTime;
         } else {
           source.start(0,context.currentTime - offset);
@@ -226,10 +226,14 @@ for (var i = 0, len = tracks.length; i < len; i++) {
 
 Here we set up a new AudioContext and create a function (playTrack) that loads and starts playing a track.
 
-> Note - start (formerly known as noteOn) will start playing an audio asset. Start takes three parameters:
-1. when (delay before starting) 2. where (the part of the audio to start playing from) and 3. how long (duration).
+> Note - start (formerly known as noteOn) will start playing an audio asset. Start takes three (optional) parameters:
+1. when (delay before starting) 2. where (the part of the audio to start playing from) and 3. how long (duration). Stop takes one optional parameter - when (delay before stopping).
 
 If the second parameter -- the offset -- is zero we start playing from the start of the given piece of audio, which is what we do in the first instance. We then store the AudioContext currentTime offset of when the first piece began playing and subtract that from any subsequent currentTimes to calculate the actual time and use that to synchronise our tracks.
+
+In the context of your game world you may have loops and samples that are played depending on circumstance and it can be useful to be able to synchronise with other tracks for a more seamless experience.
+
+> Note that this example does not wait for the beat end, we could do this if we knew the BPM (Beats Per Minute) of the tracks.
 
 
 See Also
