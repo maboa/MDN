@@ -227,7 +227,7 @@ for (var i = 0, len = tracks.length; i < len; i++) {
 Here we set up a new AudioContext and create a function (playTrack) that loads and starts playing a track.
 
 > Note - start (formerly known as noteOn) will start playing an audio asset. Start takes three (optional) parameters:
-1. when (delay before starting) 2. where (the part of the audio to start playing from) and 3. how long (duration). Stop takes one optional parameter - when (delay before stopping).
+1. when (the absolute time to commence playback) 2. where (the part of the audio to start playing from) and 3. how long (duration). Stop takes one optional parameter - when (delay before stopping).
 
 If the second parameter -- the offset -- is zero we start playing from the start of the given piece of audio, which is what we do in the first instance. We then store the AudioContext currentTime offset of when the first piece began playing and subtract that from any subsequent currentTimes to calculate the actual time and use that to synchronise our tracks.
 
