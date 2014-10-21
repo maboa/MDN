@@ -155,11 +155,81 @@ Let's look at the methods of dynamically adjusting music from it's base tracks.
 
 With the Web Audio API you can load separate tracks and loops individually using XHR, which means you can load them synchronously or in parallel. Loading synchronously might mean parts of your music are ready earlier and you can start playing them, while others load.
 
-Parallel loading of audio can be achieved like this:
+Either way you may want to synchronise tracks or loops. The Web Audio API contains the notion of an internal clock that starts ticking the moment you create an audio context. You'll need to take account of the time between creating an audio context and when the first audio track starts playing. Recording this offset and querying the playing track's current time give you enough information to synchronise separate pieces of audio.
+
+To see this in action, let's lay out some separate tracks:
 
 `````html
+<ul>
+  <li><a class="track" href="http://jPlayer.org/audio/mp3/gbreggae-leadguitar.mp3">Lead Guitar</a></li>
+  <li><a class="track" href="http://jPlayer.org/audio/mp3/gbreggae-drums.mp3">Drums</a></li>
+  <li><a class="track" href="http://jPlayer.org/audio/mp3/gbreggae-bassguitar.mp3">Bass Guitar</a></li>
+  <li><a class="track" href="http://jPlayer.org/audio/mp3/gbreggae-horns.mp3">Horns</a></li>
+  <li><a class="track" href="http://jPlayer.org/audio/mp3/gbreggae-clav.mp3">Clavi</a></li>
+</ul>
 
 `````
+All of these tracks are the same tempo and are designed to be synchronised with each other.
+
+`````javascript
+window.AudioContext = window.AudioContext || window.webkitAudioContext;
+
+var offset = 0;
+var context = new AudioContext();
+
+function playTrack(url) {
+  var request = new XMLHttpRequest();
+  request.open('GET', url, true);
+  request.responseType = 'arraybuffer';
+
+  var audiobuffer;
+
+  // Decode asynchronously
+  request.onload = function() {
+    
+    if (request.status == 200) {
+      
+      context.decodeAudioData(request.response, function(buffer) {
+        var source = context.createBufferSource();
+        source.buffer = buffer;
+        source.connect(context.destination);
+        console.log('context.currentTime '+context.currentTime);
+
+        if (offset == 0) {
+          source.start(0,0);
+          offset = context.currentTime;
+        } else {
+          source.start(0,context.currentTime - offset);
+        }
+
+      }, function(e) {
+        console.log('Error decoding audio data:' + e);
+      });
+    } else {
+      console.log('Audio didn\'t load successfully; error code:' + request.statusText);
+    }
+  }
+  request.send();
+}
+
+var tracks = document.getElementsByClassName('track');
+
+for (var i = 0, len = tracks.length; i < len; i++) {
+  tracks[i].addEventListener('click', function(e){
+
+    playTrack(this.href);
+    e.preventDefault();
+  });
+}
+
+`````
+
+Here we set up a new AudioContext and create a function (playTrack) that loads and starts playing a track.
+
+> Note - start (formerly known as noteOn) will start playing an audio asset. Start takes three parameters:
+1. when (delay before starting) 2. where (the part of the audio to start playing from) and 3. how long (duration).
+
+If the second parameter -- the offset -- is zero we start playing from the start of the given piece of audio, which is what we do in the first instance. We then store the AudioContext currentTime offset of when the first piece began playing and subtract that from any subsequent currentTimes to calculate the actual time and use that to synchronise our tracks.
 
 
 See Also
