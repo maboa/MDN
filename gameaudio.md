@@ -224,6 +224,8 @@ for (var i = 0, len = tracks.length; i < len; i++) {
 
 `````
 
+[Try it out](http://jsfiddle.net/c87z11jj/1/)
+
 Here we set up a new AudioContext and create a function (playTrack) that loads and starts playing a track.
 
 > Note - start (formerly known as noteOn) will start playing an audio asset. Start takes three (optional) parameters:
@@ -233,7 +235,30 @@ If the second parameter -- the offset -- is zero we start playing from the start
 
 In the context of your game world you may have loops and samples that are played depending on circumstance and it can be useful to be able to synchronise with other tracks for a more seamless experience.
 
-> Note that this example does not wait for the beat end, we could do this if we knew the BPM (Beats Per Minute) of the tracks.
+> Note that this example does not wait for the beat end to introduce the next piece, we could do this if we knew the BPM (Beats Per Minute) of the tracks.
+
+You may find that the introduction of a new track sounds more natural if it comes in on the beat/bar/phrase or whatever units you want to chunk your background music into.
+
+To do this before playing the track you want to synch, you should calculate how long it is until the start of the next beat/bar etc.
+
+Here's a bit of code that given a tempo (the time in seconds of your beat/bar) will calculate how long to wait until you play the next part - you feed this to the start function with the first parameter which takes the absolute time of when that playback should commence. Note the second parameter (where to start playing from in the new track) is relative:
+
+`````javascript
+        if (offset == 0) {
+          source.start();
+          offset = context.currentTime;
+        } else {
+          var relativeTime = context.currentTime - offset;
+          var beats = relativeTime / tempo;
+          var remainder = beats - Math.floor(beats);
+          var delay = tempo - (remainder*tempo);
+          source.start(context.currentTime+delay, relativeTime+delay);
+        }
+`````
+
+[Try it here](http://jsfiddle.net/c87z11jj/2/) (I've synched to the bar in this case).
+
+> Note that if the first parameter is 0 or less than the context currentTime, playback will commence immediatley. 
 
 
 See Also
