@@ -263,9 +263,19 @@ Here's a bit of code that given a tempo (the time in seconds of your beat/bar) w
 Positional Audio
 ----------------
 
-http://www.html5rocks.com/en/tutorials/webaudio/positional_audio/
+Positional audio can be an important technique in making audio a key part of an immersive gaming experience. The Web Audio API not only enables us to position a number of audio sources in three-dimensional space but can also allow us to apply filters that make that audio appear more realistic. 
 
+In short, using the positional capabilities of the Web Audio API we can relate further information about the game world to the player. 
 
+We can relate:
+
+- The position of objects
+- The direction of objects (movement of position and recreation of the doppler effect)
+- The environment (cavernous, underwater etc)
+
+This is especially useful in a three-dimensional environment rendered using WebGL where the Web Audio API makes it possible to tie audio to the objects and viewpoints.
+
+See [Web Audio API Spatialisation Basics](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics) for more details.
 
 
 See Also
