@@ -260,6 +260,13 @@ Here's a bit of code that given a tempo (the time in seconds of your beat/bar) w
 
 > Note that if the first parameter is 0 or less than the context currentTime, playback will commence immediatley. 
 
+Positional Audio
+----------------
+
+http://www.html5rocks.com/en/tutorials/webaudio/positional_audio/
+
+
+
 
 See Also
 --------
@@ -267,3 +274,4 @@ See Also
 - [Making HTML5 Audio Actually Work on Mobile](http://pupunzi.open-lab.com/2013/03/13/making-html5-audio-actually-work-on-mobile/)
 - [Audio Sprites (and fixes for iOS)](http://remysharp.com/2010/12/23/audio-sprites/)
 - [Developing Game Audio with the Web Audio API (HTML5Rocks)](http://www.html5rocks.com/en/tutorials/webaudio/games/)
+- [Mixing Positional Audio and WebGL (HTML5Rocks)](http://www.html5rocks.com/en/tutorials/webaudio/positional_audio/)
