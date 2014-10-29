@@ -3,7 +3,7 @@ Audio for Web Games
 
 Audio is an important part of any game - it adds feedback and atmosphere. Web based audio is maturing fast, but there are still many browser differences to negotiate.
 
-We often need to prioritise the audio parts that are essential for our games and devise a strategy based on those decisions.
+We often need to decide which audio parts are essential to our games' experience, which are nice to have and devise a strategy accordingly.
 
 Mobile
 ------
@@ -14,11 +14,13 @@ By far the most difficult platforms to provide support for are mobile. Unfortuna
 
 ### Autoplay
 
-Many mobile browsers will simply ignore any instructions to autoplay audio. Playback for audio needs to be started by a user initiated event. This means you will have to structure your audio playback to take account of that. This is usually mitigated against by loading the audio in advance and starting any -- say -- background music in advance so that playback occurs when a start button is pressed. 
+Many mobile browsers will simply ignore any instructions to autoplay audio. Playback for audio needs to be started by a user initiated event. This means you will have to structure your audio playback to take account of that. This is usually mitigated against by loading the audio in advance and priming it on a user initiated event.
 
-For more passive audio autoplay, for example background music that starting as soon as a game loads, one trick is to detect any user initiated event and play back at that point.
+For more passive audio autoplay, for example background music that starts as soon as a game loads, one trick is to detect *any* user initiated event and start playback then. For other more active sounds that are to be used during the game we could consider priming them as soon as something like a start button is pressed. To prime audio like this we want to play a part of it, to do this it is useful to include a moment of silence at the end of your audio sample. Jumping to, playing and pausing that silence will mean we can now use JavaScript to play that file at arbitary points.
 
-> Note - adding a web app to your mobile home screen may change its capabilities. In the case of autoplay and iOS, this appears to be the case currently.
+> Note 1 - playing part of your file a zero volume could also work if the browser allows you to change volume (see below). Also note that playing and immediately pausing your audio does not guarantee that a small piece of audio is emitted.
+
+> Note 2 - adding a web app to your mobile home screen may change its capabilities. In the case of autoplay and iOS, this appears to be the case currently.
 
 
 
@@ -131,7 +133,7 @@ All this is possible using the standard audio element and associated API but bec
 Web Audio API for Games
 -----------------------
 
-Now supported in all modern browsers bar Internet Explorer and Opera Mini an acceptable approach for many is to use the Web Audio API. The Web Audio API is an advanced audio JavaScript API that is ideally suited to gaming. Developers can generate audio and manipulating audio samples as well as position sound in 3D game space.
+Now supported in all modern browsers bar Internet Explorer and Opera Mini, an acceptable approach for many is to use the Web Audio API ([Can I use Web Audio API](http://caniuse.com/#search=web%20audio%20api)). The Web Audio API is an advanced audio JavaScript API that is ideally suited to gaming. Developers can generate audio and manipulating audio samples as well as position sound in 3D game space.
 
 A feasible strategy would be to provide basic audio using the standard audio element and enhance the experience using the Web Audio API where supported.
 
