@@ -3,12 +3,12 @@ Audio for Web Games
 
 Audio is an important part of any game - it adds feedback and atmosphere. Web based audio is maturing fast, but there are still many browser differences to negotiate.
 
-We often need to prioritise the audio parts that are essential for our games, which are nice to have and devise a strategy based on those decisions.
+We often need to prioritise the audio parts that are essential for our games and devise a strategy based on those decisions.
 
 Mobile
 ------
 
-By far the most difficult platforms to provide support for are mobile. Unfortunately these are also the platforms that people often use to play games. There's a couple of differences between desktop and mobile browsers that may have caused broswer vendors to make choices that then make mobile difficult for games audio developers to work with.
+By far the most difficult platforms to provide support for are mobile. Unfortunately these are also the platforms that people often use to play games. There's a couple of differences between desktop and mobile browsers that may have caused browser vendors to make choices that can make audio difficult for games developers to work with.
 
 
 
