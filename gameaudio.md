@@ -27,7 +27,7 @@ For more passive audio autoplay, for example background music that starts as soo
 
 ### Volume
 
-Volume is also one of those properties that is often disabled by mobile browsers. The rationale is often that the user should be in control of the volume and this shouldn't be overriden.
+Volume is also one of those properties that may be disabled in mobile browsers. The reason often given is that the user should be in control of the volume via at the OS level and this shouldn't be overriden.
 
 ### Buffering
 
