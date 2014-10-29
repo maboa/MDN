@@ -35,7 +35,7 @@ Likely an attempt to mitigate runaway mobile network data use, we may also find 
 
 ### Concurrent Audio Playback
 
-A requirement of many games is to play more than one piece of audio at the same time. Although the situation is set to get better with the adoption of the Web Audio API. Currently using the vanilla audio element will result in patchy results on mobile.
+A requirement of many games is to play more than one piece of audio at the same time. Although the situation is set to get better with the adoption of the Web Audio API, currently using the vanilla audio element will result in patchy results on mobile.
 
 ### Testing and Support
 
