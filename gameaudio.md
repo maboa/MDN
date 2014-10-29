@@ -5,6 +5,7 @@ Audio is an important part of any game - it adds feedback and atmosphere. Web ba
 
 We often need to decide which audio parts are essential to our games' experience, which are nice to have and devise a strategy accordingly.
 
+
 Mobile
 ------
 
@@ -133,7 +134,7 @@ All this is possible using the standard audio element and associated API but bec
 Web Audio API for Games
 -----------------------
 
-Now supported in all modern browsers bar Internet Explorer and Opera Mini, an acceptable approach for many is to use the Web Audio API ([Can I use Web Audio API](http://caniuse.com/#search=web%20audio%20api)). The Web Audio API is an advanced audio JavaScript API that is ideally suited to gaming. Developers can generate audio and manipulating audio samples as well as position sound in 3D game space.
+Now supported in all modern browsers bar Opera Mini and Internet Explorer ([Although Microsoft are working on it](https://status.modern.ie/webaudioapi)), an acceptable approach for many is to use the Web Audio API ([Can I use Web Audio API](http://caniuse.com/#search=web%20audio%20api)). The Web Audio API is an advanced audio JavaScript API that is ideally suited to gaming. Developers can generate audio and manipulating audio samples as well as position sound in 3D game space.
 
 A feasible strategy would be to provide basic audio using the standard audio element and enhance the experience using the Web Audio API where supported.
 
