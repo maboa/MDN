@@ -28,12 +28,14 @@ Often one of the first considerations for many developers or designers are price
 | Video.js               | Apche 2.0           | Full version free                                   |
 
 
+
 ### Audio Only
 
 | Library                | License          | Pricing             |
 | ---------------------- | ---------------- | ------------------- |
 | SoundJS                | MIT              | Full version free   |
 | SoundManager 2         | BSD              | Full version free   | 
+
 
 
 ### Video Only
@@ -48,9 +50,47 @@ Often one of the first considerations for many developers or designers are price
 | Projekktor             | GPL              | Full version free                                                  |
 | SublimeVideo           | remote hosted    | Free for personal use, commercial pro licenses available           |
 
-Feature Support
----------------
+
+Download and Repository
+-----------------------
+
+Once you've identified a potential library to go with you'll probably want to know how easy it is to download and install and what the repository looks like.
+
+### Audio and Video
+
+| Library                | Download              | Public Repo                                | Repo Stars* |
+| ---------------------- | --------------------- | ------------------------------------------ | ----------- |
+| Acorn Media Player     | Direct includes demos | https://github.com/ghinda/acornmediaplayer |          74 |
+| jPlayer                | Direct includes demos | https://github.com/happyworm/jPlayer       |       2,588 |
+| Leanback Player        | Direct                | unknown                                    |           - |
+| mediaelement.js        | Direct includes demos | https://github.com/johndyer/mediaelement   |       2,849 |
+| OSMPlayer              | Github                | https://github.com/mediafront/osmplayer    |         255 |
+| Video.js               | Direct includes demo  | https://github.com/videojs/video.js        |       7,084 |
+
+
+
+### Audio Only
+
+| Library                | Download              | Public Repo                                    | Repo Stars* |
+| ---------------------- | --------------------- | ---------------------------------------------- | ----------- |
+| SoundJS                | Github includes demos | https://github.com/CreateJS/SoundJS            |       1,195 |
+| SoundManager 2         | Direct includes demos | https://github.com/scottschiller/SoundManager2 |       1,984 |
+
+
+
+
+### Video Only  
+
+| Library                | Download              | Public Repo                               | Repos Stars* |
+| ---------------------- | --------------------- | ---------------------------------------------------------|
+| Codo Player            | Direct includes demo  | unknown                                   |            - |
+| flowplayer             | Registration required | https://github.com/flowplayer/flowplayer  |          787 |
+| jMediaelement2         | Github includes demos | https://github.com/aFarkas/jMediaelement  |          147 |
+| JW Player              | Registration required | https://github.com/jwplayer/jwplayer      |          126 |
+| Kaltura Player         | Registration required | https://github.com/kaltura/mwEmbed        |           93 |
+| Projekktor             | Direct includes demo  | https://github.com/frankyghost/projekktor |          111 |
+| SublimeVideo           | Registration required | unknown                                   |            - |
    
-The feature-set of audio and video on the web is comprehensive and contsantly growing and evolving.
-
-
+   
+   
+The feature-set of audio and video on the web is comprehensive and constantly growing and evolving.
