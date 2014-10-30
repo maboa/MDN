@@ -115,7 +115,7 @@ Finally we looked at whether the player included a Flash fallback. This not only
 ### Audio and Video
 
 | Library                | Dependencies                | Library Size | Flash Fallback | Custom Build | Theming  |
-| ---------------------- | --------------------------- | ------------ |--------------- | ----------------------- |
+| ---------------------- | --------------------------- | ------------ |--------------- | ------------ | -------- |
 | Acorn Media Player     | jQuery, jQueryUI, modernizr |  34.6 kB **  | No             |              | CSS      |
 | jPlayer                | jQuery or Zepto             |  55.7 kB     | Yes (14.2 kB)  |              | CSS/HTML |
 | Leanback Player        | None                        |  62.9 kB     | No             |              | CSS      |
