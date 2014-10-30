@@ -92,5 +92,6 @@ Once you've identified a potential library to go with you'll probably want to kn
 | SublimeVideo           | Registration required | unknown                                   |            - |
    
    
-   
+* Information correct on October 30th, 2014
+
 The feature-set of audio and video on the web is comprehensive and constantly growing and evolving.
