@@ -14,16 +14,7 @@ Licensing and Pricing
 
 Often one of the first considerations for many developers or designers are price and licensing so let's commence by looking at those two aspects.
 
-### Audio and Video
 
-
-
-### Audio Only
-
-| Library                | License          | Pricing             |
-| ---------------------- | ---------------- | ------------------- |
-| SoundJS                | MIT              | Full version free   |
-| SoundManager 2         | BSD              | Full version free   | 
 
 ### Audio and Video
 
@@ -35,6 +26,15 @@ Often one of the first considerations for many developers or designers are price
 | mediaelement.js        | MIT                 | Full version free                    |
 | OSMPlayer              | MIT                 | Full version free                    |
 | Video.js               | Apche 2.0           | Full version free                    |
+
+
+### Audio Only
+
+| Library                | License          | Pricing             |
+| ---------------------- | ---------------- | ------------------- |
+| SoundJS                | MIT              | Full version free   |
+| SoundManager 2         | BSD              | Full version free   | 
+
 
 ### Video Only
 
