@@ -18,14 +18,14 @@ Often one of the first considerations for many developers or designers are price
 
 ### Audio and Video
 
-| Library                | License             | Pricing                              |
-| ---------------------- | ------------------- | ------------------------------------ |
-| Acorn Media Player     | MIT                 | Full version free                    |     
-| jPlayer                | MIT                 | Full version free                    |
-| Leanback Player        | GPL v3 / Commercial | Non commercial free / 35€ per domain |
-| mediaelement.js        | MIT                 | Full version free                    |
-| OSMPlayer              | MIT                 | Full version free                    |
-| Video.js               | Apche 2.0           | Full version free                    |
+| Library                | License             | Pricing                                             |
+| ---------------------- | ------------------- | --------------------------------------------------- |
+| Acorn Media Player     | MIT                 | Full version free                                   |     
+| jPlayer                | MIT                 | Full version free                                   |
+| Leanback Player        | GPL v3 / Commercial | Non commercial free / commercial licenses available |
+| mediaelement.js        | MIT                 | Full version free                                   |
+| OSMPlayer              | MIT                 | Full version free                                   |
+| Video.js               | Apche 2.0           | Full version free                                   |
 
 
 ### Audio Only
@@ -40,15 +40,17 @@ Often one of the first considerations for many developers or designers are price
 
 | Library                | License          | Pricing                                                            |
 | ---------------------- | ---------------- | -------------------------------------------------------------------| 
-| Codo Player            | GPL / Commercial | Standard version free with logo, commercial pro versions available |
-| flowplayer             | GPL / Commercial | Standard version free with logo, commercial pro versions available |
+| Codo Player            | GPL / Commercial | Standard version free with logo, commercial pro licenses available |
+| flowplayer             | GPL / Commercial | Standard version free with logo, commercial pro licenses available |
 | jMediaelement2         | MIT / GPL        | Full version free                                                  |
-| JW Player              | CC / Commercial  | Standard version free with logo, commercial pro versions available |
-
+| JW Player              | CC / Commercial  | Standard version free with logo, commercial pro licenses available |
+| Kaltura Player         | AGPL v3          | Full version free                                                  |
+| Projekktor             | GPL              | Full version free                                                  |
+| SublimeVideo           | remote hosted    | Free for personal use, commercial pro licenses available           |
 
 Feature Support
 ---------------
-
+   
 The feature-set of audio and video on the web is comprehensive and contsantly growing and evolving.
 
 
