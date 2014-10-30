@@ -20,29 +20,30 @@ Often one of the first considerations for many developers or designers are price
 
 ### Audio Only
 
-| Library                | License          | Pricing                                                               |
-| ---------------------- | ---------------- | --------------------------------------------------------------------- |
-| SoundJS                | MIT              | Full version free                                                     |
-| SoundManager 2         | BSD              | Full version free    
+| Library                | License          | Pricing             |
+| ---------------------- | ---------------- | ------------------- |
+| SoundJS                | MIT              | Full version free   |
+| SoundManager 2         | BSD              | Full version free   | 
 
 ### Audio and Video
 
-| Library                | License          | Pricing                                                               |
-| ---------------------- | ---------------- | --------------------------------------------------------------------- |
-| Acorn Media Player     | MIT              | Full version free       
-|
-| jPlayer                | MIT              | Full version free   
-
+| Library                | License             | Pricing                              |
+| ---------------------- | ------------------- | ------------------------------------ |
+| Acorn Media Player     | MIT                 | Full version free                    |     
+| jPlayer                | MIT                 | Full version free                    |
+| Leanback Player        | GPL v3 / Commercial | Non commercial free / 35€ per domain |
+| mediaelement.js        | MIT                 | Full version free                    |
+| OSMPlayer              | MIT                 | Full version free                    |
+| Video.js               | Apche 2.0           | Full version free                    |
 
 ### Video Only
 
-| Library                | License          | Pricing                                                               |
-| ---------------------- | ---------------- | --------------------------------------------------------------------- 
-|
-| Codo Player            | GPL / Commercial | Standard version free with logo, commercial pro versions available    |
-| flowplayer             | GPL / Commercial | Standard version free with logo, commercial pro versions available    |
-| jMediaelement2         | MIT / GPL        | Full version free                                                                                                       |
-| JW Player              | CC / Commercial  | Standard version free with logo, commercial pro versions available    |
+| Library                | License          | Pricing                                                            |
+| ---------------------- | ---------------- | -------------------------------------------------------------------| 
+| Codo Player            | GPL / Commercial | Standard version free with logo, commercial pro versions available |
+| flowplayer             | GPL / Commercial | Standard version free with logo, commercial pro versions available |
+| jMediaelement2         | MIT / GPL        | Full version free                                                  |
+| JW Player              | CC / Commercial  | Standard version free with logo, commercial pro versions available |
 
 
 Feature Support
