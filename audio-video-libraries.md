@@ -94,4 +94,36 @@ Once you've identified a potential library to go with you'll probably want to kn
    
 *Information correct on October 30th, 2014
 
+Dependencies, Size, Flexibility and Fallbacks
+---------------------------------------------
+
+Another key consideration are the library's dependencies - does it rely on jQuery or other libraries or is it standalone?
+
+Dependencies and size of the source code can give you an idea of how long the player will take to load. 
+
+> Note some libraries allow you to create a custom build.
+
+There are two parts to important parts to the flexibility of your player:
+
+- Can you customise it, how and to what extent?
+- Can you easily swap a different player in (including the browsers native player) should you decide to change?
+
+We looked at the mechanisms used to theme the player and whether the syntax for defining the player was standard enough that it could be used as a polyfill - in other words does is it defined using standard audio video tags?
+
+Finally we looked at whether the player included a Flash fallback. This not only indicates that it will work on browsers that haven't implemented the audio and video tag, it can be used to provide support for formats that some browsers may not support and be used for RTMP streaming.
+
+### Audio and Video
+
+| Library                | Dependencies                | Library Size | Flash Fallback | Custom Build | Theming  |
+| ---------------------- | --------------------------- | ------------ |--------------- | ----------------------- |
+| Acorn Media Player     | jQuery, jQueryUI, modernizr |  34.6 kB **  | No             |              | CSS      |
+| jPlayer                | jQuery or Zepto             |  55.7 kB     | Yes (14.2 kB)  |              | CSS/HTML |
+| Leanback Player        | None                        |  62.9 kB     | No             |              | CSS      |
+| mediaelement.js        | None                        |  27.6 kB     | Yes (57.1 kB)  |              | CSS      |
+| OSMPlayer              | jQuery, jQueryUI            | 105.5 kB     | No             | Yes          | unknown  |
+| Video.js               | None                        |  68.8 kB     | Yes (17.0 kB)  | Yes          | CSS      |
+
+
+
+
 The feature-set of audio and video on the web is comprehensive and constantly growing and evolving.
