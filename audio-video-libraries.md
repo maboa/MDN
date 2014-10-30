@@ -82,7 +82,7 @@ Once you've identified a potential library to go with you'll probably want to kn
 ### Video Only  
 
 | Library                | Download              | Public Repo                               | Repos Stars* |
-| ---------------------- | --------------------- | ---------------------------------------------------------|
+| ---------------------- | --------------------- | ----------------------------------------- | ------------ |
 | Codo Player            | Direct includes demo  | unknown                                   |            - |
 | flowplayer             | Registration required | https://github.com/flowplayer/flowplayer  |          787 |
 | jMediaelement2         | Github includes demos | https://github.com/aFarkas/jMediaelement  |          147 |
