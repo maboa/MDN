@@ -81,15 +81,15 @@ Once you've identified a potential library to go with you'll probably want to kn
 
 ### Video Only  
 
-| Library                | Download              | Public Repo                               | Repos Stars* |
-| ---------------------- | --------------------- | ----------------------------------------- | ------------ |
-| Codo Player            | Direct includes demo  | unknown                                   |            - |
-| flowplayer             | Registration required | https://github.com/flowplayer/flowplayer  |          787 |
-| jMediaelement2         | Github includes demos | https://github.com/aFarkas/jMediaelement  |          147 |
-| JW Player              | Registration required | https://github.com/jwplayer/jwplayer      |          126 |
-| Kaltura Player         | Registration required | https://github.com/kaltura/mwEmbed        |           93 |
-| Projekktor             | Direct includes demo  | https://github.com/frankyghost/projekktor |          111 |
-| SublimeVideo           | Registration required | unknown                                   |            - |
+| Library                | Download              | Public Repo                               | Repo Stars* |
+| ---------------------- | --------------------- | ----------------------------------------- | ----------- |
+| Codo Player            | Direct includes demo  | unknown                                   |           - |
+| flowplayer             | Registration required | https://github.com/flowplayer/flowplayer  |         787 |
+| jMediaelement2         | Github includes demos | https://github.com/aFarkas/jMediaelement  |         147 |
+| JW Player              | Registration required | https://github.com/jwplayer/jwplayer      |         126 |
+| Kaltura Player         | Registration required | https://github.com/kaltura/mwEmbed        |          93 |
+| Projekktor             | Direct includes demo  | https://github.com/frankyghost/projekktor |         111 |
+| SublimeVideo           | Registration required | unknown                                   |           - |
    
    
 *Information correct on October 30th, 2014
