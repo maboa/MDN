@@ -124,6 +124,15 @@ Finally we looked at whether the player included a Flash fallback. This not only
 | Video.js               | None                        |  68.8 kB     | Yes (17.0 kB)  | Yes          | CSS      |
 
 
+### Audio Only
+
+| Library                | Dependencies | Library Size | Flash Fallback            | Custom Build | Theming      |
+| ---------------------- | ------------ | -------------|-------------------------- | ------------ | ------------ |
+| SoundJS                | None         | 34.3 kB      | Yes (18.9 kB) + SWFObject | No           | CSS/JSON     |
+| SoundManager 2         | None         | 51.3 kB      | Yes (8.7 kB)              | Debug build  | CSS/Templates|
+
+
+
 
 
 The feature-set of audio and video on the web is comprehensive and constantly growing and evolving.
