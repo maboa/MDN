@@ -148,7 +148,7 @@ Background Music with the Web Audio API
 
 Although we can use the audio element to deliver linear background music that doesn't change in reaction to your game environment, the Web Audio API is ideal for implementing a more dynamic musical experience. You may want music to change depending on whether you are trying to build suspense or encourage the player in some way. Music is an important part of the gaming experience and depending on the type of game you are making you may wish to invest significant effort into getting it right.
 
-One way you can make your soundtrack more dynamic is by splitting it up into component loops or tracks. This often the way that musicians compose music anyway and the Web Audio API is extremely good at keeping these parts in sync. Once you have the various tracks that make up your piece you can bring tracks in and out as appropriate.
+One way you can make your soundtrack more dynamic is by splitting it up into component loops or tracks. This is often the way that musicians compose music anyway and the Web Audio API is extremely good at keeping these parts in sync. Once you have the various tracks that make up your piece you can bring tracks in and out as appropriate.
 
 We can also apply filters or effects to music. Is your character in a cave? Increase the echo. Maybe you have underwater scenes - apply a filter that muffles the sound.
 
@@ -242,7 +242,7 @@ In the context of your game world you may have loops and samples that are played
 
 You may find that the introduction of a new track sounds more natural if it comes in on the beat/bar/phrase or whatever units you want to chunk your background music into.
 
-To do this before playing the track you want to synch, you should calculate how long it is until the start of the next beat/bar etc.
+To do this before playing the track you want to sync, you should calculate how long it is until the start of the next beat/bar etc.
 
 Here's a bit of code that given a tempo (the time in seconds of your beat/bar) will calculate how long to wait until you play the next part - you feed this to the start function with the first parameter which takes the absolute time of when that playback should commence. Note the second parameter (where to start playing from in the new track) is relative:
 
