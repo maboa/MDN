@@ -132,7 +132,17 @@ Finally we looked at whether the player included a Flash fallback. This not only
 | SoundManager 2         | None         | 51.3 kB      | Yes (8.7 kB)              | Debug build  | CSS/Templates|
 
 
+### Video Only
 
+| Library                | Dependencies | Library Size | Flash Fallback | Custom Build | Theming        |
+| ---------------------- | ------------ | ---------------------------------------------|----------------|
+| Codo Player            | None         | 57.2 kB      | Yes (3.6 kB)   | No           | CSS            |
+| flowplayer             | jQuery       | 36.4 kB      | Yes (5.8 kB)   | No           | CSS            |
+| jMediaelement2         | None         | 26.8 kB      | No             | Yes          | CSS            |
+| JW Player              | jQuery       | 162.7 kB     | Yes (165.4 kB) | No           | XML config     |
+| Kaltura Player         | unknown      | unknown      | Yes            | Yes          | CSS/JSON       |
+| Projekktor             | jQuery       | 136.5 kB     | Yes (15.5 kB)  | Yes          | CSS/Parameters |
+| SublimeVideo           | unknown      | unknown      | Yes            | Online       | Online         |
 
 
 The feature-set of audio and video on the web is comprehensive and constantly growing and evolving.
