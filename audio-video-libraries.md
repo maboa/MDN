@@ -135,7 +135,7 @@ Finally we looked at whether the player included a Flash fallback. This not only
 ### Video Only
 
 | Library                | Dependencies | Library Size | Flash Fallback | Custom Build | Theming        |
-| ---------------------- | ------------ | ---------------------------------------------|----------------|
+| ---------------------- | ------------ | ------------ | -------------- | ------------ | -------------- |
 | Codo Player            | None         | 57.2 kB      | Yes (3.6 kB)   | No           | CSS            |
 | flowplayer             | jQuery       | 36.4 kB      | Yes (5.8 kB)   | No           | CSS            |
 | jMediaelement2         | None         | 26.8 kB      | No             | Yes          | CSS            |
